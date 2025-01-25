@@ -28,8 +28,12 @@ h1{
 
 @media(min-width:200px) and (max-width:300px){
     h1{
-        background-color: aqua;
+        background-color: magenta;
     }
 }
-
-
+@media (orientation: landscape){
+    h1{
+        background-color: aqua;
+        color: brown;
+    }
+}
