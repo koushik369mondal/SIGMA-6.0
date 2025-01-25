@@ -1,0 +1,29 @@
+
+
+#outer{
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    /* margin: 50px; */
+    border: 2px solid black;
+    font-size: 10px;
+}
+#inner{
+    height: 100px;
+    width: 100px;
+    background-color: cornflowerblue;
+    /* margin-left: 10%; */
+    font-size: 3em;
+    padding: 1em;
+}
+/* 
+button{
+    font-size: 50px;
+} */
+
+section{
+    font-size: 15px;
+}
+div{
+    font-size: 2rem;
+}

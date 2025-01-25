@@ -1,0 +1,37 @@
+#container{
+    background-color: antiquewhite;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+}
+.child{
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#navbar{
+    background-color: pink;
+    height: 50px;
+    width: 900px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid aquamarine;
+}
+.navItem{
+    font-size: 24px;
+    margin: 10px;
+}
