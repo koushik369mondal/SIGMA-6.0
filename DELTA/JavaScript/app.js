@@ -78,3 +78,19 @@ else if(size == "S"){
 else{
     console.log("Not Defined")
 }
+
+// Practice Qs 
+console.log("Practice Qs (Operators)");
+let str = "apple"
+if(str.length >= 3 && str[0] == "a"){
+    console.log("good")
+}else{
+    console.log("bad")
+}
+
+let num = 12;
+if((num%3 === 0) && ((num+1 == 15) || (num-1 == 11))){
+    console.log("safe");
+}else{
+    console.log("unsafe");
+}
