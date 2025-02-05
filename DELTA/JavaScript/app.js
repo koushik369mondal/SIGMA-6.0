@@ -94,3 +94,122 @@ if((num%3 === 0) && ((num+1 == 15) || (num-1 == 11))){
 }else{
     console.log("unsafe");
 }
+
+// truthy and falsy
+console.log("truthy and falsy") 
+if(true){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(false){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(0){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(1){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(" "){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(""){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(null){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if(undefined){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+if("kaushiik"){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+let numbers = 10;
+if(numbers){
+    console.log("It has true value.")
+}
+else{
+    console.log("It has false value.")
+}
+
+// switch case 
+let color = "red"
+switch(color){
+    case "red":
+        console.log("stop");
+        break;
+    case "yellow":
+        console.log ("stow down");
+        break;
+    case "green":
+        console.log ("go");
+        break;
+    default:
+        console.log ("light is broken");
+}
+
+// practice Qs to print the day of the week 
+console.log("print the day of the week")
+let day = "1"
+switch(day){
+    case "1":
+        console.log("sunday");
+        break;
+    case "2":
+        console.log("monday");
+        break;
+    case "3":
+        console.log("tuesday");
+        break;
+    case "4":
+        console.log("wednesday");
+        break;
+    case "5":
+        console.log("thursday");
+        break;
+    case "6":
+        console.log("friday");
+        break;
+    case "7":
+        console.log("saturday");
+        break;
+    default:
+        console.log("invalid day");
+
+}
