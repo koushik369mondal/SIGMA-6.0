@@ -186,7 +186,7 @@ switch(color){
 
 // practice Qs to print the day of the week 
 console.log("print the day of the week")
-let day = "1"
+let day = prompt("Enter the number")
 switch(day){
     case "1":
         console.log("sunday");
@@ -211,5 +211,11 @@ switch(day){
         break;
     default:
         console.log("invalid day");
-
 }
+
+// learn alert and prompt 
+let firstNam = prompt("Enter first name:");
+let lastNam = prompt("Enter last name:");
+let msg = "Welcome " + firstNam + lastNam + "!";
+alert(msg);
+
