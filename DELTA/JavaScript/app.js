@@ -186,7 +186,8 @@ switch(color){
 
 // practice Qs to print the day of the week 
 console.log("print the day of the week")
-let day = prompt("Enter the number")
+// let day = prompt("Enter the number")
+let day = "4";
 switch(day){
     case "1":
         console.log("sunday");
@@ -214,8 +215,16 @@ switch(day){
 }
 
 // learn alert and prompt 
-let firstNam = prompt("Enter first name:");
-let lastNam = prompt("Enter last name:");
-let msg = "Welcome " + firstNam + lastNam + "!";
-alert(msg);
+// let firstNam = prompt("Enter first name:");
+// let lastNam = prompt("Enter last name:");
+// let msg = "Welcome " + firstNam + lastNam + "!";
+// alert(msg);
 
+// Trim method
+let Str = "   hel lo   ";
+let afterStr = Str.trim();
+console.log(afterStr);
+
+let Name = "Kaushik Mandal"
+Name.toUpperCase();
+Name.toLowerCase
