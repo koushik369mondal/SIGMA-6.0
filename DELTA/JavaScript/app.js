@@ -316,3 +316,50 @@ console.log(colors.sort());
 let nums = [[2,4], [3,6], [4,8]];
 console.log(nums);
 console.log(nums[2][0]);
+
+//for loop
+console.log("for loop")
+for(let i=1; i<=5; i++){
+    console.log(i);
+}
+for(let i=10; i>=5; i--){
+    console.log(i);
+}
+
+for(let i = 1; i<=15; i+=2){
+    console.log(i);
+}
+
+for(let i=2; i<=100; i+=2){
+    console.log(i);
+}
+for(let i=100; i>=2; i-=2){
+    console.log(i);
+}
+
+// multiplication table 
+for(let i=5; i<50; i+=5){
+    console.log(i);
+}
+
+// let n = prompt("Enter number:")
+// n = parseInt(n);
+// for(let i=n; i<=n*10; i+=n){
+//     console.log(i);
+// }
+
+//nested loop
+for(let i=1; i<=3; i++){
+    console.log(`outer loop ${i}`);
+    for(let j=1; j<=3; j++){
+        console.log(j);
+    }
+}
+
+//while loop
+console.log("while loop")
+let i = 1;
+while(i <= 5){
+    console.log(i);
+    i++;
+}
