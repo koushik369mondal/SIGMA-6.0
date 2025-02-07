@@ -109,3 +109,49 @@ console.log(game)
 game[0][1] = 'O';
 console.log(game);
 
+// JS(Part3) Practice Questions 
+// Qs1
+let arr = [7, 9, 0, -2];
+let n = 3;
+let ans = arr.slice(0, n);
+console.log(ans);
+
+// Qs2 
+let arr2 = [7, 9, 0, -2];
+let n2 = 3;
+let ans2 = arr2.slice(arr.length-n);
+console.log(ans2);
+
+// Qs3 
+let str = "Hello Guys";
+if(str.length == 0){
+    console.log("String is empty");
+}else{
+    console.log("String is not empty");
+}
+
+// Qs4 
+let str2 = "ApNaCoLaEgE";
+let idx = 3;
+if(str2[idx] == str2[idx].toLocaleLowerCase()) {
+    console.log("Character is lowercase");
+}
+else{
+    console.log("Character is not lowercase");
+}
+
+// Qs5
+// let str3 = prompt("please enter a string");
+let str3 = " Hell o    "
+console.log(`original string = ${str3}`);
+console.log(`string without spaces = ${str3.trim()}`);
+
+// Qs6 
+let arr4 = ["hello", 'a', 23, 64, 99, -6];
+let item = 64;
+if(arr4.indexOf(item) != -1){
+    console.log("element exists in array");
+}
+else{
+    console.log("element does not exist in array");
+}
