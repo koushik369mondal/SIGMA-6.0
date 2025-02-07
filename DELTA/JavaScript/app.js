@@ -256,3 +256,63 @@ let arr = ["kaushik", 27, 69.99]  //mixed array
 console.log(arr);
 console.log(arr[0][3]);
 console.log(arr[0].length);
+
+let cars = ['audi', 'bmw', 'xuv', 'maruti'];
+console.log(cars);
+cars.push('toyota');
+console.log(cars);
+cars.pop()
+console.log(cars);
+
+cars.unshift('farari');
+console.log(cars);
+cars.shift()
+console.log(cars);
+
+let followers = ['a', 'b', 'c'];
+let blocked = followers.shift();
+console.log(blocked);
+console.log(followers);
+
+// indexOf and includes
+console.log(cars.indexOf('xuv'));
+console.log(cars.includes('audi'));
+console.log(cars.includes('BMW'));
+
+// Concatenation & Reverse
+console.log("Concatenation & Reverse ")
+let primary = ['red', 'yellow', 'blue'];
+let  secondary = ['orange', 'green', 'violet'];
+let allColors = primary.concat(secondary);
+console.log(allColors);
+console.log(allColors.reverse());
+
+// slice in array 
+console.log("slice in array ")
+let fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+console.log(fruits.slice());
+console.log(fruits.slice(2));
+console.log(fruits.slice(2, 4));
+console.log(fruits.slice(-2));
+console.log(fruits.slice(fruits.length-1));
+
+// Splice in Arrays
+// splice( start, deleteCount, item0...itemN)
+console.log("Splice in Arrays ")
+let colors = ['red', 'yellow', 'blue', 'orange', 'green', 'violet']
+console.log(colors.splice(4));
+console.log(colors);
+console.log(colors.splice(0, 1));
+console.log(colors.splice(0, 1, 'black', 'grey'));
+console.log(colors);
+console.log(colors.splice(1, 0, "pink")); // yello ki jagha pe pink aa gaya
+console.log(colors);
+console.log(colors.splice(1, 1, "azure")); 
+console.log(colors);
+
+console.log("sort in Array")
+console.log(colors.sort());
+
+let nums = [[2,4], [3,6], [4,8]];
+console.log(nums);
+console.log(nums[2][0]);

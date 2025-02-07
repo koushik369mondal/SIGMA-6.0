@@ -63,7 +63,7 @@ if((Num1 % 10) == (Num2 % 10)){
 }
 
 
-// JS (Part3) Practice Questions
+// Part3
 
 //Qs
 let msg = "help!";
@@ -78,3 +78,34 @@ console.log(name1.replace("Apna", "Our"));
 // Qs  
 console.log(name1.slice(4).replace("l", "t"));
 console.log(name1.slice(4).replace("l", "t").replace("l", "t"));
+
+// Qs 
+let month = ['january', 'july', 'march', 'august']
+// let blocked = month.shift();
+// console.log(month);
+// let blockedd = month.shift();
+// console.log(month);
+month.shift();
+month.shift();
+month.unshift("june");
+month.unshift("july");
+console.log(month);
+
+// Qs 
+let months = ['january', 'july', 'march', 'august'];
+months.splice(0,2 ,"july", "june");
+console.log(months)
+
+// Qs 
+let lang = ["C", "C++", "HTML", "JavaScript", "Python", "Java", "C#"];
+lang.push("sql");
+console.log(lang.reverse());
+console.log(lang.reverse());
+console.log(lang.reverse().indexOf("JavaScript"));
+
+// Qs 
+let game = [['X', null , 'O'], [null , 'X' , null], ['O', null , 'X']];
+console.log(game)
+game[0][1] = 'O';
+console.log(game);
+
