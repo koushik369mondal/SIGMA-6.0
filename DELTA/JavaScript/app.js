@@ -227,4 +227,32 @@ console.log(afterStr);
 
 let Name = "Kaushik Mandal"
 Name.toUpperCase();
-Name.toLowerCase
+Name.toLowerCase();
+
+//indexOf method
+let msg = "ILoveCoding";
+msg.indexOf("Love");
+msg.indexOf("love");
+msg.indexOf("o");
+msg.indexOf("z");
+
+//slice method
+let msg1 = "koushik369mondal";
+console.log(msg1.slice(0,5));
+console.log(msg1.slice(-2));
+
+//replace
+let msg2 = "I love coding";
+console.log(msg2.replace("love", "do"));
+let msg3 = "kkkkkkk"
+console.log(msg3.replace("k", "M"));  //only change first character
+
+//repeat
+let msg4 = "Hello";
+console.log(msg4.repeat(3));
+
+//array
+let arr = ["kaushik", 27, 69.99]  //mixed array
+console.log(arr);
+console.log(arr[0][3]);
+console.log(arr[0].length);

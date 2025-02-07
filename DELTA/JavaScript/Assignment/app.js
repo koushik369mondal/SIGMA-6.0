@@ -9,10 +9,10 @@ if(num % 10 == 0){
 }
 
 // Qs2
-let Name = prompt("Enter your name: ")
-let age = prompt("Enter your age: ")
+// let Name = prompt("Enter your name: ")
+// let age = prompt("Enter your age: ")
 // alert(name + " is " + age + " years old.")
-alert(`${Name} is ${age} years old.`)
+// alert(`${Name} is ${age} years old.`)
 
 // Qs3
 let quarter = "1";
@@ -61,3 +61,20 @@ if((Num1 % 10) == (Num2 % 10)){
 }else{
     console.log(`last digit is not same`);
 }
+
+
+// JS (Part3) Practice Questions
+
+//Qs
+let msg = "help!";
+console.log(msg.trim().toUpperCase());
+
+// Qs
+let name1 = "ApnaCollage";
+console.log(name1.slice(4,9));
+console.log(name1.indexOf("na"));
+console.log(name1.replace("Apna", "Our"));
+
+// Qs  
+console.log(name1.slice(4).replace("l", "t"));
+console.log(name1.slice(4).replace("l", "t").replace("l", "t"));
