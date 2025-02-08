@@ -363,3 +363,70 @@ while(i <= 5){
     console.log(i);
     i++;
 }
+
+// favorite movie 
+// const favMovie = "avatar";
+// let guess = prompt("guess my favorite movie: ");
+// while( (guess != favMovie)){
+//     if(guess == "quit"){
+//         console.log("you quit");
+//         break;
+//     }
+//     guess = prompt("Wrong guess. please try again.");
+// }
+// if(guess == favMovie){
+//     console.log("congrats!!");
+// }
+
+console.log("Use break statement")
+let j = 1;
+while(j <= 5){
+    if(j == 3){
+        break;
+    }
+    console.log(j);
+    j++;
+}
+
+//loop with array
+console.log("Loop with Array");
+let fruits1 = ["apple", "banana", "cherry", "date", "elderberry"];
+fruits1.push("pineapple")
+// for(let i=0; i<fruits1.length; i++){
+//     console.log(i, fruits1[i]);
+// }
+for(let i=fruits1.length-1; i>0; i--){
+    console.log(i, fruits1[i]);
+}
+
+let heroes = [["ironman", "spiderman", "thor"], ["superman", "woder woman", "flash"]];
+for(let i=0; i<heroes.length; i++){
+    console.log(`List #${i}`);
+    for(let j=0; j<heroes[i].length; j++){
+        console.log(heroes[i][j]);
+    }
+}
+
+let student = [["aman", 95], ["shradha", 94.4], ["karan", 100]];
+for(let i=0; i<student.length; i++){
+    console.log(`into of student #${i+1}`);
+    for(let j=0; j<student[i].length; j++){
+        console.log(student[i][j]);
+    }
+}
+
+let fruits2 = ["mango", "apple", "banana", "orange", "lichi"];
+for(fruit3 of fruits2){
+    console.log(fruit3);
+}
+
+for(char of "ApnaCollege"){
+    console.log(char)
+}
+
+let heroes1 = [["ironman", "spiderman", "thor"], ["superman", "woder woman", "flash"]];
+for(list of heroes1){
+    for(hero of list){
+        console.log(hero);
+    }
+}
