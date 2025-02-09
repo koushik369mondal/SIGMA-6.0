@@ -155,3 +155,53 @@ if(arr4.indexOf(item) != -1){
 else{
     console.log("element does not exist in array");
 }
+
+// JS(Part4) Practice Questions
+// Qs1 
+let arr5 = [1, 2, 3, 4, 5, 6, 2, 3];
+let num4 = 2;
+for(let i=0 ; i<arr5.length; i++){
+    if(arr5[i] == num4){
+        arr5.splice(i, 1);
+    }
+}
+console.log(arr5);
+
+// Qs2
+let number = 287152;
+// count = number.toString().length;
+// console.log(count);
+let count = 0;
+while(number > 0){
+    count++;
+    number = Math.floor(number/10);
+}
+console.log(count)
+
+// Qs3 
+let number1 = 2871523;
+let sum = 0;
+while(number1 > 0){
+    digit = number1 % 10;
+    sum += digit;
+    number1 = Math.floor(number1/10);
+}
+console.log(sum);
+
+// Qs4 
+let x = 5;
+let factorial = 1;
+for(let i=1; i<=x; i++){
+    factorial *= i;
+}
+console.log(`The factorial of ${x} is ${factorial}`);
+
+// Qs5
+let arr6 = [3, 6, 9, 2, 4, 6, 8];
+let largest = arr6[0];
+for(let i=1; i<arr6.length; i++){
+    if(arr6[i] > largest){
+        largest = arr6[i];
+    }
+}
+console.log(largest);
