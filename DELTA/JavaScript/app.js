@@ -430,3 +430,97 @@ for(list of heroes1){
         console.log(hero);
     }
 }
+
+//Object Literals
+console.log("Object Literals")
+const student1 = {
+    name: "Kaushik",
+    age: 20,
+    marks: 90.5
+};
+console.log(student1);
+
+const item = {
+    price: 100.99,
+    discount: 50,
+    color:["red", "pink"]
+};
+console.log(item);
+
+const obj = {
+    1 : "a",
+    2 : "b",
+    true : "c",
+    null : "d", //here null show as string
+    undefined : "e"
+}
+console.log(obj[1]);
+console.log(obj.null); //data store in string format 
+
+const student2 = {
+    Name : "Kauhsik",
+    age : "20",
+    marks : 90.5,
+    city : "West Bengal"
+}
+console.log(student2);
+student2.city = "Mumbai";
+console.log(student2);
+student2.gender = "Male";
+console.log(student2);
+delete student2.marks;
+console.log(student2);
+
+// nested objects 
+console.log("nested objects")
+const classInfo = {
+    aman : {
+        roll : 1,
+        city : "Delhi"
+    },
+    kaushik : {
+        roll : 2,
+        city : "West Bengal"
+    },
+    karan : {
+        roll : 3,
+        city : "Mumbai"
+    }
+}
+console.log(classInfo);
+console.log(classInfo.kaushik.city);
+
+// array of objects 
+console.log("array of objects ")
+const classInfo2 = [   
+    {
+        name: "aman ",
+        roll : 1,
+        city : "Delhi"
+    },
+    {
+        name: "kaushik ",
+        roll : 2,
+        city : "West Bengal"
+    },
+    {
+        name: "karan ",
+        roll : 3,
+        city : "Mumbai"
+    }
+]
+console.log(classInfo2[0]);
+console.log(classInfo2[2].city);
+
+// Math Object
+console.log("Math Object");
+console.log(Math.abs(3.9));
+console.log(Math.pow(2, 3));
+console.log(Math.floor(3.99));
+console.log(Math.ceil(3.99));
+console.log(Math.random());
+
+//Random Integers
+console.log("Random Integers");
+const randomInt = Math.floor(Math.random() * 100) +1;
+console.log(randomInt);

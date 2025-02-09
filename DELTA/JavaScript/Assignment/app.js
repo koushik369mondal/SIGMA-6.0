@@ -205,3 +205,12 @@ for(let i=1; i<arr6.length; i++){
     }
 }
 console.log(largest);
+
+// part5 
+// Qs   
+console.log(Math.floor(Math.random() * 100) +1);
+
+// Qs  
+console.log(Math.ceil(Math.random() * 5));
+
+console.log(Math.ceil(Math.random() * 5) +20);
