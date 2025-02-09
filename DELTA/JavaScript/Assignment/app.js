@@ -214,3 +214,30 @@ console.log(Math.floor(Math.random() * 100) +1);
 console.log(Math.ceil(Math.random() * 5));
 
 console.log(Math.ceil(Math.random() * 5) +20);
+
+// JS (Part5) Practice Questions 
+console.log("JS (Part5) Practice Questions ");
+
+// Qs1 
+let dice = Math.ceil(Math.random() *6);
+console.log(dice);
+
+// Qs2 
+let car = {
+    name: "BMW",
+    model : "BMW XM",
+    color : "Black"
+};
+console.log(car.name);
+
+// Qs 3 
+let person = {
+    name: "John",
+    age: 25,
+    city: "India",
+}
+console.log(person);
+person.city = "New York";
+console.log(person);
+person.country = "United States";
+console.log(person);
