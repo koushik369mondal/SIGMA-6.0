@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-section {
+            margin-bottom: 1.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 2px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+        }
+
+        #message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .success {
+            background-color: #c6f6d5;
+            color: #2f855a;
+        }
+
+        .error {
+            background-color: #fed7d7;
+            color: #c53030;
+        }
+
+        .hint {
+            background-color: #e9ecef;
+            color: #2d3748;
+        }
+
+        #quit-btn {
+            background-color: #e53e3e;
+            margin-top: 1rem;
+        }
+
+        #quit-btn:hover {
+            background-color: #c53030;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <div class="input-section">
+            <input type="number" id="maxNumber" placeholder="Enter maximum number">
+            <button id="start-btn">Start Game</button>
+        </div>
+        <div id="game-section" style="display: none;">
+            <input type="number" id="guess" placeholder="Enter your guess">
+            <button id="guess-btn">Submit Guess</button>
+            <button id="quit-btn">Quit Game</button>
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        let random;
+        let maxNumber;
+        const messageDiv = document.getElementById('message');
+        const gameSection = document.getElementById('game-section');
+
+        document.getElementById('start-btn').addEventListener('click', () => {
+            maxNumber = parseInt(document.getElementById('maxNumber').value);
+            if (maxNumber > 0) {
+                random = Math.floor(Math.random() * maxNumber) + 1;
+                gameSection.style.display = 'block';
+                messageDiv.textContent = `Game started! Guess a number between 1 and ${maxNumber}`;
+                messageDiv.className = 'hint';
+            } else {
+                messageDiv.textContent = 'Please enter a valid maximum number';
+                messageDiv.className = 'error';
+            }
+        });
+
+        document.getElementById('guess-btn').addEventListener('click', () => {
+            const guess = parseInt(document.getElementById('guess').value);
+            
+            if (isNaN(guess)) {
+                messageDiv.textContent = 'Please enter a valid number';
+                messageDiv.className = 'error';
+                return;
+            }
+
+            if (guess === random) {
+                messageDiv.textContent = `Congratulations! The number was ${random}`;
+                messageDiv.className = 'success';
+            } else if (guess < random) {
+                messageDiv.textContent = 'Your guess was too small. Try again!';
+                messageDiv.className = 'hint';
+            } else {
+                messageDiv.textContent = 'Your guess was too large. Try again!';
+                messageDiv.className = 'hint';
+            }
+        });
+
+        document.getElementById('quit-btn').addEventListener('click', () => {
+            gameSection.style.display = 'none';
+            document.getElementById('maxNumber').value = '';
+            document.getElementById('guess').value = '';
+            messageDiv.textContent = 'Game ended. Start a new game!';
+            messageDiv.className = 'hint';
+        });
+    </script>
+</body>
+</html>
