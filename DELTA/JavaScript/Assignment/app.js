@@ -243,7 +243,7 @@ person.country = "United States";
 console.log(person);
 
 //part 6
-// QS 
+// QS 1
 function poem(){
     console.log("Twinkle Twinkle little star");
     console.log("How I wonder what you are");
@@ -252,7 +252,7 @@ function poem(){
 }
 poem();
 
-// Qs 
+// Qs 2
 function rollDice(){
     let rand = Math.floor(Math.random() * 6) +1;
     console.log(rand);
@@ -261,3 +261,27 @@ rollDice();
 rollDice();
 rollDice();
 rollDice();
+
+// Qs 3
+function average(a, b , c){
+    let avg = (a + b + c) / 3;
+    console.log(`Average is: ${avg}`)
+}
+average(3,6,9);
+
+// Qs 7
+function multiplicationTable(a){
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${a} * ${i} = ${a * i}`);
+    }
+}
+multiplicationTable(5);
+
+//Diffrent way
+function printTable(n){
+    for(i = n; i <= n*10; i += n){
+        console.log(i);
+    }
+}
+printTable(6)
+

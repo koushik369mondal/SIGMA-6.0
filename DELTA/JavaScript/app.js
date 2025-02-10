@@ -542,3 +542,17 @@ function isAdult(){
 }
 isAdult();
 
+//Function with arguments
+function printInfo(name, age){
+    console.log(`${name}'s age is ${age}`);
+}
+printInfo("Kaushik", 20);
+printInfo("Karan");
+printInfo(18, "Arun");
+printInfo(18);
+
+function sum(a , b){
+    console.log(a + b);
+}
+sum(10, 20);
+
