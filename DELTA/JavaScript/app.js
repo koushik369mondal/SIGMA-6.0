@@ -556,3 +556,32 @@ function sum(a , b){
 }
 sum(10, 20);
 
+function sum2(a , b){
+    return a + b;
+}
+console.log(`Sum using return: ${sum2(sum2(1,2), 3)}`);
+
+//return Keyword
+function multiplication(a , b){
+    console.log("Hello1");
+    console.log("Hello1");
+    return a * b;
+    console.log("Hello2"); // after return anything not work
+    console.log("Hello2");
+}
+let mul = multiplication(10, 20);
+console.log(`Multiplication is ${mul}`)
+
+function isAdult(age){
+    if(age >= 18){
+        return "Adult";
+    }
+    else{
+        return "Not an Adult";
+    }
+    console.log("Hello Hi") //it also not print due to return
+}
+console.log("bye bye");
+console.log(isAdult(20));
+console.log(isAdult(17));
+
