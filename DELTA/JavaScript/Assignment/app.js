@@ -241,3 +241,23 @@ person.city = "New York";
 console.log(person);
 person.country = "United States";
 console.log(person);
+
+//part 6
+// QS 
+function poem(){
+    console.log("Twinkle Twinkle little star");
+    console.log("How I wonder what you are");
+    console.log("Up above the world so high");
+    console.log("Like a diamond in the sky");
+}
+poem();
+
+// Qs 
+function rollDice(){
+    let rand = Math.floor(Math.random() * 6) +1;
+    console.log(rand);
+}
+rollDice();
+rollDice();
+rollDice();
+rollDice();

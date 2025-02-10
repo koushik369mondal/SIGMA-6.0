@@ -524,3 +524,21 @@ console.log(Math.random());
 console.log("Random Integers");
 const randomInt = Math.floor(Math.random() * 100) +1;
 console.log(randomInt);
+
+//Functions 
+function hello(){
+    console.log("Hello Guys");
+}
+hello();
+
+function isAdult(){
+    let age = 18;
+    if(age >= 18){
+        console.log("Adult");
+    }
+    else{
+        console.log("Not an Adult");
+    }
+}
+isAdult();
+
