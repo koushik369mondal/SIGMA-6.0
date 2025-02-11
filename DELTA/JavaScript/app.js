@@ -621,3 +621,59 @@ hello3 = function(){
 console.log(name2);
 console.log(sum3(10, 20));
 console.log(hello3());
+
+//High order functions
+function multipleGreet(funk, count){
+    for(let i = 1; i <= count; i++){
+        funk();
+    }
+}
+let greet = function(){
+    console.log("Hello");
+}
+multipleGreet(greet, 79);  // insted of writing multiple time greet function we use this 
+multipleGreet(function() {console.log("namaste")}, 1000); //use another way
+
+// High order function returns
+function oddEvenTest(request){
+    if(request == "odd"){
+        return function(n){
+            console.log(!(n % 2 == 0));
+        }
+    }
+    else if(request == "even"){
+        return function(n){
+            console.log(n % 2 == 0);
+        }
+    }
+    else{
+        console.log("Wrong request");
+    }
+}
+let request = "odd"; //even
+
+//Methods
+const calculator = {
+    num: 55,
+    add: function(a, b){
+        return a+b;
+    },
+    sub: function(a, b){
+        return a-b;
+    },
+    mul: function(a, b){
+        return a*b;
+    }
+}
+console.log(calculator.add(10, 20));
+
+// Methods(Shorthand)
+const calculator2 = {
+    add(a,b){
+        return a+b;
+    },
+    sub(a,b){
+        return a-b;
+    }
+}
+console.log(calculator2.add(5,10));
