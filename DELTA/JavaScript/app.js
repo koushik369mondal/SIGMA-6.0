@@ -605,3 +605,19 @@ function outerFunc(){
     innerFunc();
 }
 console.log(outerFunc());
+
+//Function expression
+let name2 = "kaushik";
+let x = 5;
+let sum3 = function(a, b){
+    return a + b;
+}
+let hello3 = function(){
+    console.log("Hello");
+}
+hello3 = function(){
+    console.log("namaste")
+}
+console.log(name2);
+console.log(sum3(10, 20));
+console.log(hello3());
