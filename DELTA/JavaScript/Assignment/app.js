@@ -308,3 +308,14 @@ function concat(str4){
 }
 console.log(concat(str4));
 
+// Qs 7
+let greet = "hello";  //global scope
+function changeGreet(){
+    let greet = "namaste"; //function scope
+    console.log(greet);
+    function innnerGreet(){  
+        console.log(greet); // we do not call it so it not run 
+    }
+}
+console.log(greet);  //print global scope
+changeGreet();  // print function scope
