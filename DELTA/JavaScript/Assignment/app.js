@@ -269,7 +269,7 @@ function average(a, b , c){
 }
 average(3,6,9);
 
-// Qs 7
+// Qs 4
 function multiplicationTable(a){
     for (let i = 1; i <= 10; i++) {
         console.log(`${a} * ${i} = ${a * i}`);
@@ -284,4 +284,27 @@ function printTable(n){
     }
 }
 printTable(6)
+
+//Qs 5
+function getSum(n){
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+console.log(getSum(3));
+
+// Qs 6
+let str4 = ["Hi", "Hello", "Bye", "!"];
+
+function concat(str4){
+    let result = "";
+
+    for(let i=0; i<str4.length; i++){
+        result += str4[i];
+    }
+    return result;
+}
+console.log(concat(str4));
 

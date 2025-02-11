@@ -585,3 +585,11 @@ console.log("bye bye");
 console.log(isAdult(20));
 console.log(isAdult(17));
 
+//Scope
+let sum1 = 59;  // Global Scope
+function calSum(a, b){
+    let sum1 = a + b; // Function Scope
+    console.log(sum1);
+}
+calSum(10, 20);
+console.log(sum1);
