@@ -593,3 +593,15 @@ function calSum(a, b){
 }
 calSum(10, 20);
 console.log(sum1);
+
+// Lexical Scope
+function outerFunc(){
+    let x = 5;
+    let y = 6;
+    function innerFunc(){
+        // let a = 10;   not working 
+        console.log(x);
+    }
+    innerFunc();
+}
+console.log(outerFunc());
