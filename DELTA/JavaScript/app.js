@@ -699,3 +699,14 @@ function getAvg(){
 }
 console.log(getAvg()); 
 
+// try and catch 
+console.log("Hello");
+console.log("Hello");
+// let A  = 68;
+try{
+    console.log(A);
+}catch{
+    console.log("caught and error.. a is not defined");
+}
+console.log("Hello2");
+console.log("Hello2");
