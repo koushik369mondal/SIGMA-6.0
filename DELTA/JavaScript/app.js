@@ -710,3 +710,16 @@ try{
 }
 console.log("Hello2");
 console.log("Hello2");
+
+// arrow function 
+const sum4 = (a, b) => {
+    console.log(a + b);
+};
+const cube = (n) => {
+    return n * n * n;
+}
+const pow = (a , b) => {
+    return a**b;
+}
+console.log(cube(2));
+console.log(pow(2, 4));
