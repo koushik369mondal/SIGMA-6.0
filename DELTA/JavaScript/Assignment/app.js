@@ -2,9 +2,9 @@
 
 // Qs1
 let num = 12;
-if(num % 10 == 0){
+if (num % 10 == 0) {
     console.log("good")
-}else{
+} else {
     console.log("bad")
 }
 
@@ -16,7 +16,7 @@ if(num % 10 == 0){
 
 // Qs3
 let quarter = "1";
-switch(quarter){
+switch (quarter) {
     case "1":
         console.log("January , February , March");
         break;
@@ -33,9 +33,9 @@ switch(quarter){
 
 // Qs4
 let char = "aluminium";
-if(char[0] = ("a" || "A") && char.length > 5) {
+if (char[0] = ("a" || "A") && char.length > 5) {
     console.log("golden string")
-}else{
+} else {
     console.log("not golden string")
 }
 
@@ -43,22 +43,22 @@ if(char[0] = ("a" || "A") && char.length > 5) {
 let num1 = 59;
 let num2 = 9;
 let num3 = 79;
-if(num1 > num2 && num1 > num3){
+if (num1 > num2 && num1 > num3) {
     console.log(`${num1} is largest`);
 }
-else if(num2 > num1 && num2 > num3){
+else if (num2 > num1 && num2 > num3) {
     console.log(`${num2} is largest`);
 }
-else{
+else {
     console.log(`${num3} is largest`);
 }
 
 // Qs6
 let Num1 = 32;
 let Num2 = 47852;
-if((Num1 % 10) == (Num2 % 10)){
+if ((Num1 % 10) == (Num2 % 10)) {
     console.log(`last digit is same ${Num1 % 10}`);
-}else{
+} else {
     console.log(`last digit is not same`);
 }
 
@@ -71,7 +71,7 @@ console.log(msg.trim().toUpperCase());
 
 // Qs
 let name1 = "ApnaCollage";
-console.log(name1.slice(4,9));
+console.log(name1.slice(4, 9));
 console.log(name1.indexOf("na"));
 console.log(name1.replace("Apna", "Our"));
 
@@ -93,7 +93,7 @@ console.log(month);
 
 // Qs 
 let months = ['january', 'july', 'march', 'august'];
-months.splice(0,2 ,"july", "june");
+months.splice(0, 2, "july", "june");
 console.log(months)
 
 // Qs 
@@ -104,7 +104,7 @@ console.log(lang.reverse());
 console.log(lang.reverse().indexOf("JavaScript"));
 
 // Qs 
-let game = [['X', null , 'O'], [null , 'X' , null], ['O', null , 'X']];
+let game = [['X', null, 'O'], [null, 'X', null], ['O', null, 'X']];
 console.log(game)
 game[0][1] = 'O';
 console.log(game);
@@ -119,24 +119,24 @@ console.log(ans);
 // Qs2 
 let arr2 = [7, 9, 0, -2];
 let n2 = 3;
-let ans2 = arr2.slice(arr.length-n);
+let ans2 = arr2.slice(arr.length - n);
 console.log(ans2);
 
 // Qs3 
 let str = "Hello Guys";
-if(str.length == 0){
+if (str.length == 0) {
     console.log("String is empty");
-}else{
+} else {
     console.log("String is not empty");
 }
 
 // Qs4 
 let str2 = "ApNaCoLaEgE";
 let idx = 3;
-if(str2[idx] == str2[idx].toLocaleLowerCase()) {
+if (str2[idx] == str2[idx].toLocaleLowerCase()) {
     console.log("Character is lowercase");
 }
-else{
+else {
     console.log("Character is not lowercase");
 }
 
@@ -149,10 +149,10 @@ console.log(`string without spaces = ${str3.trim()}`);
 // Qs6 
 let arr4 = ["hello", 'a', 23, 64, 99, -6];
 let item = 64;
-if(arr4.indexOf(item) != -1){
+if (arr4.indexOf(item) != -1) {
     console.log("element exists in array");
 }
-else{
+else {
     console.log("element does not exist in array");
 }
 
@@ -160,8 +160,8 @@ else{
 // Qs1 
 let arr5 = [1, 2, 3, 4, 5, 6, 2, 3];
 let num4 = 2;
-for(let i=0 ; i<arr5.length; i++){
-    if(arr5[i] == num4){
+for (let i = 0; i < arr5.length; i++) {
+    if (arr5[i] == num4) {
         arr5.splice(i, 1);
     }
 }
@@ -172,26 +172,26 @@ let number = 287152;
 // count = number.toString().length;
 // console.log(count);
 let count = 0;
-while(number > 0){
+while (number > 0) {
     count++;
-    number = Math.floor(number/10);
+    number = Math.floor(number / 10);
 }
 console.log(count)
 
 // Qs3 
 let number1 = 2871523;
 let sum = 0;
-while(number1 > 0){
+while (number1 > 0) {
     digit = number1 % 10;
     sum += digit;
-    number1 = Math.floor(number1/10);
+    number1 = Math.floor(number1 / 10);
 }
 console.log(sum);
 
 // Qs4 
 let x = 5;
 let factorial = 1;
-for(let i=1; i<=x; i++){
+for (let i = 1; i <= x; i++) {
     factorial *= i;
 }
 console.log(`The factorial of ${x} is ${factorial}`);
@@ -199,8 +199,8 @@ console.log(`The factorial of ${x} is ${factorial}`);
 // Qs5
 let arr6 = [3, 6, 9, 2, 4, 6, 8];
 let largest = arr6[0];
-for(let i=1; i<arr6.length; i++){
-    if(arr6[i] > largest){
+for (let i = 1; i < arr6.length; i++) {
+    if (arr6[i] > largest) {
         largest = arr6[i];
     }
 }
@@ -208,25 +208,25 @@ console.log(largest);
 
 // part5 
 // Qs   
-console.log(Math.floor(Math.random() * 100) +1);
+console.log(Math.floor(Math.random() * 100) + 1);
 
 // Qs  
 console.log(Math.ceil(Math.random() * 5));
 
-console.log(Math.ceil(Math.random() * 5) +20);
+console.log(Math.ceil(Math.random() * 5) + 20);
 
 // JS (Part5) Practice Questions 
 console.log("JS (Part5) Practice Questions ");
 
 // Qs1 
-let dice = Math.ceil(Math.random() *6);
+let dice = Math.ceil(Math.random() * 6);
 console.log(dice);
 
 // Qs2 
 let car = {
     name: "BMW",
-    model : "BMW XM",
-    color : "Black"
+    model: "BMW XM",
+    color: "Black"
 };
 console.log(car.name);
 
@@ -244,7 +244,7 @@ console.log(person);
 
 //part 6
 // QS 1
-function poem(){
+function poem() {
     console.log("Twinkle Twinkle little star");
     console.log("How I wonder what you are");
     console.log("Up above the world so high");
@@ -253,8 +253,8 @@ function poem(){
 poem();
 
 // Qs 2
-function rollDice(){
-    let rand = Math.floor(Math.random() * 6) +1;
+function rollDice() {
+    let rand = Math.floor(Math.random() * 6) + 1;
     console.log(rand);
 }
 rollDice();
@@ -263,14 +263,14 @@ rollDice();
 rollDice();
 
 // Qs 3
-function average(a, b , c){
+function average(a, b, c) {
     let avg = (a + b + c) / 3;
     console.log(`Average is: ${avg}`)
 }
-average(3,6,9);
+average(3, 6, 9);
 
 // Qs 4
-function multiplicationTable(a){
+function multiplicationTable(a) {
     for (let i = 1; i <= 10; i++) {
         console.log(`${a} * ${i} = ${a * i}`);
     }
@@ -278,15 +278,15 @@ function multiplicationTable(a){
 multiplicationTable(5);
 
 //Diffrent way
-function printTable(n){
-    for(i = n; i <= n*10; i += n){
+function printTable(n) {
+    for (i = n; i <= n * 10; i += n) {
         console.log(i);
     }
 }
 printTable(6)
 
 //Qs 5
-function getSum(n){
+function getSum(n) {
     let sum = 0;
     for (let i = 1; i <= n; i++) {
         sum += i;
@@ -298,10 +298,10 @@ console.log(getSum(3));
 // Qs 6
 let str4 = ["Hi", "Hello", "Bye", "!"];
 
-function concat(str4){
+function concat(str4) {
     let result = "";
 
-    for(let i=0; i<str4.length; i++){
+    for (let i = 0; i < str4.length; i++) {
         result += str4[i];
     }
     return result;
@@ -310,12 +310,86 @@ console.log(concat(str4));
 
 // Qs 7
 let greet = "hello";  //global scope
-function changeGreet(){
+function changeGreet() {
     let greet = "namaste"; //function scope
     console.log(greet);
-    function innnerGreet(){  
+    function innnerGreet() {
         console.log(greet); // we do not call it so it not run 
     }
 }
 console.log(greet);  //print global scope
 changeGreet();  // print function scope
+
+// JS (Part6) Practice Question
+// Qs 1 
+let arr7 = [8, 9, 10, 1, 2, 3, 4, 5, 6, 7];
+let num7 = 5;
+// elements larger than a number num function
+function getLargerElements(arr7, num7) {
+    let largerElements = [];
+    for (let i = 0; i < arr7.length; i++) {
+        if (arr7[i] > num7) {
+            largerElements.push(arr7[i]);
+        }
+    }
+    return largerElements;
+}
+console.log(getLargerElements(arr7, num7));
+
+// Qs 2
+let str5 = "abcdabcdefgggh";
+// function to get String with all unique elements
+function getUnique(str5){
+    let ans = "";
+    for (let i = 0; i < str5.length; i++){
+        let currChar = str5[i];
+        if(ans.indexOf(currChar) == -1){
+            ans += currChar;
+        }
+    }
+    return ans;
+}
+console.log(getUnique(str5));
+
+// Qs 3
+let country = ["Australia","Germany","United States of America"];
+function longestName(country){
+    let ansIndex = 0;
+    for(let i = 0; i < country.length; i++){
+        let ansLen = country[ansIndex].length;
+        let currLen = country[i].length;
+        if(currLen > ansLen){
+            ansIndex = i;
+        }
+    }
+    return country[ansIndex];
+}
+console.log(longestName(country));
+
+// Qs 4 
+let str6 = "apnacollage";
+function countVowels(str6){
+    let count = 0;
+    for (let i = 0; i < str6.length; i++) {
+        if(
+            str6.charAt(i) == "a" ||
+            str6.charAt(i) == "e" ||
+            str6.charAt(i) == "i" ||
+            str6.charAt(i) == "o" ||
+            str6.charAt(i) == "u"
+        ){
+            count++;
+        }
+    }
+    return count;
+}
+console.log(`Total vowels are ${countVowels(str6)}`);
+
+// Qs 5 
+let start = 100;
+let end = 1000;
+function generateRandom(start, end){
+    let diff = end - start;
+    return Math.floor(Math.random() * diff) + start;
+}
+console.log(generateRandom(start, end));
