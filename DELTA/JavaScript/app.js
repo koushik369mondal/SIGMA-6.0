@@ -677,3 +677,25 @@ const calculator2 = {
     }
 }
 console.log(calculator2.add(5,10));
+
+// this in JavaScript 
+const student3 = {
+    name3 : "Kaushik",
+    age : 20,
+    eng : 95,
+    phy : 97,
+    math : 93,
+    getAvg(){
+        console.log(this)
+        let avg = (this.eng + this.math + this.phy) / 3;
+        console.log(`${this.name3} got avg marks = ${avg}`);
+    }
+}
+console.log(student3.getAvg()); 
+
+//Window
+function getAvg(){
+    console.log(this);
+}
+console.log(getAvg()); 
+
