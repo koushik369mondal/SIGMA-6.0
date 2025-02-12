@@ -339,11 +339,11 @@ console.log(getLargerElements(arr7, num7));
 // Qs 2
 let str5 = "abcdabcdefgggh";
 // function to get String with all unique elements
-function getUnique(str5){
+function getUnique(str5) {
     let ans = "";
-    for (let i = 0; i < str5.length; i++){
+    for (let i = 0; i < str5.length; i++) {
         let currChar = str5[i];
-        if(ans.indexOf(currChar) == -1){
+        if (ans.indexOf(currChar) == -1) {
             ans += currChar;
         }
     }
@@ -352,13 +352,13 @@ function getUnique(str5){
 console.log(getUnique(str5));
 
 // Qs 3
-let country = ["Australia","Germany","United States of America"];
-function longestName(country){
+let country = ["Australia", "Germany", "United States of America"];
+function longestName(country) {
     let ansIndex = 0;
-    for(let i = 0; i < country.length; i++){
+    for (let i = 0; i < country.length; i++) {
         let ansLen = country[ansIndex].length;
         let currLen = country[i].length;
-        if(currLen > ansLen){
+        if (currLen > ansLen) {
             ansIndex = i;
         }
     }
@@ -368,16 +368,16 @@ console.log(longestName(country));
 
 // Qs 4 
 let str6 = "apnacollage";
-function countVowels(str6){
+function countVowels(str6) {
     let count = 0;
     for (let i = 0; i < str6.length; i++) {
-        if(
+        if (
             str6.charAt(i) == "a" ||
             str6.charAt(i) == "e" ||
             str6.charAt(i) == "i" ||
             str6.charAt(i) == "o" ||
             str6.charAt(i) == "u"
-        ){
+        ) {
             count++;
         }
     }
@@ -388,8 +388,66 @@ console.log(`Total vowels are ${countVowels(str6)}`);
 // Qs 5 
 let start = 100;
 let end = 1000;
-function generateRandom(start, end){
+function generateRandom(start, end) {
     let diff = end - start;
     return Math.floor(Math.random() * diff) + start;
 }
 console.log(generateRandom(start, end));
+
+// part 7
+//Qs
+const square = (n) => n * n;
+console.log(square(6));
+
+let id = setInterval(() => {
+    console.log("Hello World!");
+}, 2000);
+setTimeout(() => {
+    clearInterval(id);
+    console.log("Time's up!");
+}, 10000);
+
+// JS (Part7) Practice Sollutions
+// Qs 1
+const arrayAverage = (arr1) => {
+    let total = 0;
+    for (let number of arr1) {
+        total += number;
+    }
+    return total / arr1.length;
+};
+let arr1 = [1, 2, 3, 4, 5, 6];
+console.log(`Array Average is ${arrayAverage(arr1)}`);
+
+// Qs 2
+const isEven = (num8) => {
+    if (num8 % 2 == 0) {
+        console.log(`${num8} is even number`);
+    }
+    else {
+        console.log(`${num8} is odd number`);
+    }
+}
+console.log(isEven(9));
+
+// Qs4
+const object = { 
+    message: 'Hello,World!',
+    logMessage() { 
+        console.log(this.message);
+    } 
+}; 
+setTimeout(object.logMessage, 1000);
+
+// Qs5 
+let length = 4;
+function callback(){
+    console.log(this.length);
+}
+const object1 = {
+    length:5,
+    method(callback){
+        callback();
+    },
+};
+object1.method(callback,1,2)
