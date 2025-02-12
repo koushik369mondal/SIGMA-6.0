@@ -42,7 +42,7 @@ console.log('*' > '&');
 // conditional statement
 console.log("conditional statement");
 let firstName = "Kaushik";
-if (firstName == "Kaushik"){
+if (firstName == "Kaushik") {
     console.log(`Hello ${firstName}`);
 }
 
@@ -50,145 +50,145 @@ if (firstName == "Kaushik"){
 console.log("Practice Qs (Traffic light)");
 // light = "red";
 let light = "red";
-if(light == "red"){
+if (light == "red") {
     console.log("Stop");
 }
-if(light == "yellow"){
+if (light == "yellow") {
     console.log("Go slow");
 }
-if(light == "green"){
+if (light == "green") {
     console.log("Go");
 }
 
 //Practice Qs(Popcorn price)
 console.log("Practice Qs(Popcorn price)")
 let size = "M";
-if(size == "XL"){
+if (size == "XL") {
     console.log("Price is 250");
 }
-else if(size == "L"){
+else if (size == "L") {
     console.log("Price is 200")
 }
-else if(size == "M"){
+else if (size == "M") {
     console.log("Price is 100")
 }
-else if(size == "S"){
+else if (size == "S") {
     console.log("Price is 50")
 }
-else{
+else {
     console.log("Not Defined")
 }
 
 // Practice Qs 
 console.log("Practice Qs (Operators)");
 let str = "apple"
-if(str.length >= 3 && str[0] == "a"){
+if (str.length >= 3 && str[0] == "a") {
     console.log("good")
-}else{
+} else {
     console.log("bad")
 }
 
 let num = 12;
-if((num%3 === 0) && ((num+1 == 15) || (num-1 == 11))){
+if ((num % 3 === 0) && ((num + 1 == 15) || (num - 1 == 11))) {
     console.log("safe");
-}else{
+} else {
     console.log("unsafe");
 }
 
 // truthy and falsy
-console.log("truthy and falsy") 
-if(true){
+console.log("truthy and falsy")
+if (true) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(false){
+if (false) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(0){
+if (0) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(1){
+if (1) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(" "){
+if (" ") {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(""){
+if ("") {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(null){
+if (null) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if(undefined){
+if (undefined) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
-if("kaushiik"){
+if ("kaushiik") {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
 let numbers = 10;
-if(numbers){
+if (numbers) {
     console.log("It has true value.")
 }
-else{
+else {
     console.log("It has false value.")
 }
 
 // switch case 
 let color = "red"
-switch(color){
+switch (color) {
     case "red":
         console.log("stop");
         break;
     case "yellow":
-        console.log ("stow down");
+        console.log("stow down");
         break;
     case "green":
-        console.log ("go");
+        console.log("go");
         break;
     default:
-        console.log ("light is broken");
+        console.log("light is broken");
 }
 
 // practice Qs to print the day of the week 
 console.log("print the day of the week")
 // let day = prompt("Enter the number")
 let day = "4";
-switch(day){
+switch (day) {
     case "1":
         console.log("sunday");
         break;
@@ -238,7 +238,7 @@ msg.indexOf("z");
 
 //slice method
 let msg1 = "koushik369mondal";
-console.log(msg1.slice(0,5));
+console.log(msg1.slice(0, 5));
 console.log(msg1.slice(-2));
 
 //replace
@@ -282,7 +282,7 @@ console.log(cars.includes('BMW'));
 // Concatenation & Reverse
 console.log("Concatenation & Reverse ")
 let primary = ['red', 'yellow', 'blue'];
-let  secondary = ['orange', 'green', 'violet'];
+let secondary = ['orange', 'green', 'violet'];
 let allColors = primary.concat(secondary);
 console.log(allColors);
 console.log(allColors.reverse());
@@ -294,7 +294,7 @@ console.log(fruits.slice());
 console.log(fruits.slice(2));
 console.log(fruits.slice(2, 4));
 console.log(fruits.slice(-2));
-console.log(fruits.slice(fruits.length-1));
+console.log(fruits.slice(fruits.length - 1));
 
 // Splice in Arrays
 // splice( start, deleteCount, item0...itemN)
@@ -307,38 +307,38 @@ console.log(colors.splice(0, 1, 'black', 'grey'));
 console.log(colors);
 console.log(colors.splice(1, 0, "pink")); // yello ki jagha pe pink aa gaya
 console.log(colors);
-console.log(colors.splice(1, 1, "azure")); 
+console.log(colors.splice(1, 1, "azure"));
 console.log(colors);
 
 console.log("sort in Array")
 console.log(colors.sort());
 
-let nums = [[2,4], [3,6], [4,8]];
+let nums = [[2, 4], [3, 6], [4, 8]];
 console.log(nums);
 console.log(nums[2][0]);
 
 //for loop
 console.log("for loop")
-for(let i=1; i<=5; i++){
+for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
-for(let i=10; i>=5; i--){
-    console.log(i);
-}
-
-for(let i = 1; i<=15; i+=2){
+for (let i = 10; i >= 5; i--) {
     console.log(i);
 }
 
-for(let i=2; i<=100; i+=2){
+for (let i = 1; i <= 15; i += 2) {
     console.log(i);
 }
-for(let i=100; i>=2; i-=2){
+
+for (let i = 2; i <= 100; i += 2) {
+    console.log(i);
+}
+for (let i = 100; i >= 2; i -= 2) {
     console.log(i);
 }
 
 // multiplication table 
-for(let i=5; i<50; i+=5){
+for (let i = 5; i < 50; i += 5) {
     console.log(i);
 }
 
@@ -349,9 +349,9 @@ for(let i=5; i<50; i+=5){
 // }
 
 //nested loop
-for(let i=1; i<=3; i++){
+for (let i = 1; i <= 3; i++) {
     console.log(`outer loop ${i}`);
-    for(let j=1; j<=3; j++){
+    for (let j = 1; j <= 3; j++) {
         console.log(j);
     }
 }
@@ -359,7 +359,7 @@ for(let i=1; i<=3; i++){
 //while loop
 console.log("while loop")
 let i = 1;
-while(i <= 5){
+while (i <= 5) {
     console.log(i);
     i++;
 }
@@ -380,8 +380,8 @@ while(i <= 5){
 
 console.log("Use break statement")
 let j = 1;
-while(j <= 5){
-    if(j == 3){
+while (j <= 5) {
+    if (j == 3) {
         break;
     }
     console.log(j);
@@ -395,38 +395,38 @@ fruits1.push("pineapple")
 // for(let i=0; i<fruits1.length; i++){
 //     console.log(i, fruits1[i]);
 // }
-for(let i=fruits1.length-1; i>0; i--){
+for (let i = fruits1.length - 1; i > 0; i--) {
     console.log(i, fruits1[i]);
 }
 
 let heroes = [["ironman", "spiderman", "thor"], ["superman", "woder woman", "flash"]];
-for(let i=0; i<heroes.length; i++){
+for (let i = 0; i < heroes.length; i++) {
     console.log(`List #${i}`);
-    for(let j=0; j<heroes[i].length; j++){
+    for (let j = 0; j < heroes[i].length; j++) {
         console.log(heroes[i][j]);
     }
 }
 
 let student = [["aman", 95], ["shradha", 94.4], ["karan", 100]];
-for(let i=0; i<student.length; i++){
-    console.log(`into of student #${i+1}`);
-    for(let j=0; j<student[i].length; j++){
+for (let i = 0; i < student.length; i++) {
+    console.log(`into of student #${i + 1}`);
+    for (let j = 0; j < student[i].length; j++) {
         console.log(student[i][j]);
     }
 }
 
 let fruits2 = ["mango", "apple", "banana", "orange", "lichi"];
-for(fruit3 of fruits2){
+for (fruit3 of fruits2) {
     console.log(fruit3);
 }
 
-for(char of "ApnaCollege"){
+for (char of "ApnaCollege") {
     console.log(char)
 }
 
 let heroes1 = [["ironman", "spiderman", "thor"], ["superman", "woder woman", "flash"]];
-for(list of heroes1){
-    for(hero of list){
+for (list of heroes1) {
+    for (hero of list) {
         console.log(hero);
     }
 }
@@ -443,25 +443,25 @@ console.log(student1);
 const item = {
     price: 100.99,
     discount: 50,
-    color:["red", "pink"]
+    color: ["red", "pink"]
 };
 console.log(item);
 
 const obj = {
-    1 : "a",
-    2 : "b",
-    true : "c",
-    null : "d", //here null show as string
-    undefined : "e"
+    1: "a",
+    2: "b",
+    true: "c",
+    null: "d", //here null show as string
+    undefined: "e"
 }
 console.log(obj[1]);
 console.log(obj.null); //data store in string format 
 
 const student2 = {
-    Name : "Kauhsik",
-    age : "20",
-    marks : 90.5,
-    city : "West Bengal"
+    Name: "Kauhsik",
+    age: "20",
+    marks: 90.5,
+    city: "West Bengal"
 }
 console.log(student2);
 student2.city = "Mumbai";
@@ -474,17 +474,17 @@ console.log(student2);
 // nested objects 
 console.log("nested objects")
 const classInfo = {
-    aman : {
-        roll : 1,
-        city : "Delhi"
+    aman: {
+        roll: 1,
+        city: "Delhi"
     },
-    kaushik : {
-        roll : 2,
-        city : "West Bengal"
+    kaushik: {
+        roll: 2,
+        city: "West Bengal"
     },
-    karan : {
-        roll : 3,
-        city : "Mumbai"
+    karan: {
+        roll: 3,
+        city: "Mumbai"
     }
 }
 console.log(classInfo);
@@ -492,21 +492,21 @@ console.log(classInfo.kaushik.city);
 
 // array of objects 
 console.log("array of objects ")
-const classInfo2 = [   
+const classInfo2 = [
     {
         name: "aman ",
-        roll : 1,
-        city : "Delhi"
+        roll: 1,
+        city: "Delhi"
     },
     {
         name: "kaushik ",
-        roll : 2,
-        city : "West Bengal"
+        roll: 2,
+        city: "West Bengal"
     },
     {
         name: "karan ",
-        roll : 3,
-        city : "Mumbai"
+        roll: 3,
+        city: "Mumbai"
     }
 ]
 console.log(classInfo2[0]);
@@ -522,28 +522,28 @@ console.log(Math.random());
 
 //Random Integers
 console.log("Random Integers");
-const randomInt = Math.floor(Math.random() * 100) +1;
+const randomInt = Math.floor(Math.random() * 100) + 1;
 console.log(randomInt);
 
 //Functions 
-function hello(){
+function hello() {
     console.log("Hello Guys");
 }
 hello();
 
-function isAdult(){
+function isAdult() {
     let age = 18;
-    if(age >= 18){
+    if (age >= 18) {
         console.log("Adult");
     }
-    else{
+    else {
         console.log("Not an Adult");
     }
 }
 isAdult();
 
 //Function with arguments
-function printInfo(name, age){
+function printInfo(name, age) {
     console.log(`${name}'s age is ${age}`);
 }
 printInfo("Kaushik", 20);
@@ -551,18 +551,18 @@ printInfo("Karan");
 printInfo(18, "Arun");
 printInfo(18);
 
-function sum(a , b){
+function sum(a, b) {
     console.log(a + b);
 }
 sum(10, 20);
 
-function sum2(a , b){
+function sum2(a, b) {
     return a + b;
 }
-console.log(`Sum using return: ${sum2(sum2(1,2), 3)}`);
+console.log(`Sum using return: ${sum2(sum2(1, 2), 3)}`);
 
 //return Keyword
-function multiplication(a , b){
+function multiplication(a, b) {
     console.log("Hello1");
     console.log("Hello1");
     return a * b;
@@ -572,11 +572,11 @@ function multiplication(a , b){
 let mul = multiplication(10, 20);
 console.log(`Multiplication is ${mul}`)
 
-function isAdult(age){
-    if(age >= 18){
+function isAdult(age) {
+    if (age >= 18) {
         return "Adult";
     }
-    else{
+    else {
         return "Not an Adult";
     }
     console.log("Hello Hi") //it also not print due to return
@@ -587,7 +587,7 @@ console.log(isAdult(17));
 
 //Scope
 let sum1 = 59;  // Global Scope
-function calSum(a, b){
+function calSum(a, b) {
     let sum1 = a + b; // Function Scope
     console.log(sum1);
 }
@@ -595,10 +595,10 @@ calSum(10, 20);
 console.log(sum1);
 
 // Lexical Scope
-function outerFunc(){
+function outerFunc() {
     let x = 5;
     let y = 6;
-    function innerFunc(){
+    function innerFunc() {
         // let a = 10;   not working 
         console.log(x);
     }
@@ -609,13 +609,13 @@ console.log(outerFunc());
 //Function expression
 let name2 = "kaushik";
 let x = 5;
-let sum3 = function(a, b){
+let sum3 = function (a, b) {
     return a + b;
 }
-let hello3 = function(){
+let hello3 = function () {
     console.log("Hello");
 }
-hello3 = function(){
+hello3 = function () {
     console.log("namaste")
 }
 console.log(name2);
@@ -623,30 +623,30 @@ console.log(sum3(10, 20));
 console.log(hello3());
 
 //High order functions
-function multipleGreet(funk, count){
-    for(let i = 1; i <= count; i++){
+function multipleGreet(funk, count) {
+    for (let i = 1; i <= count; i++) {
         funk();
     }
 }
-let greet = function(){
+let greet = function () {
     console.log("Hello");
 }
 multipleGreet(greet, 79);  // insted of writing multiple time greet function we use this 
-multipleGreet(function() {console.log("namaste")}, 1000); //use another way
+multipleGreet(function () { console.log("namaste") }, 1000); //use another way
 
 // High order function returns
-function oddEvenTest(request){
-    if(request == "odd"){
-        return function(n){
+function oddEvenTest(request) {
+    if (request == "odd") {
+        return function (n) {
             console.log(!(n % 2 == 0));
         }
     }
-    else if(request == "even"){
-        return function(n){
+    else if (request == "even") {
+        return function (n) {
             console.log(n % 2 == 0);
         }
     }
-    else{
+    else {
         console.log("Wrong request");
     }
 }
@@ -655,57 +655,57 @@ let request = "odd"; //even
 //Methods
 const calculator = {
     num: 55,
-    add: function(a, b){
-        return a+b;
+    add: function (a, b) {
+        return a + b;
     },
-    sub: function(a, b){
-        return a-b;
+    sub: function (a, b) {
+        return a - b;
     },
-    mul: function(a, b){
-        return a*b;
+    mul: function (a, b) {
+        return a * b;
     }
 }
 console.log(calculator.add(10, 20));
 
 // Methods(Shorthand)
 const calculator2 = {
-    add(a,b){
-        return a+b;
+    add(a, b) {
+        return a + b;
     },
-    sub(a,b){
-        return a-b;
+    sub(a, b) {
+        return a - b;
     }
 }
-console.log(calculator2.add(5,10));
+console.log(calculator2.add(5, 10));
 
 // this in JavaScript 
 const student3 = {
-    name3 : "Kaushik",
-    age : 20,
-    eng : 95,
-    phy : 97,
-    math : 93,
-    getAvg(){
+    name3: "Kaushik",
+    age: 20,
+    eng: 95,
+    phy: 97,
+    math: 93,
+    getAvg() {
         console.log(this)
         let avg = (this.eng + this.math + this.phy) / 3;
         console.log(`${this.name3} got avg marks = ${avg}`);
     }
 }
-console.log(student3.getAvg()); 
+console.log(student3.getAvg());
 
 //Window
-function getAvg(){
+function getAvg() {
     console.log(this);
 }
-console.log(getAvg()); 
+console.log(getAvg());
 
 // try and catch 
 console.log("Hello");
 console.log("Hello");
 // let A  = 68;
-try{
+try {
     console.log(A);
-}catch{
+} catch {
     console.log("caught and error.. a is not defined");
 }
 console.log("Hello2");
@@ -718,8 +718,58 @@ const sum4 = (a, b) => {
 const cube = (n) => {
     return n * n * n;
 }
-const pow = (a , b) => {
-    return a**b;
+const pow = (a, b) => {
+    return a ** b;
 }
 console.log(cube(2));
 console.log(pow(2, 4));
+
+// Implicit Return in Arrow Functions
+const multi = (a, b) => (a * b);
+console.log(multi(3, 5));
+
+// Set TimeOut Function
+console.log("Hi there!");
+setTimeout(() => {
+    console.log("Apna College");
+}, 2000);
+console.log("Welcome to ");
+
+// setInterval(() => {
+//     console.log("Hello Guys");
+// }, 3000);
+
+let id = setInterval(() => {
+    console.log("Hello Guys");
+}, 3000);
+console.log(id);
+clearInterval(id);  // it is used to stop
+
+// this with Arrow Functions 
+const student4 = {
+    name4 : "Kaushik",
+    marks : 95,
+    prop : this, //global scope
+    getName : function (){
+        console.log(this);
+        return this.name4;
+    },
+    getMarks: () =>{
+        console.log(this); //parents scope -> window
+        return this.marks;
+    },
+    getInfo1: function(){
+        setTimeout( () => {
+            console.log(this); //student
+        }, 2000);
+    },
+    getInfo2: function(){
+        setTimeout( function() {
+            console.log(this); //window
+        }, 2000);
+    },
+};
+console.log(student4.getInfo1());
+console.log(student4.getInfo2());
+const a1 = 5; //global scope
+console.log(student4.getName());
