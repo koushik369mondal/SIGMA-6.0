@@ -773,3 +773,52 @@ console.log(student4.getInfo1());
 console.log(student4.getInfo2());
 const a1 = 5; //global scope
 console.log(student4.getName());
+
+// Array Method 
+let arr8 = [1, 2, 3, 4, 5,];
+
+arr8.forEach ((el) => {
+    console.log(el);
+});
+
+arr8.forEach(function(el) {
+    console.log(el);
+})
+
+// let print = function (el){
+//     console.log(el);
+// }
+// arr8.forEach(print); //forEach is a method of array
+
+//objects
+let students = [{
+    name : "Kaushik",
+    age : 20,
+    marks : 95.69
+}, 
+{
+    name : "Rahul",
+    age : 21,
+    marks : 94.67
+}, 
+{
+    name : "Mohan",
+    age : 22,
+    marks : 93.65
+}];
+students.forEach((student) => {
+    console.log(student.name);
+})
+
+let gpa = students.map()
+
+// Map & Filter 
+let num9 = [1,2 ,3, 4];
+let double = num9.map((el) =>{
+    return el * 2;
+});
+let square = num9.map((el) =>{
+    return el * el;
+});
+console.log(double);
+console.log(square);
