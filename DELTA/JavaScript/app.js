@@ -840,3 +840,11 @@ let LT5 = numss.filter((el) =>{
 });
 console.log(LT5);
 
+//every (every function need to be true)
+let num1 = [1, 2, 3, 4, 5];
+let num2 = [ 2, 4, 6, 8, 10];
+let everyy = num1.every((el) => el % 2 == 0);
+let everyyy = num2.every((el) => el % 2 == 0);
+console.log(everyy);
+console.log(everyyy);
+
