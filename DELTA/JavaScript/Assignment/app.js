@@ -451,3 +451,24 @@ const object1 = {
     },
 };
 object1.method(callback,1,2)
+
+// part 8 
+// Qs 
+let multiple10 = [10, 20, 30, 40, 50, 60, 7];
+let every10 = multiple10.every((el) => el % 10 == 0);
+console.log(every10);
+
+function getMin(){
+    let min = arr9.reduce((min, el) => {
+        if(min < el){
+            return min;
+        }
+        else{
+            return el;
+        }
+    });
+    return min;
+}
+let arr9 = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+
+console.log(`Min value is ${getMin(arr9)}`);
