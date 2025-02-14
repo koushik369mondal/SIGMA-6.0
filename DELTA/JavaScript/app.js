@@ -862,4 +862,13 @@ let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
 // }
 // console.log(`Maximum value is ${max}`);
 
+let max = arr1.reduce((max, el) => {
+    if(max < el){
+        return el;
+    }
+    else{
+        return max;
+    }
+});
+console.log(`Max value is ${max}`);
 
