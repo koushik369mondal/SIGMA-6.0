@@ -810,7 +810,10 @@ students.forEach((student) => {
     console.log(student.name);
 })
 
-let gpa = students.map()
+let gpa = students.map((el) =>{
+    return el.marks / 10;
+});
+console.log(gpa);
 
 // Map & Filter 
 let num9 = [1,2 ,3, 4];
@@ -822,3 +825,18 @@ let square = num9.map((el) =>{
 });
 console.log(double);
 console.log(square);
+
+let numss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let even = numss.filter((el) =>{
+    return el % 2 == 0;
+});
+console.log(even);
+let odd = numss.filter((el) =>{
+    return el % 2 != 0;
+});
+console.log(odd);
+let LT5 = numss.filter((el) =>{
+    return el < 5;
+});
+console.log(LT5);
+
