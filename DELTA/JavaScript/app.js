@@ -884,3 +884,14 @@ function sum5(a = 3, b){
 }
 sum(1, 4)  // 5
 sum(1)  // b undefined because 1 assign to a
+
+//Spread
+let arr10 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(Math.min(...arr10));
+arr10.push(-1);
+console.log(Math.min(...arr10));
+console.log(Math.max(...arr10));
+console.log(arr10);
+console.log(...arr10);
+console.log("apnacollage")
+console.log(..."apnacollage")
