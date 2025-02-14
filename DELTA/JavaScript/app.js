@@ -852,3 +852,14 @@ console.log(everyyy);
 let num3 = [1, 2, 3, 4];
 let finalVal = num3.reduce((res, el) => res + el);
 console.log(finalVal);
+
+let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+// let max = -1;
+// for(let i = 0; i < arr1.length; i++){
+//     if(arr1[i] > max){
+//         max = arr1[i];
+//     }
+// }
+// console.log(`Maximum value is ${max}`);
+
+
