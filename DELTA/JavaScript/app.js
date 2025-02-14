@@ -872,3 +872,15 @@ let max = arr1.reduce((max, el) => {
 });
 console.log(`Max value is ${max}`);
 
+//default parameter
+function sum5(a , b = 3){
+    return a + b;
+}
+sum(1, 4)  // 5
+sum(1)  // 4
+
+function sum5(a = 3, b){
+    return a + b;
+}
+sum(1, 4)  // 5
+sum(1)  // b undefined because 1 assign to a
