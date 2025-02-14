@@ -848,3 +848,7 @@ let everyyy = num2.every((el) => el % 2 == 0);
 console.log(everyy);
 console.log(everyyy);
 
+// reduce methgod 
+let num3 = [1, 2, 3, 4];
+let finalVal = num3.reduce((res, el) => res + el);
+console.log(finalVal);
