@@ -915,3 +915,21 @@ let obj2 = {..."hello"};
 console.log(obj1);
 console.log(obj2);
 
+// rest 
+function sum6(...args) {
+    return args.reduce((sum, el) => sum + el)
+}
+console.log(sum6(2,3,4 ,1));
+
+function min(msg5, ...args){
+    console.log(msg5);
+    return args.reduce((min, el) => {
+        if(min > el){
+            return el;
+        }
+        else{
+            return min;
+        }
+    })
+}
+console.log(min("Hello",2,3,4,1,5,6,7,8));
