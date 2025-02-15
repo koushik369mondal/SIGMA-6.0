@@ -486,6 +486,20 @@ let number2 = [1, 2, 3, 4, 5];
 console.log(number2.map((number) => number + 5));
 
 // Qs 3 
+let strings = ["apple", "banana", "coconut", "lichi"];
+console.log(strings.map((string) => string.toUpperCase()));
 
+// Qs 4
+const doubleAndReturnArgs = (arr, ...args) => [
+    ...arr,
+    ...args.map((v) => v * 2),
+];
+console.log(doubleAndReturnArgs([1, 2, 3], 4, 4));  // [1, 2, 3, 8 , 8]
+doubleAndReturnArgs([2], 10 , 4); // [2 , 20 , 8]
 
-
+// Qs 5 
+const mergeObjects = (obj1, obj2) => ({
+    ...obj1,
+    ...obj2
+});
+console.log(mergeObjects({a : 1, b : 2}, { c : 3, d : 4}));
