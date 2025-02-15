@@ -472,3 +472,12 @@ function getMin(){
 let arr9 = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
 
 console.log(`Min value is ${getMin(arr9)}`);
+
+// JS(Part8) Practice Answers
+// Qs1
+const array1 = [1, 2, 3, 4, 5];
+const sumOfSquares = array1.reduce((acc, curr) => acc + curr ** 2, 0);
+const average1 = sumOfSquares / array1.length;
+console.log("Sum of squares: ", sumOfSquares);
+console.log("Average: ", average1);
+
