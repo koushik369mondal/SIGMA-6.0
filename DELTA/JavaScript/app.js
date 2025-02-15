@@ -933,3 +933,13 @@ function min(msg5, ...args){
     })
 }
 console.log(min("Hello",2,3,4,1,5,6,7,8));
+
+// Destructuring 
+let names = ["kaushik", "rohan", "nitesh", "aman", "rishi", "suman"];
+// let winner = names[0];
+// let runner = names[1];
+// let runner2 = names[2];
+let [winner, runner, runner2, ...others] = names;
+console.log(winner);
+console.log(others);
+
