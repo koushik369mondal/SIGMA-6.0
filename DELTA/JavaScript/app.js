@@ -893,5 +893,25 @@ console.log(Math.min(...arr10));
 console.log(Math.max(...arr10));
 console.log(arr10);
 console.log(...arr10);
-console.log("apnacollage")
-console.log(..."apnacollage")
+console.log("apnacollage");
+console.log(..."apnacollage");
+
+let odd1 = [1, 3, 5, 7, 9];
+let even1 = [2, 4, 6, 8, 10];
+let all1 = [...odd1, ...even1];
+
+const data = {
+    email: "koushik@gmail.com",
+    password: "1234",
+};
+const dataCopy = {...data, id: 27, country: "India"};
+console.log(dataCopy);
+
+let arr2 = [1, 2, 3, 4, 5];
+let obj1 = {...arr};
+
+let obj2 = {..."hello"};
+
+console.log(obj1);
+console.log(obj2);
+
