@@ -481,3 +481,11 @@ const average1 = sumOfSquares / array1.length;
 console.log("Sum of squares: ", sumOfSquares);
 console.log("Average: ", average1);
 
+// Qs 2
+let number2 = [1, 2, 3, 4, 5];
+console.log(number2.map((number) => number + 5));
+
+// Qs 3 
+
+
+
