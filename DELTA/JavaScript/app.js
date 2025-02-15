@@ -943,3 +943,22 @@ let [winner, runner, runner2, ...others] = names;
 console.log(winner);
 console.log(others);
 
+
+const student5 = {
+    name: "karan",
+    age: 20,
+    class: 9,
+    subjects: ["hindi", "english", "math", "science"],
+    username: "karan@123",
+    password: "abc"
+};
+// let username = student5.username;
+// let password = student5.password;
+
+// let {username, password} = student5;
+// console.log(username);
+
+// let {username: user, password: secret} = student5;
+// console.log(user);
+
+let{username: user, password: secret, city: place = "Mumbai"} = student5;  //here city is default, if city not defined then Mumbai shows
