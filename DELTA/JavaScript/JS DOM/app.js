@@ -50,3 +50,13 @@ function sayName(){
     console.log("My name is Kaushik");
 }
 // btn.onclick = sayHello;
+
+let p = document.querySelector("p");
+p.addEventListener("click", function(){
+    console.log("You clicked a paragraph");
+})
+
+let box = document.querySelector(".box");
+box.addEventListener("mouseenter", function(){
+    console.log("You entered the box");
+})
