@@ -61,23 +61,22 @@
 //     console.log("You entered the box");
 // })
 
-let btn = document.querySelector("button");
-let p = document.querySelector("p");
-let h1 = document.querySelector("h1");
-let h3 = document.querySelector("h3");
 
-function changeColor(){
-    console.dir(this.innerText);
-    this.style.backgroundColor = "blue";
-}
+// let p = document.querySelector("p");
+// let h1 = document.querySelector("h1");
+// let h3 = document.querySelector("h3");
 
-btn.addEventListener("click", changeColor);
+// function changeColor(){
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+// }
 
-p.addEventListener("click", changeColor);
 
-h1.addEventListener("click", changeColor);
+// p.addEventListener("click", changeColor);
 
-h3.addEventListener("click", changeColor);
+// h1.addEventListener("click", changeColor);
+
+// h3.addEventListener("click", changeColor);
 
 // btn.addEventListener("click", function(){
 //     console.log(this);
@@ -103,3 +102,43 @@ h3.addEventListener("click", changeColor);
 //     console.dir(this.innerText);
 //     this.style.backgroundColor = "blue";
 // });
+
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", changeColor);
+
+// btn.addEventListener("click", function(event){
+//     console.log(event);
+//     console.log("button clicked");
+// });
+// btn.addEventListener("dblclick", function(event){
+//     console.log(event);
+//     console.log("button clicked");
+// });
+
+let inp = document.querySelector("input");
+
+// inp.addEventListener("keydown", function(event){
+//     console.log("Key = ",event.key);
+//     console.log("Code = ",event.code);
+//     console.log("key was pressed");
+// });
+
+// inp.addEventListener("keyup", function(){
+//     console.log("key was release");
+// });
+
+inp.addEventListener("keydown", function(event){
+    console.log("code = ", event.code);
+    if(event.code = "ArrowUp"){
+        console.log("character moves forward");
+    }
+    else if(event.code = "ArrowDown"){
+        console.log("character moves backward");
+    }
+    else if (event.code = "ArrowLeft"){
+        console.log("character moves left");
+    }
+    else if (event.code = "ArrowRight"){
+        console.log("character moves right");
+    }
+})
