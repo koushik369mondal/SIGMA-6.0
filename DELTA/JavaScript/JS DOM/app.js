@@ -20,9 +20,9 @@
 //     links[i].style.color = "green";
 // }
 
-let btns = document.querySelectorAll("button");
+// let btns = document.querySelectorAll("button");
 
-for(btn of btns){
+// for(btn of btns){
     // btn.onclick = sayHello;
     // btn.onclick = sayName;
 
@@ -32,10 +32,10 @@ for(btn of btns){
 
     // btn.addEventListener("click", sayHello);
     // btn.addEventListener("click", sayName);
-    btn.addEventListener("dblclick", function(){
-        console.log("You double clicked me")
-    });
-}
+//     btn.addEventListener("dblclick", function(){
+//         console.log("You double clicked me")
+//     });
+// }
 
 // console.dir(btn);
 
@@ -43,20 +43,63 @@ for(btn of btns){
 //     console.log("Button clicked");
 // }
 
-function sayHello(){
-    console.log("Hello");
-}
-function sayName(){
-    console.log("My name is Kaushik");
-}
+// function sayHello(){
+//     console.log("Hello");
+// }
+// function sayName(){
+//     console.log("My name is Kaushik");
+// }
 // btn.onclick = sayHello;
 
-let p = document.querySelector("p");
-p.addEventListener("click", function(){
-    console.log("You clicked a paragraph");
-})
+// let p = document.querySelector("p");
+// p.addEventListener("click", function(){
+//     console.log("You clicked a paragraph");
+// })
 
-let box = document.querySelector(".box");
-box.addEventListener("mouseenter", function(){
-    console.log("You entered the box");
-})
+// let box = document.querySelector(".box");
+// box.addEventListener("mouseenter", function(){
+//     console.log("You entered the box");
+// })
+
+let btn = document.querySelector("button");
+let p = document.querySelector("p");
+let h1 = document.querySelector("h1");
+let h3 = document.querySelector("h3");
+
+function changeColor(){
+    console.dir(this.innerText);
+    this.style.backgroundColor = "blue";
+}
+
+btn.addEventListener("click", changeColor);
+
+p.addEventListener("click", changeColor);
+
+h1.addEventListener("click", changeColor);
+
+h3.addEventListener("click", changeColor);
+
+// btn.addEventListener("click", function(){
+//     console.log(this);
+//     console.dir(this);
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+// });
+// p.addEventListener("click", function(){
+//     console.log(this);
+//     console.dir(this);
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+// });
+// h1.addEventListener("click", function(){
+//     console.log(this);
+//     console.dir(this);
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+// });
+// h3.addEventListener("click", function(){
+//     console.log(this);
+//     console.dir(this);
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+// });
