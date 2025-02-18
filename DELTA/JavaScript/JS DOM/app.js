@@ -147,6 +147,19 @@ let form = document.querySelector("form");
 
 form.addEventListener("submit", function(event){
     event.preventDefault();
-    alert("form submitted");
+    // alert("form submitted");
+    console.dir(form);
+
+    // let user = document.querySelector("#user");
+    // let pass = document.querySelector("#pass");
+    let user = this.elements[0];
+    let pass = this.elements[1];
+
+    console.log(user.value);
+    console.log(pass.value);
+    console.log(`Hi ${user.value} your password set to ${pass.value}.`);
+
+    // console.dir(inp);
+    // console.log(inp.value);
 })
 
