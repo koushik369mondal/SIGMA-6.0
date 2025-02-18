@@ -20,4 +20,21 @@
 //     links[i].style.color = "green";
 // }
 
+let btns = document.querySelectorAll("button");
+for(btn of btns){
+    btn.onclick = sayHello;
+    btn.onmouseenter = function(){
+        console.log("you entered a button");
+    }
+}
 
+// console.dir(btn);
+
+// btn.onclick = function(){
+//     console.log("Button clicked");
+// }
+
+function sayHello(){
+    console.log("Hello");
+}
+btn.onclick = sayHello;
