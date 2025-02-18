@@ -21,11 +21,20 @@
 // }
 
 let btns = document.querySelectorAll("button");
+
 for(btn of btns){
-    btn.onclick = sayHello;
-    btn.onmouseenter = function(){
-        console.log("you entered a button");
-    }
+    // btn.onclick = sayHello;
+    // btn.onclick = sayName;
+
+    // btn.onmouseenter = function(){
+    //     console.log("you entered a button");
+    // }
+
+    // btn.addEventListener("click", sayHello);
+    // btn.addEventListener("click", sayName);
+    btn.addEventListener("dblclick", function(){
+        console.log("You double clicked me")
+    });
 }
 
 // console.dir(btn);
@@ -37,4 +46,7 @@ for(btn of btns){
 function sayHello(){
     console.log("Hello");
 }
-btn.onclick = sayHello;
+function sayName(){
+    console.log("My name is Kaushik");
+}
+// btn.onclick = sayHello;
