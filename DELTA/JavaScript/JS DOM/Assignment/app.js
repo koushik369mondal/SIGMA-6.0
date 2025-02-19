@@ -41,7 +41,7 @@ let btn = document.querySelector("#btn");
 btn.classList.add("btn");
 
 // Qs 4
-let h1 = document.createElement("h1");
+// let h1 = document.createElement("h1");
 h1.innerText = "DOM Practice";
 document.querySelector("body").append(h1);
 
@@ -49,3 +49,47 @@ document.querySelector("body").append(h1);
 let p = document.createElement("p");
 p.innerHTML = "Apna Collage <b>Delta</b> Practice";
 document.querySelector("body").append(p);
+
+// JS Part 10 
+// Qs 1
+// Mouseout event
+document.getElementById('hoverBox').addEventListener('mouseout', function(){
+    this.style.background = "red";
+    this.textContent = "Mouse is out";
+});
+
+// Keypress event
+document.addEventListener('keypress', function(event){
+    document.getElementById('output').textContent = `You passed: ${event.key}`;
+});
+
+// Scroll event
+window.addEventListener('scroll', function(){
+    document.getElementById('output').textContent = `You scrolled: ${window.scrollY}px`;
+});
+
+// Load event
+window.addEventListener('load', function(){
+    // alert(`page fully loaded!`);
+    console.log(`page fully loaded!`);
+});
+
+// Qs 2
+const button1 = document.createElement('button');
+button1.textContent = 'Chnage color';
+button1.style.padding = '10px 20px';
+button1.style.fontSize = '16px';
+
+document.body.appendChild(button1);
+
+button1.addEventListener('click', function(){
+    button1.style.backgroundColor = 'green';
+    button1.style.color = 'white';
+})
+
+// Qs 3
+document.getElementById('nameInput').addEventListener('input', function(){
+    const sanitizedValue = this .ariaValueMax.replace(/[^a-zA-Z\s]/g, '');
+    this.value = sanitizedValue;
+    document.getElementById('displayName').textContent = sanitizedValue;
+});
