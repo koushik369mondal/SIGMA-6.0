@@ -979,3 +979,17 @@ console.log("calling demo function");
 demo();
 console.log("done, bye")
 
+console.log("Visualizing the Call Stack");
+function one(){
+    return 1;
+}
+
+function two(){
+    return one() + one();
+}
+
+function three(){
+    let ans = two() + one();
+    console.log(ans);
+}
+console.log(three());
