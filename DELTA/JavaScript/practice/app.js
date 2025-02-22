@@ -8,7 +8,7 @@
 // let output = `The total price is : ${pencilPrice} rupees.`;
 // console.log(output);
 
-// unary operators 
+// unary operators
 // console.log("unary operators")
 // let a = 10;
 // let b = 20;
@@ -79,7 +79,7 @@
 //     console.log("Not Defined")
 // }
 
-// Practice Qs 
+// Practice Qs
 // console.log("Practice Qs (Operators)");
 // let str = "apple"
 // if (str.length >= 3 && str[0] == "a") {
@@ -168,7 +168,7 @@
 //     console.log("It has false value.")
 // }
 
-// switch case 
+// switch case
 // let color = "red"
 // switch (color) {
 //     case "red":
@@ -184,7 +184,7 @@
 //         console.log("light is broken");
 // }
 
-// practice Qs to print the day of the week 
+// practice Qs to print the day of the week
 // console.log("print the day of the week")
 // let day = prompt("Enter the number")
 // let day = "4";
@@ -214,7 +214,7 @@
 //         console.log("invalid day");
 // }
 
-// learn alert and prompt 
+// learn alert and prompt
 // let firstNam = prompt("Enter first name:");
 // let lastNam = prompt("Enter last name:");
 // let msg = "Welcome " + firstNam + lastNam + "!";
@@ -287,7 +287,7 @@
 // console.log(allColors);
 // console.log(allColors.reverse());
 
-// slice in array 
+// slice in array
 // console.log("slice in array ")
 // let fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
 // console.log(fruits.slice());
@@ -337,7 +337,7 @@
 //     console.log(i);
 // }
 
-// multiplication table 
+// multiplication table
 // for (let i = 5; i < 50; i += 5) {
 //     console.log(i);
 // }
@@ -364,7 +364,7 @@
 //     i++;
 // }
 
-// favorite movie 
+// favorite movie
 // const favMovie = "avatar";
 // let guess = prompt("guess my favorite movie: ");
 // while( (guess != favMovie)){
@@ -455,7 +455,7 @@
 //     undefined: "e"
 // }
 // console.log(obj[1]);
-// console.log(obj.null); //data store in string format 
+// console.log(obj.null); //data store in string format
 
 // const student2 = {
 //     Name: "Kauhsik",
@@ -471,7 +471,7 @@
 // delete student2.marks;
 // console.log(student2);
 
-// nested objects 
+// nested objects
 // console.log("nested objects")
 // const classInfo = {
 //     aman: {
@@ -490,7 +490,7 @@
 // console.log(classInfo);
 // console.log(classInfo.kaushik.city);
 
-// array of objects 
+// array of objects
 // console.log("array of objects ")
 // const classInfo2 = [
 //     {
@@ -525,7 +525,7 @@
 // const randomInt = Math.floor(Math.random() * 100) + 1;
 // console.log(randomInt);
 
-//Functions 
+//Functions
 // function hello() {
 //     console.log("Hello Guys");
 // }
@@ -599,7 +599,7 @@
 //     let x = 5;
 //     let y = 6;
 //     function innerFunc() {
-//         // let a = 10;   not working 
+//         // let a = 10;   not working
 //         console.log(x);
 //     }
 //     innerFunc();
@@ -631,7 +631,7 @@
 // let greet = function () {
 //     console.log("Hello");
 // }
-// multipleGreet(greet, 79);  // insted of writing multiple time greet function we use this 
+// multipleGreet(greet, 79);  // insted of writing multiple time greet function we use this
 // multipleGreet(function () { console.log("namaste") }, 1000); //use another way
 
 // High order function returns
@@ -678,7 +678,7 @@
 // }
 // console.log(calculator2.add(5, 10));
 
-// this in JavaScript 
+// this in JavaScript
 // const student3 = {
 //     name3: "Kaushik",
 //     age: 20,
@@ -699,7 +699,7 @@
 // }
 // console.log(getAvg());
 
-// try and catch 
+// try and catch
 // console.log("Hello");
 // console.log("Hello");
 // let A  = 68;
@@ -711,7 +711,7 @@
 // console.log("Hello2");
 // console.log("Hello2");
 
-// arrow function 
+// arrow function
 // const sum4 = (a, b) => {
 //     console.log(a + b);
 // };
@@ -745,7 +745,7 @@
 // console.log(id);
 // clearInterval(id);  // it is used to stop
 
-// this with Arrow Functions 
+// this with Arrow Functions
 // const student4 = {
 //     name4 : "Kaushik",
 //     marks : 95,
@@ -774,7 +774,7 @@
 // const a1 = 5; //global scope
 // console.log(student4.getName());
 
-// Array Method 
+// Array Method
 // let arr8 = [1, 2, 3, 4, 5,];
 
 // arr8.forEach ((el) => {
@@ -795,12 +795,12 @@
 //     name : "Kaushik",
 //     age : 20,
 //     marks : 95.69
-// }, 
+// },
 // {
 //     name : "Rahul",
 //     age : 21,
 //     marks : 94.67
-// }, 
+// },
 // {
 //     name : "Mohan",
 //     age : 22,
@@ -815,7 +815,7 @@
 // });
 // console.log(gpa);
 
-// Map & Filter 
+// Map & Filter
 // let num9 = [1,2 ,3, 4];
 // let double = num9.map((el) =>{
 //     return el * 2;
@@ -848,7 +848,7 @@
 // console.log(everyy);
 // console.log(everyyy);
 
-// reduce methgod 
+// reduce methgod
 // let num3 = [1, 2, 3, 4];
 // let finalVal = num3.reduce((res, el) => res + el);
 // console.log(finalVal);
@@ -915,7 +915,7 @@
 // console.log(obj1);
 // console.log(obj2);
 
-// rest 
+// rest
 // function sum6(...args) {
 //     return args.reduce((sum, el) => sum + el)
 // }
@@ -934,7 +934,7 @@
 // }
 // console.log(min("Hello",2,3,4,1,5,6,7,8));
 
-// Destructuring 
+// Destructuring
 // let names = ["kaushik", "rohan", "nitesh", "aman", "rishi", "suman"];
 // let winner = names[0];
 // let runner = names[1];
@@ -942,7 +942,6 @@
 // let [winner, runner, runner2, ...others] = names;
 // console.log(winner);
 // console.log(others);
-
 
 // const student5 = {
 //     name: "karan",
@@ -962,7 +961,6 @@
 // console.log(user);
 
 // let{username: user, password: secret, city: place = "Mumbai"} = student5;  //here city is default, if city not defined then Mumbai shows
-
 
 // console.log("part 11");
 // function hello(){
@@ -1014,7 +1012,6 @@
 //     });
 // });
 
-
 // changeColor("orange", 2000);
 // changeColor("green", 3000);
 
@@ -1030,3 +1027,39 @@
 //     h1.style.color = "green";
 // }, 3000);
 
+function savetoDb(data, success, failure) {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+    if (internetSpeed > 4) {
+        success();
+    } else {
+        failure();
+    }
+}
+
+savetoDb(
+    "apna collage",
+    () => {
+        console.log("success: Your data was saved: ");
+        savetoDb(
+            "hello world",
+            () => {
+                console.log("success2: data2 saved.");
+                savetoDb(
+                    "kaushik",
+                    () => {
+                        console.log("success3: data3 saved");
+                    },
+                    () => {
+                        console.log("failure3: data3 failed");
+                    }
+                );
+            },
+            () => {
+                console.log("failure2: weak connection.");
+            }
+        );
+    },
+    () => {
+        console.log("failure: weak connection. data not saved");
+    }
+);
