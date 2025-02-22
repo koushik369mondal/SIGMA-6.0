@@ -732,7 +732,7 @@ console.log(multi(3, 5));
 console.log("Hi there!");
 setTimeout(() => {
     console.log("Apna College");
-}, 2000);
+});
 console.log("Welcome to ");
 
 // setInterval(() => {
@@ -741,7 +741,7 @@ console.log("Welcome to ");
 
 let id = setInterval(() => {
     console.log("Hello Guys");
-}, 3000);
+});
 console.log(id);
 clearInterval(id);  // it is used to stop
 
@@ -761,12 +761,12 @@ const student4 = {
     getInfo1: function(){
         setTimeout( () => {
             console.log(this); //student
-        }, 2000);
+        });
     },
     getInfo2: function(){
         setTimeout( function() {
             console.log(this); //window
-        }, 2000);
+        });
     },
 };
 console.log(student4.getInfo1());
@@ -962,3 +962,20 @@ const student5 = {
 // console.log(user);
 
 let{username: user, password: secret, city: place = "Mumbai"} = student5;  //here city is default, if city not defined then Mumbai shows
+
+
+console.log("part 11");
+function hello(){
+    console.log("inside hello function")
+    console.log("Hello");
+}
+
+function demo(){
+    console.log("calling hello function")
+    hello();
+}
+
+console.log("calling demo function");
+demo();
+console.log("done, bye")
+
