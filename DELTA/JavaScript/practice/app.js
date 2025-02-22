@@ -1067,14 +1067,32 @@
 function savetoDb(data) {
     return new Promise((resolve, reject) => {
         let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if(internetSpeed > 4){
+        if (internetSpeed > 4) {
             resolve("success: data was saved");
         }
-        else{
+        else {
             reject("failure: weak connection");
         }
     });
-    
+
 }
 
-savetoDb("apna collage");
+// let request = savetoDb("apna collage"); //req = promise object
+// request 
+//     .then(() => {
+//         console.log("promise was resolved");
+//         console.log(request);
+//     })
+//     .catch(() => {
+//         console.log("promise was rejected");
+//         console.log(request);
+//     })
+
+//more compact 
+savetoDb("apna collage")
+    .then(() => {
+        console.log("promise was resolved");
+    })
+    .catch(() => {
+        console.log("promise was rejected");
+    });
