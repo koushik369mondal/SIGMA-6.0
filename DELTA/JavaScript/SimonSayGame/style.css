@@ -1,8 +1,13 @@
-body{
+body {
     text-align: center;
 }
 
-.btn{
+h2, h3 {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.btn {
     height: 200px;
     width: 200px;
     border-radius: 20%;
@@ -10,31 +15,32 @@ body{
     margin: 2rem;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.yellow{
+.yellow {
     background-color: #f99b45;
 }
 
-.red{
+.red {
     background-color: #d95980;
 }
 
-.purple{
+.purple {
     background-color: #819ff9;
 }
 
-.green{
+.green {
     background-color: #63aac0;
 }
 
-.flash{
+.flash {
     background-color: white;
 }
 
-.userFlash{
+.userFlash {
     background-color: green;
 }
