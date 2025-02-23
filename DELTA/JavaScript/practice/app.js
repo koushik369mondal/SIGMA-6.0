@@ -1091,7 +1091,15 @@ function savetoDb(data) {
 //more compact 
 savetoDb("apna collage")
     .then(() => {
-        console.log("promise was resolved");
+        console.log("data1 saved.");
+        return savetoDb("helloworld");
+    })
+    .then(() => {
+        console.log("data2 saved.");
+        return savetoDb("kaushik");
+    })
+    .then(() => {
+        console.log("data3 saved.");
     })
     .catch(() => {
         console.log("promise was rejected");
