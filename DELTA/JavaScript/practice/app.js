@@ -995,14 +995,33 @@
 // JS is Single Threaded
 // it is asynchronous because it follow step by step
 
-// h1 = document.querySelector("h1");
+h1 = document.querySelector("h1");
 
-// function changeColor(color, delay, nextColorChange){
-//     setTimeout(() =>{
-//         h1.style.color = color;
-//         if(nextColorChange) nextColorChange();
-//     }, delay);
-// }
+function changeColor(color, delay){
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            h1.style.color = color;
+            resolve("color changed");
+        }, delay);
+    })
+}
+
+changeColor("red", 1000)
+.then(() => {
+    console.log("red color was completed");
+    return changeColor("orange", 1000);
+})
+.then(() => {
+    console.log("orange color was completed");
+    return changeColor("green", 1000);
+})
+.then(() => {
+    console.log("green color was completed");
+    return changeColor("blue", 1000);
+})
+.then(() => {
+    console.log("blue color was completed");
+})
 
 // changeColor("red", 1000, () =>{
 //     changeColor("orange", 1000, () =>{
@@ -1064,18 +1083,18 @@
 //     }
 // );
 
-function savetoDb(data) {
-    return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if (internetSpeed > 4) {
-            resolve("success: data was saved");
-        }
-        else {
-            reject("failure: weak connection");
-        }
-    });
+// function savetoDb(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if (internetSpeed > 4) {
+//             resolve("success: data was saved");
+//         }
+//         else {
+//             reject("failure: weak connection");
+//         }
+//     });
 
-}
+// }
 
 // let request = savetoDb("apna collage"); //req = promise object
 // request 
@@ -1089,22 +1108,22 @@ function savetoDb(data) {
 //     })
 
 //more compact 
-savetoDb("apna collage")
-    .then((result) => {
-        console.log("data1 saved.");
-        console.log("result of promise: ",result);
-        return savetoDb("helloworld");
-    })
-    .then((result) => {
-        console.log("data2 saved.");
-        console.log("result of promise: ",result);
-        return savetoDb("kaushik");
-    })
-    .then((result) => {
-        console.log("data3 saved.");
-        console.log("result of promise: ",result);
-    })
-    .catch((error) => {
-        console.log("promise was rejected");
-        console.log("result of promise: ",error);
-    });
+// savetoDb("apna collage")
+//     .then((result) => {
+//         console.log("data1 saved.");
+//         console.log("result of promise: ",result);
+//         return savetoDb("helloworld");
+//     })
+//     .then((result) => {
+//         console.log("data2 saved.");
+//         console.log("result of promise: ",result);
+//         return savetoDb("kaushik");
+//     })
+//     .then((result) => {
+//         console.log("data3 saved.");
+//         console.log("result of promise: ",result);
+//     })
+//     .catch((error) => {
+//         console.log("promise was rejected");
+//         console.log("result of promise: ",error);
+//     });
