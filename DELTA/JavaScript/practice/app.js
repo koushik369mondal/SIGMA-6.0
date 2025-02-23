@@ -1090,17 +1090,21 @@ function savetoDb(data) {
 
 //more compact 
 savetoDb("apna collage")
-    .then(() => {
+    .then((result) => {
         console.log("data1 saved.");
+        console.log("result of promise: ",result);
         return savetoDb("helloworld");
     })
-    .then(() => {
+    .then((result) => {
         console.log("data2 saved.");
+        console.log("result of promise: ",result);
         return savetoDb("kaushik");
     })
-    .then(() => {
+    .then((result) => {
         console.log("data3 saved.");
+        console.log("result of promise: ",result);
     })
-    .catch(() => {
+    .catch((error) => {
         console.log("promise was rejected");
+        console.log("result of promise: ",error);
     });
