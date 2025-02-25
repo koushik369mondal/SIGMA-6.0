@@ -995,39 +995,39 @@
 // JS is Single Threaded
 // it is asynchronous because it follow step by step
 
-h1 = document.querySelector("h1");
+// h1 = document.querySelector("h1");
 
-function changeColor(color, delay){
-    return new Promise((resolve, reject) => {
-        setTimeout(() =>{
-            let num = Math.floor(Math.random() * 5) +1;
-            if(num > 3) {
-                reject("promise rejected");
-            }
+// function changeColor(color, delay){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() =>{
+//             let num = Math.floor(Math.random() * 5) +1;
+//             if(num > 3) {
+//                 reject("promise rejected");
+//             }
 
-            h1.style.color = color;
-            console.log(`color changed to ${color}`)
-            resolve("color changed");
-        }, delay);
-    });
-}
+//             h1.style.color = color;
+//             console.log(`color changed to ${color}`)
+//             resolve("color changed");
+//         }, delay);
+//     });
+// }
 
-async function demo() {
-    try{
-        await changeColor("red", 1000);
-        await changeColor("orange", 1000);
-        await changeColor("green", 1000);
-        changeColor("blue", 1000);
-    }
-    catch(err){
-        console.log("error caught");
-        console.log(err);
-    }
+// async function demo() {
+//     try{
+//         await changeColor("red", 1000);
+//         await changeColor("orange", 1000);
+//         await changeColor("green", 1000);
+//         changeColor("blue", 1000);
+//     }
+//     catch(err){
+//         console.log("error caught");
+//         console.log(err);
+//     }
 
-    let a = 5;
-    console.log(a);
-    console.log("new number = ", a + 3);
-}
+//     let a = 5;
+//     console.log(a);
+//     console.log("new number = ", a + 3);
+// }
 
 // changeColor("red", 1000)
 // .then(() => {
@@ -1188,3 +1188,14 @@ async function demo() {
 //     getNum();
 //     getNum();
 // }
+
+let jsonRes = 
+    '{"fact":"Purring does not always indicate that a cat is happy. Cats will also purr loudly when they are distressed or in pain.","length":117}';
+
+let validRes = JSON.parse(jsonRes);
+console.log(validRes);
+
+let Student = {
+    name: "John",
+    age: 20,
+};
