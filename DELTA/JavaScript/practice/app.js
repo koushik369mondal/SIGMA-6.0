@@ -1189,13 +1189,37 @@
 //     getNum();
 // }
 
-let jsonRes = 
-    '{"fact":"Purring does not always indicate that a cat is happy. Cats will also purr loudly when they are distressed or in pain.","length":117}';
+// let jsonRes = 
+//     '{"fact":"Purring does not always indicate that a cat is happy. Cats will also purr loudly when they are distressed or in pain.","length":117}';
 
-let validRes = JSON.parse(jsonRes);
-console.log(validRes);
+// let validRes = JSON.parse(jsonRes);
+// console.log(validRes);
 
-let Student = {
-    name: "John",
-    age: 20,
-};
+// let Student = {
+//     name: "John",
+//     age: 20,
+// };
+
+// https://icanhazdadjoke.com/api
+// https://hoppscotch.io/
+
+let url = "https://catfact.ninja/fact";
+fetch(url)
+.then((res) => {
+    return res.json();
+})
+.then((data) => {
+    console.log("data1 = ",data.fact);
+    return fetch(url);
+})
+.then((res) => {
+    return res.json();
+})
+.then((data2) => {
+    console.log("data2 = ",data2.fact);
+})
+.catch((err) => {
+    console.log("ERROR", err);
+});
+
+console.log("I am happy");
