@@ -1203,27 +1203,27 @@
 // https://icanhazdadjoke.com/api
 // https://hoppscotch.io/
 
-let btn = document.querySelector("button");
-let url2 = "https://dog.ceo/api/breeds/image/random";
+// let btn = document.querySelector("button");
+// let url2 = "https://dog.ceo/api/breeds/image/random";
 
-btn.addEventListener("click", async () => {
-    let link = await getImage();
-    console.log(link);
-    let img = document.querySelector("img");
+// btn.addEventListener("click", async () => {
+//     let link = await getImage();
+//     console.log(link);
+//     let img = document.querySelector("img");
     // img.src = link;
-    img.setAttribute("src", link);
-});
+//     img.setAttribute("src", link);
+// });
 
-async function getImage() {
-    try{
-        let res = await axios.get(url2);
-        return res.data.message;
-    }
-    catch(e){
-        console.log("Error = ", e);
-        return "No fact found";
-    }
-}
+// async function getImage() {
+//     try{
+//         let res = await axios.get(url2);
+//         return res.data.message;
+//     }
+//     catch(e){
+//         console.log("Error = ", e);
+//         return "No fact found";
+//     }
+// }
 
 // btn.addEventListener("click", async () => {
 //     let fact = await getfacts();
@@ -1281,3 +1281,16 @@ async function getImage() {
 
 //     console.log("bye")
 // }
+
+const url = "https://icanhazdadjoke.com/";
+
+async function getJokes() {
+    try{
+        const config = {headers: {Accept: "application/json"}};
+        let res = await axios.get(url, config);
+        console.log(res.data);
+    }
+    catch(err){
+        console.log(err);
+    }
+}
