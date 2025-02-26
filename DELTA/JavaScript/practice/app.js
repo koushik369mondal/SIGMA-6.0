@@ -1282,15 +1282,48 @@
 //     console.log("bye")
 // }
 
-const url = "https://icanhazdadjoke.com/";
+// const url = "https://icanhazdadjoke.com/";
 
-async function getJokes() {
-    try{
-        const config = {headers: {Accept: "application/json"}};
-        let res = await axios.get(url, config);
-        console.log(res.data);
+// async function getJokes() {
+//     try{
+//         const config = {headers: {Accept: "application/json"}};
+//         let res = await axios.get(url, config);
+//         console.log(res.data);
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+
+let url = "http://universities.hipolabs.com/search?name=";
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", async() => {
+    let country = document.querySelector("input").value;
+    console.log(country);
+
+    let colArr = await getCollages(country);
+    show(colArr);
+});
+
+function show(colArr){
+    let list = document.querySelector("#list");
+    list.innerHTML = "";
+    for (col of colArr){
+        console.log(col.name);
+        let li = document.createElement("li");
+        li.innerText = col.name;
+        list.appendChild(li);
     }
-    catch(err){
-        console.log(err);
+}
+
+async function getCollages(country) {
+    try{
+        let res = await axios.get(url + country);
+        return res.data;
+    }
+    catch(e){
+        console.log("ERROR : ",e);
+        return [];
     }
 }
