@@ -1203,7 +1203,28 @@
 // https://icanhazdadjoke.com/api
 // https://hoppscotch.io/
 
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", async () => {
+    let fact = await getfacts();
+    // console.log(fact);
+    let p = document.querySelector("#result");
+    p.innerHTML = fact;
+})
+
 let url = "https://catfact.ninja/fact";
+
+async function getfacts() {
+    try{
+        let res = await axios.get(url);
+        return res.data.fact;
+    }
+    catch(e){
+        console.log("Error = ", e);
+        return "No fact found";
+    }
+}
+
 // fetch(url)
 // .then((res) => {
 //     return res.json();
@@ -1224,19 +1245,19 @@ let url = "https://catfact.ninja/fact";
 
 // console.log("I am happy");
 
-async function getfacts() {
-    try{
-        let res = await fetch(url);
-        let data = await res.json();
-        console.log(data.fact);
+// async function getfacts() {
+//     try{
+//         let res = await fetch(url);
+//         let data = await res.json();
+//         console.log(data.fact);
 
-        let res2 = await fetch(url);
-        let data2 = await res2.json();
-        console.log(data2.fact);
-    }
-    catch(e){
-        console.log("Error", e);
-    }
+//         let res2 = await fetch(url);
+//         let data2 = await res2.json();
+//         console.log(data2.fact);
+//     }
+//     catch(e){
+//         console.log("Error", e);
+//     }
 
-    console.log("bye")
-}
+//     console.log("bye")
+// }
