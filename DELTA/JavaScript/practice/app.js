@@ -1204,26 +1204,46 @@
 // https://hoppscotch.io/
 
 let btn = document.querySelector("button");
+let url2 = "https://dog.ceo/api/breeds/image/random";
 
 btn.addEventListener("click", async () => {
-    let fact = await getfacts();
-    // console.log(fact);
-    let p = document.querySelector("#result");
-    p.innerHTML = fact;
-})
+    let link = await getImage();
+    console.log(link);
+    let img = document.querySelector("img");
+    // img.src = link;
+    img.setAttribute("src", link);
+});
 
-let url = "https://catfact.ninja/fact";
-
-async function getfacts() {
+async function getImage() {
     try{
-        let res = await axios.get(url);
-        return res.data.fact;
+        let res = await axios.get(url2);
+        return res.data.message;
     }
     catch(e){
         console.log("Error = ", e);
         return "No fact found";
     }
 }
+
+// btn.addEventListener("click", async () => {
+//     let fact = await getfacts();
+//     console.log(fact);
+//     let p = document.querySelector("#result");
+//     p.innerHTML = fact;
+// })
+
+// let url = "https://catfact.ninja/fact";
+
+// async function getfacts() {
+//     try{
+//         let res = await axios.get(url);
+//         return res.data.fact;
+//     }
+//     catch(e){
+//         console.log("Error = ", e);
+//         return "No fact found";
+//     }
+// }
 
 // fetch(url)
 // .then((res) => {
