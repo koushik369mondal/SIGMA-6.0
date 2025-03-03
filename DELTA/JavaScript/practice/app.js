@@ -1295,35 +1295,72 @@
 //     }
 // }
 
-let url = "http://universities.hipolabs.com/search?name=";
+// let url = "http://universities.hipolabs.com/search?name=";
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", async() => {
+//     let country = document.querySelector("input").value;
+//     console.log(country);
+
+//     let colArr = await getCollages(country);
+//     show(colArr);
+// });
+
+// function show(colArr){
+//     let list = document.querySelector("#list");
+//     list.innerHTML = "";
+//     for (col of colArr){
+//         console.log(col.name);
+//         let li = document.createElement("li");
+//         li.innerText = col.name;
+//         list.appendChild(li);
+//     }
+// }
+
+// async function getCollages(country) {
+//     try{
+//         let res = await axios.get(url + country);
+//         return res.data;
+//     }
+//     catch(e){
+//         console.log("ERROR : ",e);
+//         return [];
+//     }
+// }
+
+let url = "http://universities.hipolabs.com/search?country=India"; // Fixed India in the API URL
 let btn = document.querySelector("button");
 
-btn.addEventListener("click", async() => {
-    let country = document.querySelector("input").value;
-    console.log(country);
+btn.addEventListener("click", async () => {
+    let state = document.querySelector("input").value; // Take state-province input instead of country
+    console.log(state);
 
-    let colArr = await getCollages(country);
+    let colArr = await getColleges(state); // Call getColleges function with state input
     show(colArr);
 });
 
-function show(colArr){
+function show(colArr) {
     let list = document.querySelector("#list");
     list.innerHTML = "";
-    for (col of colArr){
+    for (let col of colArr) {
         console.log(col.name);
         let li = document.createElement("li");
-        li.innerText = col.name;
+        li.innerText = `${col.name} (${col["state-province"] || "Unknown State"})`; // Display name and state-province
         list.appendChild(li);
     }
 }
 
-async function getCollages(country) {
-    try{
-        let res = await axios.get(url + country);
-        return res.data;
-    }
-    catch(e){
-        console.log("ERROR : ",e);
+async function getColleges(state) {
+    try {
+        let res = await axios.get(url); // Fetch all universities in India
+        let data = res.data;
+
+        // Filter universities based on state-province input
+        let filtered = data.filter(col => col["state-province"] && col["state-province"].toLowerCase().includes(state.toLowerCase()));
+
+        return filtered;
+    } catch (e) {
+        console.log("ERROR: ", e);
         return [];
     }
 }
