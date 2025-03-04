@@ -11,9 +11,15 @@
 //     console.log("Hello and welcome to ",args[i]);
 // }
 
-const someValue = require("./math");
+// const someValue = require("./math");
 
-console.log(someValue);
+// console.log(someValue);
 
-console.log(someValue.sum(2, 3));
-console.log(someValue.Pi);
+// console.log(someValue.sum(2, 3));
+// console.log(someValue.Pi);
+
+const info = require("./Fruits");
+
+// console.log(info);
+// console.log(info[0]);
+console.log(info[0].name);
