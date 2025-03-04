@@ -18,8 +18,21 @@
 // console.log(someValue.sum(2, 3));
 // console.log(someValue.Pi);
 
-const info = require("./Fruits");
+// const info = require("./Fruits");
 
 // console.log(info);
 // console.log(info[0]);
-console.log(info[0].name);
+// console.log(info[0].name);
+
+import { createRequire } from "module"; 
+const require = createRequire(import.meta.url);
+const figlet = require("figlet");
+
+figlet("Hello, Kaushik!", function (err, data) {
+    if (err) {
+        console.log("Something went wrong...");
+        console.dir(err);
+        return;
+    }
+    console.log(data);
+});
