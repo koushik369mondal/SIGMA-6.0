@@ -24,15 +24,22 @@
 // console.log(info[0]);
 // console.log(info[0].name);
 
-import { createRequire } from "module"; 
-const require = createRequire(import.meta.url);
-const figlet = require("figlet");
+// import { createRequire } from "module"; 
+// const require = createRequire(import.meta.url);
+// const figlet = require("figlet");
 
-figlet("Hello, Kaushik!", function (err, data) {
-    if (err) {
-        console.log("Something went wrong...");
-        console.dir(err);
-        return;
-    }
-    console.log(data);
-});
+// figlet("Hello, Kaushik!", function (err, data) {
+//     if (err) {
+//         console.log("Something went wrong...");
+//         console.dir(err);
+//         return;
+//     }
+//     console.log(data);
+// });
+
+
+import {sum, Pi} from "./math.js";
+import { generate} from "random-words";
+
+// console.log(sum(2, 3));
+console.log(generate());
