@@ -3,9 +3,10 @@ const app = express();
 const path = require('path'); //set path to run from backend
 
 let port = 8081;
-
+app.use(express.static(path.join(__dirname, "public/css") ));
+app.use(express.static(path.join(__dirname, "public/js") ));
 app.set("view engine", "ejs");
-app.set("views",path.join(__dirname, "views")); //set this to access from backend
+app.set("views",path.join(__dirname, "/views")); //set this to access from backend
 
 app.get("/", (req, res) => {
     res.render("home.ejs");
