@@ -12,6 +12,12 @@ app.get("/", (req, res) => {
     res.render("home.ejs");
 });
 
+app.get("/ig/:username", (req, res) => {
+    let {username } = req.params;
+    // console.log(`Hello, ${username}!`);
+    res.render("instagram.ejs", {username});
+})
+
 app.get("/hello", (req, res) => {
     res.send("Hello");
 });
