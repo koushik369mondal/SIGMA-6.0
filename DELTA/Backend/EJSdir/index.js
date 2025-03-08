@@ -8,15 +8,20 @@ app.set("view engine", "ejs");
 app.set("views",path.join(__dirname, "views")); //set this to access from backend
 
 app.get("/", (req, res) => {
-    // res.send("This is home page");
     res.render("home.ejs");
 });
 
 app.get("/ig/:username", (req, res) => {
-    const followers = ["Alice", "Bob", "Charlie", "David", "Eve"  ];
     let {username } = req.params;
-    // console.log(`Hello, ${username}!`);
-    res.render("instagram.ejs", {username, followers});
+    const instaData = require("./data.json");
+    const data = instaData[username];
+    // console.log(data);
+    if(data){
+        res.render("instagram.ejs",{data});
+    }
+    else{
+        res.render("error.ejs");
+    }
 })
 
 app.get("/hello", (req, res) => {
