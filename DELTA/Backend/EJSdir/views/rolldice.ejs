@@ -11,7 +11,12 @@
     <!-- <h1>Dice gave value: <%= Math.floor(Math.random() * 6) + 1 %>
     </h1> -->
 
-    <h1>Dice gave value: <%= diceVal %></h1>
+    <h1>Dice gave value: <%= diceVal %>
+    </h1>
+
+    <% if(diceVal==6) { %>
+        <h2>Nice! roll dice again.</h2>
+        <% } %>
 </body>
 
 </html>
