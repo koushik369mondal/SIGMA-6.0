@@ -19,6 +19,18 @@ app.get('/:username/:id', (req, res) => {
     // res.send(`Welcome ${username} with id ${id} to the root path!`);
 });
 
+app.get("/search", (req, res) => {
+    // console.log(req.query);
+    let {q} = req.query;
+    // res.send(`Search results for query: ${q}`);
+    if(!q){
+        res.send("<h1>Nothing searched</h1>");
+        return;
+    }
+    let htmlString = `<h1>Search results for query: ${q}</h1>`;
+    res.send(htmlString);
+})
+
 
 // app.get('/apple', (req, res) => {
 //     res.send("you contacted to apple path");
