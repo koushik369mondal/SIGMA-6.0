@@ -30,14 +30,24 @@
 // let p2 = personMaker("Gaurav", 39);
 
 //constructors - does not return anything & start with capital
-function Person(name, age){
-    this.name = name;
-    this.age = age;
-    console.log(this);
-}
+// function Person(name, age){
+//     this.name = name;
+//     this.age = age;
+//     console.log(this);
+// }
 
-Person.prototype.talk = function(){
-    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+// Person.prototype.talk = function(){
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+// }
+
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    talk(){
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
 }
 
 let p1 = new Person("kaushik", 20);
