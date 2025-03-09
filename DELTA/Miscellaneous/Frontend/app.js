@@ -40,16 +40,74 @@
 //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
 // }
 
-class Person {
-    constructor(name, age){
+// class Person {
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     talk(){
+//         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//     }
+// }
+
+// let p1 = new Person("kaushik", 20);
+// let p2 = new Person("Gaurav", 39);
+
+// class person {
+//     constructor(name, age){
+//         console.log("person class constructor")
+//         this.name = name;
+//         this.age = age;
+//     }
+//     talk(){
+//         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//     }
+// }
+
+// class student extends person {
+//     constructor(name, age, marks){
+//         console.log("student class constructor");
+//         super(name, age);  // call parent constructor
+//         this.marks = marks;
+//     }
+// }
+// class teacher extends person{
+//     constructor(name, age, subject){
+//         console.log("teacher class constructor");
+//         super(name, age);  // call parent constructor
+//         this.subject = subject;
+//     }
+// }
+
+class Mammal {
+    constructor(name){
         this.name = name;
-        this.age = age;
+        this.type = "warm-bloded";
     }
-    talk(){
-        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    eat(){
+        console.log(`${this.name} is eating.`);
     }
 }
 
-let p1 = new Person("kaushik", 20);
-let p2 = new Person("Gaurav", 39);
+class Dog extends Mammal {
+    constructor(name){
+        super(name);
+    }
+    bark(){
+        console.log(`wooff...`);
+    }
+}
 
+class Cat extends Mammal {
+    constructor(name){
+        super(name);
+    }
+    mew(){
+        console.log(`mew...`);
+    }
+    
+    //override
+    eat(){
+        console.log(`${this.name} is eating cat food.`);
+    }
+}
