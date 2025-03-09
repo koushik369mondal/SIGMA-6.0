@@ -79,35 +79,60 @@
 //     }
 // }
 
-class Mammal {
-    constructor(name){
+// class Mammal {
+//     constructor(name){
+//         this.name = name;
+//         this.type = "warm-bloded";
+//     }
+//     eat(){
+//         console.log(`${this.name} is eating.`);
+//     }
+// }
+
+// class Dog extends Mammal {
+//     constructor(name){
+//         super(name);
+//     }
+//     bark(){
+//         console.log(`wooff...`);
+//     }
+// }
+
+// class Cat extends Mammal {
+//     constructor(name){
+//         super(name);
+//     }
+//     mew(){
+//         console.log(`mew...`);
+//     }
+
+//     //override
+//     eat(){
+//         console.log(`${this.name} is eating cat food.`);
+//     }
+// }
+
+class Box {
+    constructor(name, l, b){
         this.name = name;
-        this.type = "warm-bloded";
+        this.l = l;
+        this.b = b;
     }
-    eat(){
-        console.log(`${this.name} is eating.`);
-    }
-}
-
-class Dog extends Mammal {
-    constructor(name){
-        super(name);
-    }
-    bark(){
-        console.log(`wooff...`);
+    area(){
+        let area = this.l * this.b;
+        console.log(`Box area is ${area}`);
     }
 }
 
-class Cat extends Mammal {
-    constructor(name){
-        super(name);
+class Square extends Box{
+    constructor(a){
+        super("Square", a, a);
     }
-    mew(){
-        console.log(`mew...`);
-    }
-    
-    //override
-    eat(){
-        console.log(`${this.name} is eating cat food.`);
+    area(){
+        let area = this.l * this.b;
+        console.log(`Square area is ${area}`);
     }
 }
+
+let sq1 = new Square(4);
+sq1.area();
