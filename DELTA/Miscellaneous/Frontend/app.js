@@ -15,16 +15,31 @@
 // "abc".toLocaleUpperCase == "xyz".toLocaleUpperCase
 // true
 
-function personMaker(name, age){
-    const person = {
-        name : name,
-        age : age,
-        talk() {
-            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-        },
-    };
-    return person;
+// function personMaker(name, age){
+//     const person = {
+//         name : name,
+//         age : age,
+//         talk() {
+//             console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//         },
+//     };
+//     return person;
+// }
+
+// let p1 = personMaker("kaushik", 20);
+// let p2 = personMaker("Gaurav", 39);
+
+//constructors - does not return anything & start with capital
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+    console.log(this);
 }
 
-let p1 = personMaker("kaushik", 20);
-let p2 = personMaker("Gaurav", 39);
+Person.prototype.talk = function(){
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+}
+
+let p1 = new Person("kaushik", 20);
+let p2 = new Person("Gaurav", 39);
+
