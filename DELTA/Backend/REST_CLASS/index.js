@@ -49,9 +49,18 @@ app.post('/posts', (req, res) => {
 app.get("/posts/:id", (req, res) => {
     let {id} = req.params;
     console.log(id);
-    let post = posts.find(p => id === p.id);
+    let post = posts.find((p) => id === p.id);
     res.render('show.ejs',{post});
 });
+
+app.patch("/posts/:id", (req, res) => {
+    let {id} = req.params;
+    let newContent = req.body.content;
+    let post = posts.find((p) => id === p.id);
+    post.content = newContent;
+    console.log(post);
+    res.send("patch request working");
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
