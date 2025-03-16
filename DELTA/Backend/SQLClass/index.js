@@ -23,6 +23,7 @@ let getRandomUser = () => {
     ];
 };
 
+//Home Route
 app.get("/", (req, res) => {
     let q = `SELECT count(*) FROM user`;
     try {
@@ -34,7 +35,22 @@ app.get("/", (req, res) => {
     }
     catch (err) {
         console.log(err);
-        res.send("some error in db");
+        res.send("some error in DB");
+    }
+});
+
+//Show Route
+app.get("/user", (req, res) => {
+    let q = `SELECT * FROM user`;
+    try {
+        connection.query(q, (err, users) => {
+            if (err) throw err;
+            res.render("showusers.ejs", {users});
+        });
+    }
+    catch (err) {
+        console.log(err);
+        res.send("some error in DB");
     }
 });
 
@@ -42,19 +58,5 @@ app.listen("8080", () => {
     console.log("Server is running on port 8080");
 });
 
-// try{
-//     connection.query(q, [data], (err, result) => {
-//         if(err) throw err;
-//         console.log(result);
-//         console.log(result.length);
-//         console.log(result[0]);
-//         console.log(result[1]);
-//     })
-// }
-// catch(err) {
-//     console.log(err);
-// }
-
-// connection.end();
 
 
