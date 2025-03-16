@@ -1,5 +1,7 @@
 const { faker } = require('@faker-js/faker');
 const mysql = require('mysql2');
+const express = require('express');
+const app = express();
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -17,26 +19,38 @@ let getRandomUser = () => {
     ];
 };
 
-//Inserting new data
-let  q = "INSERT INTO user(id, username, email, password) VALUES ?";
-let data = [];
-for(let i=1; i<=100; i++) {
-    data.push(getRandomUser());  //100 fake users
-}
+app.get("/", (req, res) => {
+    let q = `SELECT count(*) FROM user`;
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            console.log(result[0]["count(*)"]);
+            res.send("Success");
+        });
+    }
+    catch (err) {
+        console.log(err);
+        res.send("Some error in DB");
+    }
+});
 
-try{
-    connection.query(q, [data], (err, result) => {
-        if(err) throw err;
-        console.log(result);
-        console.log(result.length);
-        console.log(result[0]);
-        console.log(result[1]);
-    })
-} 
-catch(err) {
-    console.log(err);
-}
+app.listen("8080", () => {
+    console.log("Server is running on port 8080");
+});
 
-connection.end();
+// try{
+//     connection.query(q, [data], (err, result) => {
+//         if(err) throw err;
+//         console.log(result);
+//         console.log(result.length);
+//         console.log(result[0]);
+//         console.log(result[1]);
+//     })
+// }
+// catch(err) {
+//     console.log(err);
+// }
+
+// connection.end();
 
 
