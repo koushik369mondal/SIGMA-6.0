@@ -19,5 +19,26 @@ const userSchema = new mongoose.Schema({
     age: Number,
 })
 
-// const User = mongoose.model('User', userSchema);
-const Employee = mongoose.model('Employee', userSchema);
+const User = mongoose.model('User', userSchema);
+
+const user2 = new User({
+    name: "Eve",
+    email: "eve@mail.com",
+    age: 25,
+});
+
+user2
+    .save()
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+
+
+
+
+
+
