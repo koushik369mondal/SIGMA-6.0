@@ -19,4 +19,5 @@ const userSchema = new mongoose.Schema({
     age: Number,
 })
 
-const User = mongoose.model('User', userSchema);
+// const User = mongoose.model('User', userSchema);
+const Employee = mongoose.model('Employee', userSchema);
