@@ -24,14 +24,17 @@ const bookSchema = new mongoose.Schema({
     price: {
         type: Number,
     },
+    discount: {
+        type: Number,
+        default: 0,
+    },
 });
 
 const Book = mongoose.model('Book', bookSchema);
 
 let book1 = new Book({
-    title: "How to kill a Mockingbird",
-    author: "Harper Lee",
-    price: "800",
+    title: "Gone Girl",
+    price: "399",
 });
 book1.save().then((res) => {
     console.log(res);
