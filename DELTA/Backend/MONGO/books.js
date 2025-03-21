@@ -14,7 +14,13 @@ async function main() {
 }
 
 const bookSchema = new mongoose.Schema({
-    title: String,
-    author: String,
-    price: Number,
+    title: {
+        type: String,
+    },
+    author: {
+        type: String,
+    },
+    price: {
+        type: Number,
+    },
 });
