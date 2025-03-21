@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-User.find({_id: '67dc6e47c93a00e68098f4f8'})
+User.findById('67dc6e47c93a00e68098f4f8')
 .then((res) => {
     console.log(res);
 }).catch((err) => {
