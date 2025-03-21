@@ -16,6 +16,7 @@ async function main() {
 const bookSchema = new mongoose.Schema({
     title: {
         type: String,
+        required: true,
     },
     author: {
         type: String,
