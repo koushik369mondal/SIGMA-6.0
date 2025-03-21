@@ -33,15 +33,16 @@ const bookSchema = new mongoose.Schema({
     category: {
         type: String,
         enum: ['fiction', 'non-fiction'],
-    }
+    },
+    genre: [String],
 });
 
 const Book = mongoose.model('Book', bookSchema);
 
 let book1 = new Book({
-    title: "Marvel Comics",
+    title: "Marvel Comics V2.0",
     price: "599",
-    category: "fiction",
+    genre: ["comics", "superheroes", "fiction"],
 });
 book1.save().then((res) => {
     console.log(res);
