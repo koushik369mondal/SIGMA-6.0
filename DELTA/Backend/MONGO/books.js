@@ -48,7 +48,7 @@ Book.findByIdAndUpdate(
         console.log(res);
     })
     .catch((err) => {
-        console.log(err);
+        console.log(err.errors.price.properties.message);
     });
 
 // let book1 = new Book({
