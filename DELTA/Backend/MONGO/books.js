@@ -25,3 +25,5 @@ const bookSchema = new mongoose.Schema({
         type: Number,
     },
 });
+
+const Book = mongoose.model('Book', bookSchema);
