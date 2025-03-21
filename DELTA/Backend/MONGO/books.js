@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 main()
     .then((res) => {
-        console.log('Connection Successful');
+        console.log("Connection Successful");
     })
     .catch((err) => {
         console.log(err);
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/amazon');
+    await mongoose.connect("mongodb://127.0.0.1:27017/amazon");
 }
 
 const bookSchema = new mongoose.Schema({
@@ -32,15 +32,19 @@ const bookSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        enum: ['fiction', 'non-fiction'],
+        enum: ["fiction", "non-fiction"],
     },
     genre: [String],
 });
 
-const Book = mongoose.model('Book', bookSchema);
+const Book = mongoose.model("Book", bookSchema);
 
-Book.findByIdAndUpdate("67dd392c06e21405cfcf64f4", { price: -500 })
-.then((res) => {
+Book.findByIdAndUpdate(
+    "67dd392c06e21405cfcf64f4",
+    { price: -100 },
+    { runValidators: true }
+)
+    .then((res) => {
         console.log(res);
     })
     .catch((err) => {
