@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-User.deleteOne({name: "Rohit"}).then((res) => {
+User.deleteMany({age: "25"}).then((res) => {
     console.log(res);
 })
 
