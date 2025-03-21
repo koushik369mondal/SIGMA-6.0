@@ -17,24 +17,31 @@ const bookSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+        maxLength: 20,
     },
     author: {
         type: String,
     },
     price: {
         type: Number,
+        min: 1,
     },
     discount: {
         type: Number,
         default: 0,
     },
+    category: {
+        type: String,
+        enum: ['fiction', 'non-fiction'],
+    }
 });
 
 const Book = mongoose.model('Book', bookSchema);
 
 let book1 = new Book({
-    title: "Gone Girl",
-    price: "399",
+    title: "Marvel Comics",
+    price: "599",
+    category: "fiction",
 });
 book1.save().then((res) => {
     console.log(res);
