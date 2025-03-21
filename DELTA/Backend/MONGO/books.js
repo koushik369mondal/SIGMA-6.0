@@ -39,13 +39,21 @@ const bookSchema = new mongoose.Schema({
 
 const Book = mongoose.model('Book', bookSchema);
 
-let book1 = new Book({
-    title: "Marvel Comics V2.0",
-    price: "599",
-    genre: ["comics", "superheroes", "fiction"],
-});
-book1.save().then((res) => {
-    console.log(res);
-}).catch((err) => {
-    console.log(err);
-});
+Book.findByIdAndUpdate("67dd392c06e21405cfcf64f4", { price: -500 })
+.then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+// let book1 = new Book({
+//     title: "Marvel Comics V2.0",
+//     price: "599",
+//     genre: ["comics", "superheroes", "fiction"],
+// });
+// book1.save().then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
