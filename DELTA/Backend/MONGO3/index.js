@@ -33,15 +33,23 @@ app.get("/chats/new", (req, res) => {
 
 //Create Route
 app.post("/chats", (req, res) => {
-    let {from, to, msg} = req.body;
-    let newChat = new Chat ({
+    let { from, to, msg } = req.body;
+    let newChat = new Chat({
         from: from,
         to: to,
         msg: msg,
         created_at: new Date(),
     });
-    console.log(newChat);
-    res.send("Working");
+
+    // Save the chat in the database
+    newChat.save()
+        .then((res) => {
+            console.log("Chat Saved");
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    res.redirect("/chats");
 })
 
 
