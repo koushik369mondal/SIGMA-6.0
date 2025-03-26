@@ -9,7 +9,7 @@
     <h3>All Listings</h3>
     <ul>
         <% for(let Listing of allListings) { %>
-            <li><%= Listing.title %></li>
+            <li><a href="/Listings/<%= Listing._id %>"><%= Listing.title %></a></li>
         <% } %>
     </ul>
 </body>
