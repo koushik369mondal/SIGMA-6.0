@@ -41,6 +41,13 @@ app.get("/listings/:id", async (req, res) => {
     let {id} = req.params;
     const listing = await Listing.findById(id);
     res.render("listings/show.ejs", {listing});
+});
+
+//Create Route
+app.post("/listings", async (req, res) => {
+    // let {title, description, price, country, location} = req.body;
+    let listing = req.body;
+    console.log(listing);
 })
 
 // app.get("/testListing", async (req, res) => {
