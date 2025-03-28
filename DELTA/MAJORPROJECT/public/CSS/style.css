@@ -68,5 +68,5 @@ body{
 }
 
 .card-text p{
-    font-weight: 400;
+    font-weight: 400 !important;
 }
