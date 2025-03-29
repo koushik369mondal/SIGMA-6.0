@@ -19,10 +19,6 @@ const checkToken = (req, res, next) => {
     throw new Error("ACCESS DENIED!");
 };
 
-// app.get("/wrong", (req, res) => {
-//     abcd = abcd;
-// })
-
 app.get("/api", checkToken, (req, res) => {
     res.send("data");
 })
@@ -41,6 +37,15 @@ app.get("/random", (req, res) => {
 //     console.log(req.method, req.hostname, req.path, req.time);
 //     next();
 // });
+
+app.get("/err", (req, res) => {
+    abcd = abcd;
+})
+
+app.use((err, req, res, next) => {
+    console.log("------ERROR------");
+    next();
+})
 
 //404
 app.use((req, res) => {
