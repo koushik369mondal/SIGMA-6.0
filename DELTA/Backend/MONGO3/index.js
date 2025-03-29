@@ -18,7 +18,7 @@ main()
     .catch((err) => console.log(err));
 
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
+    await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatsapp");
 }
 
 //Index Route
@@ -34,7 +34,7 @@ app.get("/chats/new", (req, res) => {
 });
 
 //Create Route
-app.post("/chats", (req, res) => {
+app.post("/chats", async (req, res) => {
     let { from, to, msg } = req.body;
     let newChat = new Chat({
         from: from,
@@ -44,14 +44,15 @@ app.post("/chats", (req, res) => {
     });
 
     // Save the chat in the database
-    newChat.save()
-        .then((res) => {
-            console.log("Chat Saved");
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    await newChat.save()
     res.redirect("/chats");
+});
+
+//NEW- Show Route
+app.get("/chats/:id", async (req, res, next) => {
+    let { id } = req.params;
+    let chat = await Chat.findById(id);
+    res.render("edit.ejs", { chat });
 });
 
 // Edit Route
