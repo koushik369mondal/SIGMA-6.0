@@ -44,7 +44,7 @@ app.get("/err", (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-    let {status, message} = err;
+    let {status = 500, message} = err;
     res.status(status).send(message);
 });
 
