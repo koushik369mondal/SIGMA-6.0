@@ -3,7 +3,7 @@ const app = express();
 
 app.use((req, res, next) => {
     console.log('Hi I am 1st middleware');
-    next();
+    return next();
     console.log("This is after next");
 });
 
