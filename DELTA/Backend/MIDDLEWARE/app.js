@@ -44,8 +44,8 @@ app.get("/err", (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-    console.log("------ERROR------");
-    res.send(err);
+    let {status, message} = err;
+    res.status(status).send(message);
 });
 
 //404
