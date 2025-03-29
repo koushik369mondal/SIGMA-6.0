@@ -11,10 +11,15 @@ const app = express();
 //     next();
 // });
 
-//logger -morgan
+// logger -morgan
 app.use((req, res, next) => {
     req.time = Date.now();
     console.log(req.method, req.hostname, req.path, req.time);
+    next();
+})
+
+app.use("/random", (req, res, next) => {
+    console.log("I am only for random");
     next();
 })
 
