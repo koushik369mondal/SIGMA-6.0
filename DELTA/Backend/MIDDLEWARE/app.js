@@ -11,8 +11,9 @@ const app = express();
 //     next();
 // });
 
+//logger -morgan
 app.use((req, res, next) => {
-    req.time = newDate(Date.now()).toString();
+    req.time = Date.now();
     console.log(req.method, req.hostname, req.path, req.time);
     next();
 })
