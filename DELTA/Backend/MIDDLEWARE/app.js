@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const ExpressError = require("./ExpressError");
 
 // app.use((req, res, next) => {
 //     console.log('Hi I am 1st middleware');
@@ -16,7 +17,7 @@ const checkToken = (req, res, next) => {
     if(token === "giveaccess"){
         next();
     }
-    throw new Error("ACCESS DENIED!");
+    throw new ExpressError(401, "ACCESS DENIED!");
 };
 
 app.get("/api", checkToken, (req, res) => {
@@ -40,17 +41,17 @@ app.get("/random", (req, res) => {
 
 app.get("/err", (req, res) => {
     abcd = abcd;
-})
+});
 
 app.use((err, req, res, next) => {
     console.log("------ERROR------");
-    next();
-})
+    res.send(err);
+});
 
 //404
-app.use((req, res) => {
-    res.status(404).send("Page not found");
-})
+// app.use((req, res) => {
+//     res.status(404).send("Page not found");
+// });
 
 app.listen(8080, () => {
     console.log('Server is running on PORT 8080');
