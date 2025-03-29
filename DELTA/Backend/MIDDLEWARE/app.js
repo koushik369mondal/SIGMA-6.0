@@ -11,15 +11,15 @@ const app = express();
 //     next();
 // });
 
-app.use("/api",(req, res, next) => {
+const checkToken = (req, res, next) => {
     let {token} = req.query;
     if(token === "giveaccess"){
         next();
     }
     res.send("ACCESS DENIED!");
-});
+};
 
-app.get("/api", (req, res) => {
+app.get("/api", checkToken, (req, res) => {
     res.send("data");
 })
 
