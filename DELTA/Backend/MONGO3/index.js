@@ -31,23 +31,27 @@ app.get("/chats", async (req, res) => {
 
 //New Route
 app.get("/chats/new", (req, res) => {
-    throw new ExpressError(404, "Page Not Found");
+    // throw new ExpressError(404, "Page Not Found");
     res.render("new.ejs");
 });
 
 //Create Route
-app.post("/chats", async (req, res) => {
-    let { from, to, msg } = req.body;
-    let newChat = new Chat({
-        from: from,
-        to: to,
-        msg: msg,
-        created_at: new Date(),
-    });
+app.post("/chats", async (req, res, next) => {
+    try {
+        let { from, to, msg } = req.body;
+        let newChat = new Chat({
+            from: from,
+            to: to,
+            msg: msg,
+            created_at: new Date(),
+        });
+    
+        await newChat.save()
+        res.redirect("/chats");
+    } catch (err) {
+        next(err);
+    }
 
-    // Save the chat in the database
-    await newChat.save()
-    res.redirect("/chats");
 });
 
 //NEW- Show Route
@@ -55,7 +59,7 @@ app.get("/chats/:id", async (req, res, next) => {
     let { id } = req.params;
     let chat = await Chat.findById(id);
     if (!chat) {
-        throw new ExpressError(404, "Chat not found");
+        next(new ExpressError(500, "Chat not found"));
     }
     res.render("edit.ejs", { chat });
 });
