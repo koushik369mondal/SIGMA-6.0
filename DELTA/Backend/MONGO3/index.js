@@ -118,6 +118,9 @@ app.get("/", (req, res) => {
 
 app.use((err, req, res, next) => {
     console.log(err.name);
+    if(err.name === "ValidationError"){
+        console.log("This was a validation error. Please follow rules");
+    }
     next(err);
 });
 
