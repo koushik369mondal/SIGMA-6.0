@@ -31,6 +31,7 @@ app.get("/chats", async (req, res) => {
 
 //New Route
 app.get("/chats/new", (req, res) => {
+    throw new ExpressError(404, "Page Not Found");
     res.render("new.ejs");
 });
 
@@ -53,6 +54,9 @@ app.post("/chats", async (req, res) => {
 app.get("/chats/:id", async (req, res, next) => {
     let { id } = req.params;
     let chat = await Chat.findById(id);
+    if (!chat) {
+        throw new ExpressError(404, "Chat not found");
+    }
     res.render("edit.ejs", { chat });
 });
 
@@ -88,6 +92,12 @@ app.delete("/chats/:id", async (req, res) => {
 app.get("/", (req, res) => {
     res.send("root is working");
 });
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+    let {status = 500, message = "Something went wrong"} = err;
+    res.status(status).send(message);
+})
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
