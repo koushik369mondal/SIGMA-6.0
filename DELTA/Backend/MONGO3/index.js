@@ -116,6 +116,11 @@ app.get("/", (req, res) => {
     res.send("root is working");
 });
 
+app.use((err, req, res, next) => {
+    console.log(err.name);
+    next(err);
+});
+
 // Error Handling Middleware
 app.use((err, req, res, next) => {
     let { status = 500, message = "Something went wrong" } = err;
