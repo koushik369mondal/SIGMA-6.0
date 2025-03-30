@@ -23,16 +23,13 @@ async function main() {
 }
 
 //Index Route
-app.get("/chats", async (req, res) => {
-    try{
+app.get(
+    "/chats",
+    asyncWrap(async (req, res) => {
         let chats = await Chat.find();
         res.render("index.ejs", { chats });
-    }
-    catch (err) {
-        next(err);
-    }
-
-});
+    })
+);
 
 //New Route
 app.get("/chats/new", (req, res) => {
@@ -41,8 +38,9 @@ app.get("/chats/new", (req, res) => {
 });
 
 //Create Route
-app.post("/chats", async (req, res, next) => {
-    try {
+app.post(
+    "/chats",
+    asyncWrap(async (req, res, next) => {
         let { from, to, msg } = req.body;
         let newChat = new Chat({
             from: from,
@@ -50,48 +48,48 @@ app.post("/chats", async (req, res, next) => {
             msg: msg,
             created_at: new Date(),
         });
-    
-        await newChat.save()
-        res.redirect("/chats");
-    } catch (err) {
-        next(err);
-    }
 
-});
+        await newChat.save();
+        res.redirect("/chats");
+    })
+);
+
+function asyncWrap(fn) {
+    return function (req, res, next) {
+        fn(req, res, next).catch((err) => next(err));
+    };
+}
 
 //NEW- Show Route
-app.get("/chats/:id", async (req, res, next) => {
-    try{
+app.get(
+    "/chats/:id",
+    asyncWrap(async (req, res, next) => {
         let { id } = req.params;
         let chat = await Chat.findById(id);
         if (!chat) {
             next(new ExpressError(500, "Chat not found"));
         }
         res.render("edit.ejs", { chat });
-    }
-    catch (err) {
-        next(err);
-    }
-});
+    })
+);
 
 // Edit Route
-app.get("/chats/:id/edit", async (req, res) => {
-    try{
+app.get(
+    "/chats/:id/edit",
+    asyncWrap(async (req, res) => {
         let { id } = req.params;
         let chat = await Chat.findById(id);
         console.log(chat);
         res.render("edit.ejs", { chat });
-    }
-    catch (err) {
-        next(err);
-    }
-});
+    })
+);
 
 // Update Route
-app.put("/chats/:id", async (req, res) => {
-    try{
+app.put(
+    "/chats/:id",
+    asyncWrap(async (req, res) => {
         let { id } = req.params;
-        let {msg : newMsg } = req.body;
+        let { msg: newMsg } = req.body;
         console.log(newMsg);
         let updatedChat = await Chat.findByIdAndUpdate(
             id,
@@ -100,24 +98,19 @@ app.put("/chats/:id", async (req, res) => {
         );
         console.log(updatedChat);
         res.redirect("/chats");
-    }
-    catch (err) {
-        next(err);
-    }
-});
+    })
+);
 
 // Delete Route
-app.delete("/chats/:id", async (req, res) => {
-    try{
+app.delete(
+    "/chats/:id",
+    asyncWrap(async (req, res) => {
         let { id } = req.params;
         let deletedChat = await Chat.findByIdAndDelete(id);
         console.log(`Deleted: ${deletedChat}`);
         res.redirect("/chats");
-    }
-    catch (err) {
-        next(err);
-    }
-});
+    })
+);
 
 app.get("/", (req, res) => {
     res.send("root is working");
@@ -125,9 +118,9 @@ app.get("/", (req, res) => {
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
-    let {status = 500, message = "Something went wrong"} = err;
+    let { status = 500, message = "Something went wrong" } = err;
     res.status(status).send(message);
-})
+});
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
