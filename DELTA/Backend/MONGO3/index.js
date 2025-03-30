@@ -116,10 +116,16 @@ app.get("/", (req, res) => {
     res.send("root is working");
 });
 
+const handleValidationError = (err) =>{
+    console.log("This was a validation error. Please follow rules");
+    console.dir(err.message);
+    return(err);
+}
+
 app.use((err, req, res, next) => {
     console.log(err.name);
     if(err.name === "ValidationError"){
-        console.log("This was a validation error. Please follow rules");
+        err = handleValidationError(err);
     }
     next(err);
 });
