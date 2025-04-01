@@ -60,6 +60,9 @@ app.get(
 app.post(
     "/listings",
     wrapAsync(async (req, res, next) => {
+        if (!req.body.listing) {
+            throw new ExpressError(400, "Invalid Listing Data");
+        } 
         const newListing = new Listing(req.body.listing);
         await newListing.save();
         res.redirect(`/listings`);
@@ -80,6 +83,9 @@ app.get(
 app.put(
     "/listings/:id",
     wrapAsync(async (req, res) => {
+        if (!req.body.listing) {
+            throw new ExpressError(400, "Invalid Listing Data");
+        } 
         let { id } = req.params;
         await Listing.findByIdAndUpdate(id, { ...req.body.listing });
         res.redirect(`/listings/${id}`);
