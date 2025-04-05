@@ -50,4 +50,10 @@ const addCust = async () => {
     console.log("Customer and Order added successfully!");
 };
 
-addCust();
+const delCust = async () => {
+    let data = await Customer.findByIdAndDelete('67f0e2d9e08a911dad428119');
+    console.log(data);
+}
+
+// addCust();
+delCust();
