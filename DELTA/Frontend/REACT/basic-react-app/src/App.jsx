@@ -7,7 +7,7 @@ function Description() {
 
 function App() {
   return (
-    <div>
+    <div className="main-box">
       <Title />
       <Description />
       <Title />
