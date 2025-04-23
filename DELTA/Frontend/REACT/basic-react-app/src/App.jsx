@@ -5,8 +5,13 @@ function Title() {
 }
 
 function App() {
-  return <Title />;
-
+  return (
+    <div>
+      <h1>This is App</h1>
+      <p>This is paragraph</p>
+      <Title />
+    </div>
+  );
 }
 
 export default App
