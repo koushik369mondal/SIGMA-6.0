@@ -10,8 +10,6 @@ function App() {
     <>
       <Title />
       <Description />
-      <Title />
-      <Description />
       <Sum />
     </>
   );
