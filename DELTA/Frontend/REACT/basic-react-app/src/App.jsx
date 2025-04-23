@@ -7,13 +7,13 @@ function Description() {
 
 function App() {
   return (
-    <div className="main-box">
+    <>
       <Title />
       <Description />
       <Title />
       <Description />
       <Sum />
-    </div>
+    </>
   );
 }
 
