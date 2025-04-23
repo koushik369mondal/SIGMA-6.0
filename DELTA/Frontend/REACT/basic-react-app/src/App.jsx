@@ -7,8 +7,8 @@ function Title() {
 function App() {
   return (
     <div>
-      <h1>This is App</h1>
-      <p>This is paragraph</p>
+      <Title />
+      <Title />
       <Title />
     </div>
   );
