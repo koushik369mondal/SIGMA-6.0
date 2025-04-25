@@ -6,7 +6,7 @@ function Product({title, price=1, features, features2}) {
             <h1>{title}</h1>
             <p>Price: {price}</p>
             <p>Features:{features}</p>
-            <p>Feature from object: {features2?.b}</p>
+            <p></p>
         </div>
     );
 }
