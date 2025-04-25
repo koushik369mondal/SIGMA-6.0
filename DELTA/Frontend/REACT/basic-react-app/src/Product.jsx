@@ -1,12 +1,12 @@
 import "./Product.css";
 
 function Product({title, price=1, features, features2}) {
-    const list = features.map((feature) => <li>{feature}</li>)
+    // const list = features.map((feature) => <li>{feature}</li>)
     return (
         <div className="product">
             <h1>{title}</h1>
             <p>Price: {price}</p>
-            <p>Features:{list}</p>
+            <p>{features.map((feature) => <li>{feature}</li>)}</p>
             <p></p>
         </div>
     );
