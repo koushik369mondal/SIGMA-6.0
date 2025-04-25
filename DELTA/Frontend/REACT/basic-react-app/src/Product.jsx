@@ -1,11 +1,12 @@
 import "./Product.css";
 
 function Product({title, price=1, features, features2}) {
+    const list = features.map((feature) => <li>{feature}</li>)
     return (
         <div className="product">
             <h1>{title}</h1>
             <p>Price: {price}</p>
-            <p>Features:{features}</p>
+            <p>Features:{list}</p>
             <p></p>
         </div>
     );
