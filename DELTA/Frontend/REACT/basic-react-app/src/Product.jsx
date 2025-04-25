@@ -1,9 +1,10 @@
 import "./Product.css";
 
-function Product() {
+function Product(props) {
+    console.log(props.title);
     return (
         <div className="product">
-            <h1>I am Product</h1>
+            <h1>{props.title}</h1>
             <p>Product details will be here</p>
         </div>
     );
