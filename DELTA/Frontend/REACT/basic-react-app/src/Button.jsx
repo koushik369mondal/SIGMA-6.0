@@ -1,5 +1,6 @@
-function printHello() {
+function printHello(event) {
     console.log("Hello");
+    console.log(event);
 }
 
 function printBye() {
