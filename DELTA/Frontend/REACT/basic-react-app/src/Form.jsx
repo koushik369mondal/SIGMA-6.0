@@ -5,9 +5,9 @@ function handleFormSubmit(event) {
 
 export default function Form() {
     return(
-        <form action="">
+        <form action="" onSubmit={handleFormSubmit}>
             <input placeholder="write something" type="text" />
-            <button onClick={handleFormSubmit}>Submit</button>
+            <button>Submit</button>
         </form>
     )
 }
