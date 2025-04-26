@@ -8,7 +8,7 @@ function Product({ title, idx}) {
         <div className="product" >
             <h4>{title}</h4>
             <p>Description</p>
-            <Price oldPrice="123" newPrice="369"/>
+            <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]}/>
         </div>
     );
 }
