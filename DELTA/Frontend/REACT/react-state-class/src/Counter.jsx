@@ -1,15 +1,13 @@
+import { useState } from "react";
+
 export default function Counter() {
-    let count = 0;
+    let [stateVariable, setStateVariable] = useState(10);
+    let [count, setCount] = useState(0);
 
-    function isCount() {
-        count += 1;
-        console.log(count);
-    }
-
-    return(
+    return (
         <div>
-            <h3>Count: {count}</h3>
-            <button onClick={isCount}>Increase Count</button>
+            <h3>Count: {}</h3>
+            <button>Increase Count</button>
         </div>
-    )
+    );
 }
