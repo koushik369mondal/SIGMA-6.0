@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <h3>React State Class</h3>
-      <LikeButton />
+      <Counter />
     </>
   );
 }
