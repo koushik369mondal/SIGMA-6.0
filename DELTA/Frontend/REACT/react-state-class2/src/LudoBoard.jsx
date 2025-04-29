@@ -1,21 +1,18 @@
 import { useState } from "react"
 
 export default function LudoBoard() {
-    let [blueMove, setBlueMove] = useState(0);
-    let [yellowMove, setYellowMove] = useState(0);
-    let [greenMove, setGreenMove] = useState(0);
-    let [redMove, setRedMove] = useState(0);
+    let [moves, setMoves] = useState({blue: 0, yellow: 0, green: 0, red: 0});
     return(
         <div>
             <p>Game Begins</p>
             <div className="board">
-                <p>Blue moves = {blueMove}</p>
+                <p>Blue moves = {moves.blue}</p>
                 <button>+1</button>
-                <p>Yellow moves = {yellowMove}</p>
+                <p>Yellow moves = {moves.yellow}</p>
                 <button>+1</button>
-                <p>Green moves = {greenMove}</p>
+                <p>Green moves = {moves.green}</p>
                 <button>+1</button>
-                <p>Red moves = {redMove}</p>
+                <p>Red moves = {moves.red}</p>
                 <button>+1</button>
             </div>
         </div>
