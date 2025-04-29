@@ -5,9 +5,13 @@ export default function LudoBoard() {
     let [count, setCount] = useState(0);
 
     let updateBlue = () => {
-        console.log(`Moves.blue: ${moves.blue}`);
         setMoves((prevMoves) => {
             return {...prevMoves, blue: prevMoves.blue + 1}
+        });
+    }
+    let updateYellow = () => {
+        setMoves((prevMoves) => {
+            return {...prevMoves, yellow: prevMoves.yellow + 1}
         });
     }
 
@@ -18,7 +22,7 @@ export default function LudoBoard() {
                 <p>Blue moves = {moves.blue}</p>
                 <button style={{backgroundColor: "blue"}} onClick={updateBlue}>+1</button>
                 <p>Yellow moves = {moves.yellow}</p>
-                <button style={{backgroundColor: "yellow", color: "black"}}>+1</button>
+                <button style={{backgroundColor: "yellow", color: "black"}} onClick={updateYellow}>+1</button>
                 <p>Green moves = {moves.green}</p>
                 <button style={{backgroundColor: "green"}}>+1</button>
                 <p>Red moves = {moves.red}</p>
