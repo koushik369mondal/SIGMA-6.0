@@ -2,12 +2,20 @@ import { useState } from "react"
 
 export default function LudoBoard() {
     let [moves, setMoves] = useState({blue: 0, yellow: 0, green: 0, red: 0});
+    let [count, setCount] = useState(0);
+
+    let updateBlue = () => {
+        moves.blue += 1;
+        console.log(`Moves.blue: ${moves.blue}`);
+        setMoves({...moves});
+    }
+
     return(
         <div>
             <p>Game Begins</p>
             <div className="board">
                 <p>Blue moves = {moves.blue}</p>
-                <button style={{backgroundColor: "blue"}}>+1</button>
+                <button style={{backgroundColor: "blue"}} onClick={updateBlue}>+1</button>
                 <p>Yellow moves = {moves.yellow}</p>
                 <button style={{backgroundColor: "yellow", color: "black"}}>+1</button>
                 <p>Green moves = {moves.green}</p>
