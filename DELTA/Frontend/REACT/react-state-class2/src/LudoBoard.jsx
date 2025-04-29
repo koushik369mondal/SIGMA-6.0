@@ -5,9 +5,10 @@ export default function LudoBoard() {
     let [count, setCount] = useState(0);
 
     let updateBlue = () => {
-        moves.blue += 1;
         console.log(`Moves.blue: ${moves.blue}`);
-        setMoves({...moves});
+        setMoves((prevMoves) => {
+            return {...prevMoves, blue: prevMoves.blue + 1}
+        });
     }
 
     return(
