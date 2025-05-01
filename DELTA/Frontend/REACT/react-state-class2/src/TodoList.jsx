@@ -21,13 +21,12 @@ export default function TodoList() {
     };
 
     let upperCaseAll = () => {
-        let newArr = todos.map((todo) => {
+        setTodos(todos.map((todo) => {
             return {
                 ...todo,
                 task: todo.task.toUpperCase(),
             };
-        });
-        console.log(newArr);
+        }));
     };
 
     return (
