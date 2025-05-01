@@ -21,12 +21,14 @@ export default function TodoList() {
     };
 
     let upperCaseAll = () => {
-        setTodos(todos.map((todo) => {
-            return {
-                ...todo,
-                task: todo.task.toUpperCase(),
-            };
-        }));
+        setTodos((prevTodos) =>
+            prevTodos.map((todo) => {
+                return {
+                    ...todo,
+                    task: todo.task.toUpperCase(),
+                };
+            })
+        );
     };
 
     return (
