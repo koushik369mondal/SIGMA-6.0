@@ -1,7 +1,5 @@
 import './App.css'
-import Lottery from './Lottery'
-import Ticket from './Ticket'
-import { sum } from './helper'
+import Form from './components/Form';
 
 function App() {
 
@@ -11,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Lottery n={3} winCondition={winCondition}/>
+    <Form/>
     </>
   )
 }
