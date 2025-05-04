@@ -6,7 +6,7 @@ import { sum } from './helper'
 function App() {
 
   let winCondition = (ticket) => {
-    return ticket.every((num) => num === ticket[0]);
+    return ticket[0] === 0;
   }
 
   return (
