@@ -15,13 +15,10 @@ export default function Form() {
     // };
 
     let handleInputChange = (event) => {
-        let fieldName = event.target.name;
-        let newValue = event.target.value;
-
         setFormData((currData) => {
             return {
                 ...currData,
-                [fieldName]: newValue,
+                [event.target.name]: event.target.value,
             };
         });
     };
