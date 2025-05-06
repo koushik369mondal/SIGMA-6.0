@@ -19,18 +19,21 @@ export default function Form() {
         let newValue = event.target.value;
 
         setFormData((currData) => {
-            currData[fieldName] = newValue;
-            return { ...currData };
+            return {
+                ...currData,
+                [fieldName]: newValue,
+            };
         });
     };
 
     let handleSubmit = (event) => {
         event.preventDefault();
+        console.log("Form submitted with data:", formData);
         setFormData({
             fullName: "",
             username: "",
         });
-    }
+    };
 
     return (
         <form onSubmit={handleSubmit}>
