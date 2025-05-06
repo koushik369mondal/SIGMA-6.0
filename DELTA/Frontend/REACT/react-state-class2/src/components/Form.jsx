@@ -1,26 +1,47 @@
 import { useState } from "react";
 
 export default function Form() {
-    let [fullName, setFullName] = useState("");
-    let [username, setUsername] = useState("");
+    let [formData, setFormData] = useState({
+        fullName: "",
+        username: "",
+    });
 
-    let handleNameChange = (event) => {
-        setFullName(event.target.value);
+    // let handleNameChange = (event) => {
+    //     setFullName(event.target.value);
+    // };
+
+    // let handleUsername = (event) => {
+    //     setUsername(event.target.value);
+    // };
+
+    let handleInputChange = (event) => {
+        let fieldName = event.target.name;
+        let newValue = event.target.value;
+
+        setFormData((currData) => {
+            currData[fieldName] = newValue;
+            return { ...currData };
+        });
     };
 
-    let handleUsername = (event) => {
-        setUsername(event.target.value);
-    };
+    let handleSubmit = (event) => {
+        event.preventDefault();
+        setFormData({
+            fullName: "",
+            username: "",
+        });
+    }
 
     return (
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <label htmlFor="fullName">Full Name</label>
             <input
                 type="text"
                 placeholder="Enter your full name"
-                value={fullName}
-                onChange={handleNameChange}
+                value={formData.fullName}
                 id="fullName"
+                name="fullName"
+                onChange={handleInputChange}
             />
             <br />
             <br />
@@ -28,9 +49,10 @@ export default function Form() {
             <input
                 type="text"
                 placeholder="Enter your username"
-                value={username}
-                onChange={handleUsername}
+                value={formData.username}
                 id="username"
+                name="username"
+                onChange={handleInputChange}
             />
             <button>Submit</button>
         </form>
