@@ -4,6 +4,7 @@ export default function Form() {
     let [formData, setFormData] = useState({
         fullName: "",
         username: "",
+        password: "",
     });
 
     // let handleNameChange = (event) => {
@@ -29,6 +30,7 @@ export default function Form() {
         setFormData({
             fullName: "",
             username: "",
+            password: "",
         });
     };
 
@@ -52,6 +54,17 @@ export default function Form() {
                 value={formData.username}
                 id="username"
                 name="username"
+                onChange={handleInputChange}
+            />
+            <br />
+            <br />
+            <label htmlFor="password">Password</label>
+            <input
+                type="text"
+                placeholder="Enter your password"
+                value={formData.password}
+                id="password"
+                name="password"
                 onChange={handleInputChange}
             />
             <button>Submit</button>
