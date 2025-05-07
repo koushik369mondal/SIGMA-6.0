@@ -7,6 +7,8 @@ export default function CommentsForm({addNewComment}) {
         rating: 5,
     });
 
+    let [isValid, setIsValid] = useState(true);
+
     const handleInputChange = (event) => {
         setFormData((currData) => {
             return { ...currData, [event.target.name]: event.target.value };
@@ -16,6 +18,7 @@ export default function CommentsForm({addNewComment}) {
     let handleSubmit = (event) => {
         if(!formData.username) {
             console.log("Username is null");
+            setIsValid(false);
             event.preventDefault();
             return;
         }
@@ -43,6 +46,7 @@ export default function CommentsForm({addNewComment}) {
                     id="username"
                     name="username"
                 />
+                {!isValid && <p>Username cannot be empty</p>}
                 <br /> <br /> <br />
 
                 <label htmlFor="remarks">Remarks</label>
