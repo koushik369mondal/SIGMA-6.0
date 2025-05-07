@@ -16,6 +16,11 @@ export default function CommentsForm() {
     let handleSubmit = (event) => {
         console.log("Form submitted", formData);
         event.preventDefault();
+        setFormData({
+            username: "",
+            remarks: "",
+            rating: 5,
+        });
     };
 
     return (
@@ -32,7 +37,7 @@ export default function CommentsForm() {
                     name="username"
                 />
                 <br /> <br /> <br />
-                
+
                 <label htmlFor="remarks">Remarks</label>
                 <textarea
                     value={formData.remarks}
