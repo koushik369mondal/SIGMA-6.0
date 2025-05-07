@@ -1,4 +1,5 @@
 import './App.css'
+import Comment from './components/Comment';
 import CommentsForm from './components/CommentsForm';
 import Form from './components/Form';
 
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <>
-      <CommentsForm />
+      <Comment />
     </>
   )
 }
