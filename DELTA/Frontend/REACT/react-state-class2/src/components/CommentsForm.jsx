@@ -69,7 +69,7 @@ export default function CommentsForm({ addNewComment }) {
                     id="username"
                     name="username"
                 />
-                {formik.errors.username ? <div>{formik.errors.username}</div> : null}
+                {formik.errors.username ? <p style={{color:"red"}}>{formik.errors.username}</p> : null}
                 <br /> <br /> <br />
 
                 <label htmlFor="remarks">Remarks</label>
