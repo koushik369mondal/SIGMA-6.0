@@ -14,6 +14,12 @@ export default function CommentsForm({addNewComment}) {
     };
 
     let handleSubmit = (event) => {
+        if(!formData.username) {
+            console.log("Username is null");
+            event.preventDefault();
+            return;
+        }
+
         console.log("Form submitted", formData);
         addNewComment(formData);
         event.preventDefault();
