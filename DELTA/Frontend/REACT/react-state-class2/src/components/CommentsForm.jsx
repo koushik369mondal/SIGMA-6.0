@@ -46,7 +46,7 @@ export default function CommentsForm({addNewComment}) {
                     id="username"
                     name="username"
                 />
-                {!isValid && <p>Username cannot be empty</p>}
+                {!isValid && <p style={{color:"red"}}>Username cannot be empty</p>}
                 <br /> <br /> <br />
 
                 <label htmlFor="remarks">Remarks</label>
