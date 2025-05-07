@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Comment.css';
 
 export default function Comment() {
     let [comments, setComments] = useState([{
