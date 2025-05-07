@@ -3,6 +3,7 @@ import Comment from './components/Comment';
 import CommentsForm from './components/CommentsForm';
 import Counter from './components/Counter';
 import Form from './components/Form';
+import Joker from './components/Joker';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Counter />
+      <Joker />
     </>
   )
 }
