@@ -1,9 +1,10 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import './SearchBox.css';
 
 export default function SearchBox() {
     return (
-        <div>
+        <div className='SearchBox'>
             <h3>Search for the weather</h3>
             <form action="">
                 <TextField id="city" label="City name" variant="outlined" required />
