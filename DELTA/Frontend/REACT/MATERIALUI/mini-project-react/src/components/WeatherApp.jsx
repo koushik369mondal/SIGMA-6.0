@@ -13,11 +13,15 @@ export default function WeatherApp() {
         weather: "mist",
     });
 
+    const updateInfo = (newInfo) => {
+        setWeatherInfo(newInfo);
+    };
+
     return (
         <div style={{ textAlign: "center" }}>
             <h2>Weather App</h2>
-            <SearchBox />
-            <InfoBox Info={weatherInfo} />
+            <SearchBox updateInfo={updateInfo} />
+            <InfoBox weatherInfo={weatherInfo} />
         </div>
-    )
+    );
 }
