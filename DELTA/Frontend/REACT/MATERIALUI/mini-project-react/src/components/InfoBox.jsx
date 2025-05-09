@@ -18,7 +18,6 @@ export default function InfoBox() {
     };
     return (
         <div className="InfoBox">
-            <h1>Weather Info - {info.weather}</h1>
             <div className="cardContainer">
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia sx={{ height: 140 }} image={INIT_URL} title="green iguana" />
