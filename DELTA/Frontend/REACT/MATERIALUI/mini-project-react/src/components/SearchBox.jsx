@@ -4,6 +4,10 @@ import "./SearchBox.css";
 import { useState } from "react";
 
 export default function SearchBox() {
+
+    const API_URL = "https://api.openweathermap.org/data/2.5/weather";
+    const API_KEY = "92386185a97a841e8c25345a7b728ec3";
+
     let [city, setCity] = useState("");
 
     const handleChange = (event) => {
