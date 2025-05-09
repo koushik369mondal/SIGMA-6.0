@@ -1,4 +1,5 @@
 // import "./App.css"
+import InfoBox from "./components/InfoBox";
 import SearchBox from "./components/SearchBox";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <SearchBox />
+      <InfoBox />
     </>
   );
 }
