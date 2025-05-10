@@ -3,6 +3,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./InfoBox.css";
+import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import SunnyIcon from "@mui/icons-material/Sunny";
 
 export default function InfoBox({ weatherInfo }) {
     const INIT_URL =
@@ -22,9 +25,9 @@ export default function InfoBox({ weatherInfo }) {
                     <CardMedia
                         sx={{ height: 140 }}
                         image={
-                            InfoBox.humidity > 80
+                            weatherInfo.humidity > 80
                                 ? RAIN_URL
-                                : InfoBox.temp > 15
+                                : weatherInfo.temp > 15
                                     ? HOT_URL
                                     : COLD_URL
                         }
@@ -33,6 +36,15 @@ export default function InfoBox({ weatherInfo }) {
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
                             {weatherInfo.city}
+                            {
+                                weatherInfo.temp > 15 ? (
+                                    <SunnyIcon />
+                                ) : weatherInfo.humidity > 80 ? (
+                                    <ThunderstormIcon />
+                                ) : (
+                                    <AcUnitIcon />
+                                )
+                            }
                         </Typography>
                         <Typography
                             variant="body2"
