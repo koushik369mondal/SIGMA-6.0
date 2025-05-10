@@ -65,7 +65,7 @@ export default function SearchBox({ updateInfo }) {
                     Search
                 </Button>
                 <br />
-                {error && <p>No such place exist!</p>}
+                {error && <p style={{color:"red"}}>No such place exist!</p>}
             </form>
         </div>
     );
