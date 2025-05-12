@@ -1,7 +1,7 @@
 export default function Todo() {
     return (
         <>
-            <h3>Todos</h3>
+            <h2>Todos</h2>
         </>
     );
 }
