@@ -8,24 +8,24 @@ export const todoSlice = createSlice({
     name: "todo",
     initialState,
     reducers: {
-        //state, action
         addTodo: (state, action) => {
             const newTodo = {
                 id: nanoid(),
                 task: action.payload,
                 isDone: false,
             };
-            state.todos.push(newTodo); //direct mutation
+            state.todos.push(newTodo); 
         },
         deleteTodo: (state, action) => {
-            state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+            state.todos = state.todos.filter((todo) => todo.id !== action.payload); // ✅ filter out deleted
         },
         markAsDone: (state, action) => {
-            state.todos = state.todos, map((todo) => {
+            state.todos = state.todos.map((todo) => {
                 if (todo.id === action.payload) {
-                    todo.isDone = true;
+                    return { ...todo, isDone: true };
                 }
-            })
+                return todo;
+            });
         },
     },
 });
