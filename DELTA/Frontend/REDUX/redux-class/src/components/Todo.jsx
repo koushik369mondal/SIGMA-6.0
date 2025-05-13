@@ -6,6 +6,11 @@ export default function Todo() {
     return (
         <>
             <h2>Todos</h2>
+            <ul>
+                {todos.map((todo) => (
+                    <li key={todo.id}>{todo.task}</li>
+                ))}
+            </ul>
         </>
     );
 }
