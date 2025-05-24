@@ -2,15 +2,9 @@ import java.util.*;
 public class JavaBasics{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // String input = sc.next();
-        // System.out.println("You entered: " + input);
-
-        // System.out.print("Enter your name: ");
-        // String name = sc.nextLine();
-        // System.out.println("Hello " + name);
-
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
-        System.out.println("You are " + age + " years old.");
+        float a = sc.nextFloat();
+        float b = sc.nextFloat();
+        float sum = a + b;
+        System.out.println("Sum: " + sum);
     }
 }
