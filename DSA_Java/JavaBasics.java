@@ -5,8 +5,12 @@ public class JavaBasics{
         // String input = sc.next();
         // System.out.println("You entered: " + input);
 
-        System.out.print("Enter your name: ");
-        String name = sc.nextLine();
-        System.out.println("Hello " + name);
+        // System.out.print("Enter your name: ");
+        // String name = sc.nextLine();
+        // System.out.println("Hello " + name);
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        System.out.println("You are " + age + " years old.");
     }
 }
