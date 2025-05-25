@@ -1,14 +1,14 @@
 import java.util.*;
-public class JavaBasics{
+
+public class JavaBasics {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first item price:");
-        float price1 = sc.nextFloat();
-        System.out.println("Enter second item price:");
-        float price2 = sc.nextFloat();
-        System.out.println("Enter third item price:");
-        float price3 = sc.nextFloat();
-        float totalPrice = price1 + price2 + price3;
-        System.out.println("Total price of items with 18% gst: " + totalPrice * 1.18);
+        byte b = 4;
+        char c = 'a';
+        short s = 512;
+        int i = 1000;
+        float f = 3.14f;
+        double d = 99.9954;
+        double result = (f * b) + (i % c) - (d * s);
+        System.out.println("Result: " + result);
     }
 }
