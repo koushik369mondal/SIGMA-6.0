@@ -2,12 +2,16 @@ import java.util.*;
 
 public class JavaBasics {
     public static void main(String[] args) {
-        int x = 10, y = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number:");
+        int number1 = sc.nextInt();
+        System.out.println("Enter second number:");
+        int number2 = sc.nextInt();
 
-        int exp1 = (y * (x / y + x / y));
-        int exp2 = (y * x / y + y * x / y);
-
-        System.out.println(exp1);
-        System.out.println(exp2);
+        if (number1 > number2){
+            System.out.println("Number 1 is greater");
+        }else{
+            System.out.println("Number 2 is greater");
+        }
     }
 }
