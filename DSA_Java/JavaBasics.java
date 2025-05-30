@@ -3,12 +3,19 @@ import java.util.*;
 public class JavaBasics {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        int number = sc.nextInt();
-        if( number % 2 == 0){
-            System.out.println("The number is even.");
-        } else {
-            System.out.println("The number is odd.");
+        System.out.println("Enter your income:");
+        int income = sc.nextInt();
+        float tax;
+        
+        if(income < 500000){
+            tax = 0;
+            System.out.println("tax is zero");
+        } else if(income > 500000 && income < 1000000){
+            tax = income * 0.2f;
+            System.out.println("tax is " + tax);
+        } else{
+            tax = income * 0.3f;
+            System.out.println("tax is " + tax);
         }
     }
 }
