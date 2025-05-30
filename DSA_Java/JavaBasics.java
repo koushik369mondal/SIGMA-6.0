@@ -3,19 +3,20 @@ import java.util.*;
 public class JavaBasics {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your income:");
-        int income = sc.nextInt();
-        int tax;
-        
-        if(income < 500000){
-            tax = 0;
-            System.out.println("tax is zero");
-        } else if(income > 500000 && income < 1000000){
-            tax = (int)(income * 0.2f);
-            System.out.println("tax is " + tax);
-        } else{
-            tax = (int)(income * 0.3f);
-            System.out.println("tax is " + tax);
+        System.out.println("Enter first number:");
+        int num1 = sc.nextInt();
+        System.out.println("Enter second number:");
+        int num2 = sc.nextInt();
+        System.out.println("Enter third number:");
+        int num3 = sc.nextInt();
+
+        if(num1 > num2 && num1 > num3){
+            System.out.println("Num1 is largest");
+        }else if(num2 > num3){
+            System.out.println("Num2 is largest");
+        }else{
+            System.out.println("Num3 is largest");
         }
+
     }
 }
