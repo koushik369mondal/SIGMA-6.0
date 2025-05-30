@@ -5,16 +5,16 @@ public class JavaBasics {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your income:");
         int income = sc.nextInt();
-        float tax;
+        int tax;
         
         if(income < 500000){
             tax = 0;
             System.out.println("tax is zero");
         } else if(income > 500000 && income < 1000000){
-            tax = income * 0.2f;
+            tax = (int)(income * 0.2f);
             System.out.println("tax is " + tax);
         } else{
-            tax = income * 0.3f;
+            tax = (int)(income * 0.3f);
             System.out.println("tax is " + tax);
         }
     }
