@@ -9,7 +9,8 @@ public class JavaBasics {
         while(n > 0){
             lastDigit = n % 10;
             System.out.print(lastDigit);
-            n = n / 10;
+            n /= 10;
         }
+        System.out.println();
     }
 }
