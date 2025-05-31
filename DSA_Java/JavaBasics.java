@@ -5,8 +5,9 @@ public class JavaBasics {
         Scanner sc = new Scanner(System.in);
         int count = 0;
         while(count < 10){
-            System.out.println("Hello Guys");
-            count++;
+            count = count + 1;
+            System.out.println(count);
+            
         }
     }
 }
