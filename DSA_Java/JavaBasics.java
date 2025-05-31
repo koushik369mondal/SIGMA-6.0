@@ -2,10 +2,12 @@ import java.util.*;
 
 public class JavaBasics {
     public static void main(String[] args) {
-        int i = -2;
-        do{
-            System.out.println("Hello World");
-            i++;
-        }while(i < 3);
+        for(int i=1; i<5; i++){
+            if(i == 3){
+                break;
+            }
+            System.out.println(i);
+        }
+        System.out.println("I am out of the loop");
     }
 }
