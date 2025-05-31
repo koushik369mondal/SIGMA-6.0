@@ -7,7 +7,7 @@ public class JavaBasics {
         int a = sc.nextInt();
         System.out.println("Enter second number:");
         int b = sc.nextInt();
-
+        System.out.println("Enter the operator:");
         char operator = sc.next().charAt(0);
         
         switch(operator){
