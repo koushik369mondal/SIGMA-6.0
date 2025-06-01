@@ -2,13 +2,9 @@ import java.util.*;
 
 public class JavaBasics {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        
-        for(int i=1; i<=10; i++){
-            System.out.println(num + " X " + i + " = " + num*i);
+        for (int idx = 2; idx % 3 != 0 && idx % 5 != 0; idx++) {
+            System.out.println(idx);
         }
+
     }
 }
