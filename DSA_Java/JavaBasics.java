@@ -6,11 +6,9 @@ public class JavaBasics {
 
         System.out.println("Enter a number: ");
         int num = sc.nextInt();
-        int fact = 1;
-
-        for(int i=num; i>1; i-- ){
-            fact *= i;
+        
+        for(int i=1; i<=10; i++){
+            System.out.println(num + " X " + i + " = " + num*i);
         }
-        System.out.println(fact);
     }
 }
