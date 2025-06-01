@@ -2,12 +2,9 @@ import java.util.*;
 
 public class JavaBasics {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 5;
-        a = a + b;
-        b = a - b;
-        a = a - b;
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
+        for(int i = 0; i < 5; i++){
+            System.out.println("Hello");
+            i += 2;
+        }
     }
 }
