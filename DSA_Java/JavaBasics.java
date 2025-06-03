@@ -8,15 +8,16 @@ public class JavaBasics {
         return 3;
     }
 
-    public static void calculateSum(int num1, int num2) {
+    public static int calculateSum(int num1, int num2) {
         int sum = num1 + num2;
-        System.out.println("Sum is : " + sum);
+        return sum;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        calculateSum(a,b);
+        int sum = calculateSum(a,b);
+        System.out.println("Sum is : " + sum);
     }
 }
