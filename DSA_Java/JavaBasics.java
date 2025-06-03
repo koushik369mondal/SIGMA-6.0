@@ -1,14 +1,7 @@
 import java.util.*;
 
 public class JavaBasics {
-    public static int printHelloWorld() {
-        System.out.println("Hello World");
-        System.out.println("Hello World");
-        System.out.println("Hello World");
-        return 3;
-    }
-
-    public static int calculateSum(int num1, int num2) {
+    public static int calculateSum(int num1, int num2) { //parameters or formal parameters
         int sum = num1 + num2;
         return sum;
     }
@@ -17,7 +10,7 @@ public class JavaBasics {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        int sum = calculateSum(a,b);
+        int sum = calculateSum(a,b); // arguments or actual parameters
         System.out.println("Sum is : " + sum);
     }
 }
