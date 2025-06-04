@@ -10,5 +10,7 @@ public class JavaBasics {
         int b = 10;
         int prod = multiply(a, b);
         System.out.println("a * b = " + prod);
+        prod = multiply(10, 20);
+        System.out.println("a * b = " + prod);
     }
 }
