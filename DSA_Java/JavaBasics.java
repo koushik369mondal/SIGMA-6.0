@@ -1,16 +1,15 @@
 import java.util.*;
 
 public class JavaBasics {
-    public static int multiply(int a, int b){
-        int product = a * b;
-        return product;
+    public static int factorial(int n){
+        int f = 1;
+
+        for(int i = 1; i <= n; i++){
+            f = f * i;
+        }
+        return f;
     }
     public static void main(String[] args) {
-        int a = 5;
-        int b = 10;
-        int prod = multiply(a, b);
-        System.out.println("a * b = " + prod);
-        prod = multiply(10, 20);
-        System.out.println("a * b = " + prod);
+        System.out.println(factorial(5));;
     }
 }
