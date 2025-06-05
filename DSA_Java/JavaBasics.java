@@ -1,44 +1,13 @@
 import java.util.*;
 
 public class JavaBasics {
-
-    public static void binToDec(int binNum) {
-        int myNum = binNum;
-        int pow = 0;
-        int decNum = 0;
-
-        while (binNum > 0) {
-            int lastDigit = binNum % 10;
-            decNum = decNum + (lastDigit * (int) Math.pow(2, pow));
-
-            pow++;
-            binNum = binNum / 10;
-        }
-        System.out.println("Decimal of " + myNum + " is " + decNum);
-    }
-
-    public static void decToBin(int n) {
-        int myNum = n;
-        int pow = 0;
-        int binNum = 0;
-
-        while (n > 0) {
-            int rem = n % 2;
-            binNum = binNum + (rem * (int) Math.pow(10, pow));
-
-            pow++;
-            n = n / 2;
-        }
-        System.out.println("binary form of " + myNum + " is " + binNum);
-    }
-
     public static void myMethod() {
-        if (true) {
-            int x = 5; // block scope
-            System.out.println(x); // ✅ accessible
-        }
-
-        // System.out.println(x); ❌ Error: x not visible here
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int avg = (a+b+c)/3;
+        System.out.println(avg);
     }
 
     public static void main(String[] args) {
