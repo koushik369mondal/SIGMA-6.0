@@ -32,7 +32,17 @@ public class JavaBasics {
         System.out.println("binary form of " + myNum + " is " + binNum);
     }
 
+    public static void myMethod() {
+        int a = 10; // method scope
+
+        if (a > 5) {
+            System.out.println(a); // ✅ accessible here
+        }
+
+        System.out.println(a); // ✅ still accessible
+    }
+
     public static void main(String[] args) {
-        decToBin(53);;
+        myMethod();
     }
 }
