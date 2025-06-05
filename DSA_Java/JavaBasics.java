@@ -33,6 +33,6 @@ public class JavaBasics {
     }
 
     public static void main(String[] args) {
-        binToDec(110101);
+        decToBin(53);;
     }
 }
