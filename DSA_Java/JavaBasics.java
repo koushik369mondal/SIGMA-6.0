@@ -1,26 +1,28 @@
+import java.util.*;
+
 public class JavaBasics {
+
+    // Method to calculate sum of digits
+    public static int sumOfDigits(int num) {
+        int sum = 0;
+
+        while (num > 0) {
+            int lastDigit = num % 10;  // b. Find last digit
+            sum += lastDigit;          // c. Add to sum
+            num /= 10;                 // d. Remove last digit
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
-        int negative = -25;
+        Scanner sc = new Scanner(System.in);
 
-        // a. Math.min()
-        System.out.println("Minimum of " + a + " and " + b + ": " + Math.min(a, b));
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
 
-        // b. Math.max()
-        System.out.println("Maximum of " + a + " and " + b + ": " + Math.max(a, b));
+        int result = sumOfDigits(number);  // Call the method
 
-        // c. Math.sqrt()
-        System.out.println("Square root of 16: " + Math.sqrt(16));
-
-        // d. Math.pow()
-        System.out.println("2 raised to the power 3: " + Math.pow(2, 3));
-
-        // e. Math.avg() → Not available, use manual calculation
-        double avg = (a + b) / 2.0;
-        System.out.println("Average of " + a + " and " + b + ": " + avg);
-
-        // f. Math.abs()
-        System.out.println("Absolute value of " + negative + ": " + Math.abs(negative));
+        System.out.println("Sum of digits: " + result);
     }
 }
