@@ -1,20 +1,32 @@
 import java.util.*;
 
 public class JavaBasics {
-    public static boolean isEven(int n) {
-        return n % 2 == 0;
+
+    // Method to check if a number is a palindrome
+    public static boolean PalindromeCheck(int num) {
+        int originalNum = num;
+        int reversed = 0;
+
+        while (num > 0) {
+            int lastDigit = num % 10;
+            reversed = (reversed * 10) + lastDigit;
+            num = num / 10;
+        }
+
+        return originalNum == reversed;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        int num = sc.nextInt();
+        int number = sc.nextInt();
 
-        if (isEven(num)) {
-            System.out.println(num + " is even.");
+        // Call the method
+        if (PalindromeCheck(number)) {
+            System.out.println(number + " is a palindrome.");
         } else {
-            System.out.println(num + " is odd.");
+            System.out.println(number + " is not a palindrome.");
         }
     }
 }
