@@ -1,32 +1,26 @@
-import java.util.*;
-
 public class JavaBasics {
-
-    // Method to check if a number is a palindrome
-    public static boolean PalindromeCheck(int num) {
-        int originalNum = num;
-        int reversed = 0;
-
-        while (num > 0) {
-            int lastDigit = num % 10;
-            reversed = (reversed * 10) + lastDigit;
-            num = num / 10;
-        }
-
-        return originalNum == reversed;
-    }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        int a = 10;
+        int b = 20;
+        int negative = -25;
 
-        System.out.print("Enter a number: ");
-        int number = sc.nextInt();
+        // a. Math.min()
+        System.out.println("Minimum of " + a + " and " + b + ": " + Math.min(a, b));
 
-        // Call the method
-        if (PalindromeCheck(number)) {
-            System.out.println(number + " is a palindrome.");
-        } else {
-            System.out.println(number + " is not a palindrome.");
-        }
+        // b. Math.max()
+        System.out.println("Maximum of " + a + " and " + b + ": " + Math.max(a, b));
+
+        // c. Math.sqrt()
+        System.out.println("Square root of 16: " + Math.sqrt(16));
+
+        // d. Math.pow()
+        System.out.println("2 raised to the power 3: " + Math.pow(2, 3));
+
+        // e. Math.avg() → Not available, use manual calculation
+        double avg = (a + b) / 2.0;
+        System.out.println("Average of " + a + " and " + b + ": " + avg);
+
+        // f. Math.abs()
+        System.out.println("Absolute value of " + negative + ": " + Math.abs(negative));
     }
 }
