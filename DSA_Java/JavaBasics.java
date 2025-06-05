@@ -33,13 +33,12 @@ public class JavaBasics {
     }
 
     public static void myMethod() {
-        int a = 10; // method scope
-
-        if (a > 5) {
-            System.out.println(a); // ✅ accessible here
+        if (true) {
+            int x = 5; // block scope
+            System.out.println(x); // ✅ accessible
         }
 
-        System.out.println(a); // ✅ still accessible
+        // System.out.println(x); ❌ Error: x not visible here
     }
 
     public static void main(String[] args) {
