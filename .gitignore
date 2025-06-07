@@ -1,8 +1,12 @@
+# Ignore compiled Java files
 *.class
-bin/
-out/
-build/
-*.log
-.vscode/
+
+# Ignore IntelliJ IDEA project files
 .idea/
 *.iml
+
+# Ignore build output
+out/
+
+# Ignore local Git folders inside sub-projects (optional)
+**/.git/
