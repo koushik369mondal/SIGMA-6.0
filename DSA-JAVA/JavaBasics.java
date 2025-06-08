@@ -3,17 +3,27 @@ import java.util.*;
 public class JavaBasics {
     public static void pattern() {
         int n = 5;
-        for (int i = 1; i <= n; i++) {
-            int spaces = n - i, stars = i;
+        int i = 1;
 
-            for (int j = 1; j <= spaces; j++) {
+        while (i <= n) {
+            int spaces = n - i;
+            int j = 1;
+
+            // Print spaces
+            while (j <= spaces) {
                 System.out.print("  ");
+                j++;
             }
 
-            for (int j = 1; j <= stars; j++) {
+            // Print stars
+            j = 1;
+            while (j <= i) {
                 System.out.print("* ");
+                j++;
             }
+
             System.out.println();
+            i++;
         }
     }
 
