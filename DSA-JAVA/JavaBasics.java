@@ -2,11 +2,18 @@ import java.util.*;
 
 public class JavaBasics {
     public static void pattern() {
-        for (int i = 5; i >= 1; i--) {
-            for (int j = 1; j <= i; j++) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            int spaces = n - i, stars = i;
+
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 1; j <= stars; j++) {
                 System.out.print("* ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 
