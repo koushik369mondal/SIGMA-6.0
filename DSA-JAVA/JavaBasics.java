@@ -1,8 +1,7 @@
 import java.util.*;
 
 public class JavaBasics {
-    public static void pattern() {
-        int n = 4;
+    public static void pattern(int n) {
         for (int i = 1; i <= n; i++) {
             //space
             for (int j = 1; j <= n - i; j++) {
@@ -17,7 +16,7 @@ public class JavaBasics {
     }
 
     public static void main(String[] args) {
-        pattern();
+        pattern(5);
         ;
     }
 }
