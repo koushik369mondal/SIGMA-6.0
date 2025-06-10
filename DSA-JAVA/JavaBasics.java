@@ -1,37 +1,20 @@
 import java.util.*;
 
 public class JavaBasics {
-    public static void pattern() {
-        int n = 5;
-        int i = 1;
-
-        do {
-            int spaces = n - i;
-            int j = 1;
-
-            // Print spaces
-            do {
-                if (j > spaces)
-                    break;
-                System.out.print("  ");
-                j++;
-            } while (true);
-
-            // Print stars
-            j = 1;
-            do {
-                if (j > i)
-                    break;
-                System.out.print("* ");
-                j++;
-            } while (true);
-
+    public static void hollow_rectangle(int toRows, int toCols) {
+        for (int i = 1; i <= toRows; i++) {
+            for (int j = 1; j <= toCols; j++) {
+                if (i == 1 || i == toRows || j == 1 || j == toCols) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
             System.out.println();
-            i++;
-        } while (i <= n);
+        }
     }
 
     public static void main(String[] args) {
-        pattern();
+        hollow_rectangle(4, 5);
     }
 }
