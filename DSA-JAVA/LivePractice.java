@@ -1,24 +1,22 @@
 import java.util.*;
 
-public class LivePractice {
+class LivePractice {
+
+    static int sumOfDigits(int n) {
+        int sum = 0;
+        while (n > 0) {
+            int digit = n % 10;
+            sum = sum + digit;
+            n = n / 10;
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        int result1 = sumOfDigits(135);
+        System.out.println("135 sum of digits: " + result1);
 
-        System.out.print("Enter a number: ");
-        int num = sc.nextInt();
-        int original = num;
-        int reversed = 0;
-
-        while (num > 0) {
-            int digit = num % 10;
-            reversed = reversed * 10 + digit;
-            num = num / 10;
-        }
-
-        if (original == reversed) {
-            System.out.println(original + " is a palindrome.");
-        } else {
-            System.out.println(original + " is not a palindrome.");
-        }
+        int result2 = sumOfDigits(279);
+        System.out.println("279 sum of digits: " + result2);
     }
 }
