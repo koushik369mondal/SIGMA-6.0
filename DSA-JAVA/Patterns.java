@@ -95,31 +95,57 @@ public class Patterns {
     //     }
     // }
 
-    public static void palindromic_pattern (int n){
-        for (int i = 1; i <= n; i++) {
+    // public static void palindromic_pattern (int n){
+    //     for (int i = 1; i <= n; i++) {
+    //         int spaces = n - i;
+    //         for(int j=1; j<=spaces; j++){
+    //             System.out.print(" ");
+    //         }
+    //         for(int j=1; j<=i; j++){
+    //             System.out.print(j);
+    //         }
+    //         for(int j=i-1; j>=1; j--){
+    //             System.out.print(j);
+    //         }
+    //         System.out.println();
+    //     }
+    //     //reverse
+    //     for (int i = n; i >= 1; i--) {
+    //         int spaces = n - i;
+    //         for(int j=1; j<=spaces; j++){
+    //             System.out.print(" ");
+    //         }
+    //         for(int j=1; j<=i; j++){
+    //             System.out.print(j);
+    //         }
+    //         for(int j=i-1; j>=1; j--){
+    //             System.out.print(j);
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+
+    public static void hourglass_pattern(int n){
+        for (int i = n; i >= 1; i--) {
+            int stars = 2 * i;
             int spaces = n - i;
-            for(int j=1; j<=spaces; j++){
-                System.out.print(" ");
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print("   ");
             }
-            for(int j=1; j<=i; j++){
-                System.out.print(j);
-            }
-            for(int j=i-1; j>=1; j--){
-                System.out.print(j);
+            for (int j = 1; j <= stars; j++) {
+                System.out.print(" * ");
             }
             System.out.println();
         }
         //reverse
-        for (int i = n; i >= 1; i--) {
+        for (int i = 1; i <= n; i++) {
+            int stars = 2 * i;
             int spaces = n - i;
-            for(int j=1; j<=spaces; j++){
-                System.out.print(" ");
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print("   ");
             }
-            for(int j=1; j<=i; j++){
-                System.out.print(j);
-            }
-            for(int j=i-1; j>=1; j--){
-                System.out.print(j);
+            for (int j = 1; j <= stars; j++) {
+                System.out.print(" * ");
             }
             System.out.println();
         }
@@ -130,6 +156,7 @@ public class Patterns {
         // solid_rhombus(5);
         // hollow_rhombus(5);
         // diamond(3);
-        palindromic_pattern(4);
+        // palindromic_pattern(4);
+        hourglass_pattern(3);
     }
 }
