@@ -109,6 +109,20 @@ public class Patterns {
             }
             System.out.println();
         }
+        //reverse
+        for (int i = n; i >= 1; i--) {
+            int spaces = n - i;
+            for(int j=1; j<=spaces; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+            for(int j=i-1; j>=1; j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
@@ -116,6 +130,6 @@ public class Patterns {
         // solid_rhombus(5);
         // hollow_rhombus(5);
         // diamond(3);
-        palindromic_pattern(5);
+        palindromic_pattern(4);
     }
 }
