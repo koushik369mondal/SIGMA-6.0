@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 
 public class Patterns {
         // public static void butterfly(int n) {
