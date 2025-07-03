@@ -17,7 +17,7 @@ public class ArraysCC {
         System.out.println("Math: " + marks[2]);
         // System.out.println("Not Defined: " + marks[9]);
 
-        marks[2] = 100;
+        marks[2] = marks[2] + 1;
         System.out.println("Math: " + marks[2]);
     }
 
