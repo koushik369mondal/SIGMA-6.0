@@ -1,26 +1,22 @@
 import java.util.*;
 
 public class ArraysCC {
+
+    public static void update(int marks[]) {
+        for (int i = 0; i < marks.length; i++) {
+            marks[i] = marks[i] + 1;
+        }
+    }
+
     public static void main(String[] args) {
-        int marks[] = new int[100];
+        int marks[] = { 97, 98, 99 };
+        update(marks);
 
-        Scanner sc = new Scanner(System.in);
-        // int phy;
-        // phy = sc.nextInt();
-
-        System.out.println("Length of the array: " + marks.length);
-
-        // marks[0] = sc.nextInt(); // phy
-        // marks[1] = sc.nextInt(); // chem
-        // marks[2] = sc.nextInt(); // math
-
-        // System.out.println("Physics: " + marks[0]);
-        // System.out.println("Chemistry: " + marks[1]);
-        // System.out.println("Math: " + marks[2]);
-        // // System.out.println("Not Defined: " + marks[9]);
-
-        // int percentage = ((marks[0] + marks[1] + marks[2]) / 3);
-        // System.out.println("Percentage: " + percentage);
+        //print our marks
+        for (int i = 0; i < marks.length; i++) {
+            System.out.println(marks[i]+ " ");
+        }
+        System.out.println();
     }
 
 }
