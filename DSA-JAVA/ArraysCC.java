@@ -15,7 +15,10 @@ public class ArraysCC {
         System.out.println("Physics: " + marks[0]);
         System.out.println("Chemistry: " + marks[1]);
         System.out.println("Math: " + marks[2]);
-        System.out.println("Not Defined: " + marks[9]);
+        // System.out.println("Not Defined: " + marks[9]);
+
+        marks[2] = 100;
+        System.out.println("Math: " + marks[2]);
     }
 
 }
