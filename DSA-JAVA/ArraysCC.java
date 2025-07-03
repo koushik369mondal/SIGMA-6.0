@@ -1,24 +1,19 @@
 import java.util.*;
 
 public class ArraysCC {
-    public static int linearSearch(String fruits[], String key) {
-        for (int i = 0; i < fruits.length; i++) {
-            if (fruits[i] == key) {
-                return i;
+    public static int getLargest(int numbers[]) {
+        int largest = Integer.MIN_VALUE; // -infinity
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (largest < numbers[i]) {
+                largest = numbers[i];
             }
         }
-        return -1;
+        return largest;
     }
 
     public static void main(String[] args) {
-        String fruits[] = {"chole bhature", "momo", "chowmin", "pani puri"};
-        String key = "chole bhature";
-
-        int index = linearSearch(fruits, key);
-        if (index == -1) {
-            System.out.println("NOT found. ");
-        } else {
-            System.out.println("Found at index : " + index);
-        }
+        int numbers[] = { 1, 2, 6, 3, 5 };
+        System.out.println("Largest value is : " + getLargest(numbers));
     }
 }
