@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class ArraysCC {
-    public static int linearSearch(int numbers[], int key) {
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == key) {
+    public static int linearSearch(String fruits[], String key) {
+        for (int i = 0; i < fruits.length; i++) {
+            if (fruits[i] == key) {
                 return i;
             }
         }
@@ -11,10 +11,10 @@ public class ArraysCC {
     }
 
     public static void main(String[] args) {
-        int numbers[] = { 2, 4, 6, 8, 10, 12, 14, 16 };
-        int key = 10;
+        String fruits[] = {"chole bhature", "momo", "chowmin", "pani puri"};
+        String key = "chole bhature";
 
-        int index = linearSearch(numbers, key);
+        int index = linearSearch(fruits, key);
         if (index == -1) {
             System.out.println("NOT found. ");
         } else {
