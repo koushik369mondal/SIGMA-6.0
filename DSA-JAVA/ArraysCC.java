@@ -1,24 +1,28 @@
 import java.util.*;
 
 public class ArraysCC {
-    public static int getLargest(int numbers[]) {
-        int largest = Integer.MIN_VALUE; // -infinity
-        int smallest = Integer.MAX_VALUE; // infinity
+    public static int binarySearch(int numbers[], int key) {
+        int start = 0, end = numbers.length - 1;
 
-        for (int i = 0; i < numbers.length; i++) {
-            if (largest < numbers[i]) {
-                largest = numbers[i];
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            // comparison
+            if (numbers[mid] == key) { // found
+                return mid;
             }
-            if(smallest > numbers[i]){
-                smallest = numbers[i];
+            if (numbers[mid] < key) { // right
+                start = mid + 1;
+            } else { // left
+                end = mid - 1;
             }
         }
-        System.out.println("Smallest value is : " + smallest);
-        return largest;
+        return -1;
     }
 
     public static void main(String[] args) {
-        int numbers[] = { 1, 2, 6, 3, 5 };
-        System.out.println("Largest value is : " + getLargest(numbers));
+        int numbers[] = { 2, 4, 6, 8, 10, 12, 14 };
+        int key = 10;
+        System.out.println("index for key is : " + binarySearch(numbers, key));
     }
 }
