@@ -149,7 +149,6 @@ public class Patterns {
     // }
 
     public static void right_aligned_number_triangle(int n, int count) {
-        // int count = 1;
         for (int i = 1; i <= n; i++) {
             int spaces = n - i;
             for (int j = 1; j <= spaces; j++) {
