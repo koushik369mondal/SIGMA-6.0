@@ -8,7 +8,7 @@ public class ArraysCC {
             for (int j = i; j < numbers.length; j++) {
                 int end = j;
                 for (int k = start; k <= end; k++) { // print
-                    System.err.print(numbers[k] + " "); // subArray
+                    System.out.print(numbers[k] + " "); // subArray
                 }
                 ts++;
                 System.out.println();
