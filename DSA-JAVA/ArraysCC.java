@@ -2,6 +2,7 @@ import java.util.*;
 
 public class ArraysCC {
     public static void printSubArrays(int numbers[]) {
+        int ts = 0;
         for (int i = 0; i < numbers.length; i++) {
             int start = i;
             for (int j = i; j < numbers.length; j++) {
@@ -9,10 +10,12 @@ public class ArraysCC {
                 for (int k = start; k <= end; k++) { // print
                     System.err.print(numbers[k] + " "); // subArray
                 }
+                ts++;
                 System.out.println();
             }
             System.out.println();
         }
+        System.out.println("Total subArrays: " + ts);
     }
 
     public static void main(String[] args) {
