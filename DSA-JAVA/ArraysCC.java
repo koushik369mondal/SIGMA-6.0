@@ -1,21 +1,20 @@
 import java.util.*;
 
 public class ArraysCC {
-    public static void kadanes(int numbers[]) {
-        int ms = Integer.MIN_VALUE;
-        int cs = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            cs = cs + numbers[i];
-            if (cs < 0) {
-                cs = 0;
-            }
-            ms = Math.max(cs, ms);
-        }
-        System.out.println("Our max subArray sum is : " + ms);
+    public static void trappedRainWater(int height[]) {
+        // calculate left max boundary - array
+
+        // calculate right max boundary - array
+
+        // loop
+
+        // waterLevel = min(leftMax bound, rightMax bound)
+
+        // trapped water = waterLevel - height[i]
     }
 
     public static void main(String[] args) {
-        int numbers[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
-        kadanes(numbers);
+        int height[] = { 4, 2, 0, 6, 3, 2, 5 };
+        trappedRainWater(height);
     }
 }
