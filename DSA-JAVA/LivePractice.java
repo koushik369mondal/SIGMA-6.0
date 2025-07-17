@@ -1,15 +1,21 @@
 import java.util.*;
-import java.lang.reflect.Array;
 
 class LivePractice {
     public static boolean containsDuplicate(char[] nums) {
-        Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == nums[i + 1]) {
+        int n = nums.length;
+        HashMap<Character, Integer> map = new HashMap<>(); // Use Character, not Integer
+
+        for (int i = 0; i < n; i++) {
+            // Update frequency count
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+
+            // If count > 1, it's a duplicate
+            if (map.get(nums[i]) > 1) {
                 return true;
             }
         }
-        return false;
+
+        return false; // No duplicates found
     }
 
     public static void main(String[] args) {
