@@ -29,7 +29,7 @@ class Ideone {
                 { 7, 8, 6, 6 },
                 { 9, 9, 8, 8 }
         };
-        int n = arr.length;
+        // int n = arr.length;
         int m = arr[0].length;
         int sum = 0;
         // 2nd row index = 1
