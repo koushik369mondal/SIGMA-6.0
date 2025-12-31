@@ -29,13 +29,17 @@ class Ideone {
                 { 7, 8, 6, 6 },
                 { 9, 9, 8, 8 }
         };
-        // int n = arr.length;
+        int n = arr.length;
         int m = arr[0].length;
         int sum = 0;
         // 2nd row index = 1
-        for(int i=0; i<m; i++){
-            sum = sum + arr[1][i];
+        // for(int i=0; i<m; i++){
+        //     sum = sum + arr[1][i];
+        // }
+        // 3rd col means j=2 col
+        for(int i=0; i<n; i++) {
+            sum = sum + arr[i][2];
         }
-        System.out.println("Sum of 2nd row is: " + sum);
+        System.out.println("Sum of 3rd column is: " + sum);
     }
 }
