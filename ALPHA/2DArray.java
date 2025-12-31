@@ -33,8 +33,8 @@ class Ideone {
         int m = arr[0].length;
         int sum = 0;
         // 2nd row index = 1
-        for(int j=0; j<m; j++){
-            sum = sum + arr[1][j];
+        for(int i=0; i<m; i++){
+            sum = sum + arr[1][i];
         }
         System.out.println("Sum of 2nd row is: " + sum);
     }
