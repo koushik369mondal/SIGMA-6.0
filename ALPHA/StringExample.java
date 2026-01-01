@@ -14,5 +14,11 @@ public class StringExample{
 
         String name = "Tony Stark";
         System.out.println(name.length());
+
+        //concatenation
+        String firstName = "Kaushik";
+        String lastName = "Mandal";
+        String fullName = firstName + " " + lastName;
+        System.out.println(fullName);
     }
 }
