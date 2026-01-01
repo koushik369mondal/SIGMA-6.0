@@ -45,24 +45,24 @@ public class StringExample {
         System.out.println();
     }
 
-    public static boolean isPalindrome(String str) {
+    public static void isPalindrome() {
+        String str = "racecar";
         for (int i = 0; i < str.length() / 2; i++) {
             int n = str.length();
             if (str.charAt(i) != str.charAt(n - 1 - i)) {
                 // Not a palindrome
-                return false;
+                System.out.println(false);
+                return;
             }
         }
         // Is a palindrome
-        return true;
+        System.out.println(true);
     }
 
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
         // stringConcatenationExample();
-
-        String str = "racecar";
-        System.out.println(isPalindrome(str));
+        isPalindrome();
     }
 }
