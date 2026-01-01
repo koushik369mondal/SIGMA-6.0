@@ -9,7 +9,7 @@ public class StringExample{
         //Strings are IMMUTABLE
         Scanner sc = new Scanner(System.in);
         String name;
-        name = sc.next();
+        name = sc.nextLine();
         System.out.println("Hello " + name);
     }
 }
