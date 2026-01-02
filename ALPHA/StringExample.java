@@ -87,11 +87,30 @@ public class StringExample {
         System.out.println("Shortest Path: " + shortestPath);
     }
 
+    public static void compare(){
+        String s1 = "Kaushik";
+        String s2 = "Kaushik";
+        String s3 = new String("Kaushik");
+
+        if(s1 == s2){
+            System.out.println("s1 and s2 are equal");
+        } else {
+            System.out.println("s1 and s2 are not equal");
+        }
+
+        if(s1 == s3){
+            System.out.println("s1 and s3 are equal");
+        } else {
+            System.out.println("s1 and s3 are not equal");
+        }
+    }
+
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
         // stringConcatenationExample();
         // isPalindrome();
-        getShortestPath();
+        // getShortestPath();
+        compare();
     }
 }
