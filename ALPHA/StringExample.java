@@ -130,6 +130,9 @@ public class StringExample {
         // isPalindrome();
         // getShortestPath();
         // compare();
-        subString();
+        // subString();
+        String str1 = "HelloWorld";
+        String substr = str1.substring(0, 5);
+        System.out.println("Substring using built-in method: " + substr);
     }
 }
