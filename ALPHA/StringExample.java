@@ -123,6 +123,12 @@ public class StringExample {
         return substr;
     }
 
+    public static void subStringBuildIn() {
+        String str = "HelloWorld";
+        String substr = str.substring(0, 5);
+        System.out.println("Substring using built-in method: " + substr);
+    }
+
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
@@ -131,8 +137,6 @@ public class StringExample {
         // getShortestPath();
         // compare();
         // subString();
-        String str1 = "HelloWorld";
-        String substr = str1.substring(0, 5);
-        System.out.println("Substring using built-in method: " + substr);
+        subStringBuildIn();
     }
 }
