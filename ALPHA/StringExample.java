@@ -103,6 +103,12 @@ public class StringExample {
         } else {
             System.out.println("s1 and s3 are not equal");
         }
+
+        if(s1.equals(s3)){
+            System.out.println("s1 and s3 are equal using equals()");
+        } else {
+            System.out.println("s1 and s3 are not equal using equals()");
+        }
     }
 
     public static void main(String[] args) {
