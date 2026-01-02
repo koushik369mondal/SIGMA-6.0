@@ -129,6 +129,18 @@ public class StringExample {
         System.out.println("Substring using built-in method: " + substr);
     }
 
+    public static void largestString() {
+        String fruits[] = { "Apple", "Mango", "Banana" };
+        String largest = fruits[0];
+        for(int i=1; i<fruits.length; i++){
+            if(largest.compareTo(fruits[i]) < 0){
+                largest = fruits[i];
+            }
+        }
+        // Mango is largest as M comes last in alphabetical order
+        System.out.println("Largest String: " + largest);
+    }
+
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
@@ -137,6 +149,7 @@ public class StringExample {
         // getShortestPath();
         // compare();
         // subString();
-        subStringBuildIn();
+        // subStringBuildIn();
+        largestString();
     }
 }
