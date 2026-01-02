@@ -87,35 +87,39 @@ public class StringExample {
         System.out.println("Shortest Path: " + shortestPath);
     }
 
-    public static void compare(){
+    public static void compare() {
         String s1 = "Kaushik";
         String s2 = "Kaushik";
         String s3 = new String("Kaushik");
 
-        if(s1 == s2){
+        if (s1 == s2) {
             System.out.println("s1 and s2 are equal");
         } else {
             System.out.println("s1 and s2 are not equal");
         }
 
-        if(s1 == s3){
+        if (s1 == s3) {
             System.out.println("s1 and s3 are equal");
         } else {
             System.out.println("s1 and s3 are not equal");
         }
 
-        if(s1.equals(s3)){
+        if (s1.equals(s3)) {
             System.out.println("s1 and s3 are equal using equals()");
         } else {
             System.out.println("s1 and s3 are not equal using equals()");
         }
     }
 
-    public static String subString(String str, int si, int ei){
+    public static String subString() {
+        String str = "HelloWorld";
+        int si = 0;
+        int ei = 5;
         String substr = "";
-        for(int i = si; i < ei; i++){
+        for (int i = si; i < ei; i++) {
             substr += str.charAt(i);
         }
+        System.out.println("Substring: " + substr);
         return substr;
     }
 
@@ -126,8 +130,6 @@ public class StringExample {
         // isPalindrome();
         // getShortestPath();
         // compare();
-        String str = "HelloWorld";
-        String result = subString(str, 0, 5);
-        System.out.println("Substring: " + result);
+        subString();
     }
 }
