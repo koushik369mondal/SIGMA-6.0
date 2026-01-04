@@ -141,6 +141,14 @@ public class StringExample {
         System.out.println("Largest String: " + largest);
     }
 
+    public static void stringBuilder(){
+        StringBuilder sb = new StringBuilder("");
+        for(char ch='a'; ch<='z'; ch++){
+            sb.append(ch);
+        }
+        System.out.println(sb.toString());
+    }
+
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
@@ -150,6 +158,7 @@ public class StringExample {
         // compare();
         // subString();
         // subStringBuildIn();
-        largestString();
+        // largestString();
+        stringBuilder();
     }
 }
