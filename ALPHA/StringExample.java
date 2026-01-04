@@ -146,7 +146,9 @@ public class StringExample {
         for(char ch='a'; ch<='z'; ch++){
             sb.append(ch);
         }
-        System.out.println(sb.toString());
+        // O(26) time complexity
+        // O(26 * n^2) time complexity for string concatenation without StringBuilder
+        System.out.println(sb.length());
     }
 
     public static void main(String[] args) {
