@@ -152,8 +152,9 @@ public class StringExample {
         System.out.println(sb.length());
     }
 
-    public static String toUpperCase(String str){
+    public static void toUpperCase(){
         StringBuilder sb = new StringBuilder("");
+        String str = "Kaushik mandal";
 
         char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
@@ -167,7 +168,7 @@ public class StringExample {
                 sb.append(str.charAt(i));
             }
         }
-        return sb.toString();
+        System.out.println(sb.toString());
     }
 
     public static void main(String[] args) {
@@ -181,7 +182,6 @@ public class StringExample {
         // subStringBuildIn();
         // largestString();
         // stringBuilder();
-        String str = "Hello WORLD.";
-        System.out.println(toUpperCase(str));
+        toUpperCase();
     }
 }
