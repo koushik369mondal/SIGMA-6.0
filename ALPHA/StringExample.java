@@ -181,7 +181,7 @@ public class StringExample {
         // subStringBuildIn();
         // largestString();
         // stringBuilder();
-        String str = "Hi, I am kaushik mandal.";
+        String str = "Hello WORLD.";
         System.out.println(toUpperCase(str));
     }
 }
