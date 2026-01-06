@@ -171,8 +171,9 @@ public class StringExample {
         System.out.println(sb.toString());
     }
 
-    public static String compress(String str){
+    public static void compress(){
         String newStr = "";
+        String str = "aaabbcccdd";
 
         for(int i=0; i<str.length(); i++){
             Integer count = 1;
@@ -185,7 +186,7 @@ public class StringExample {
                 newStr += count.toString();
             }
         }
-        return newStr;
+        System.out.println(newStr);
     }
 
     public static void main(String[] args) {
@@ -200,7 +201,6 @@ public class StringExample {
         // largestString();
         // stringBuilder();
         // toUpperCase();
-        String str = "aaabbcccdd";
-        System.out.println(compress(str));
+        compress();       
     }
 }
