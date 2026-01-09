@@ -195,7 +195,11 @@ public class StringExample {
                 ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U');
     }
 
-    public static int countVowels(String input) {
+    public static void countVowels() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
         int count = 0;
         for (int i = 0; i < input.length(); i++) {
             char ch = input.charAt(i);
@@ -203,7 +207,9 @@ public class StringExample {
                 count++;
             }
         }
-        return count;
+
+        System.out.println("Total vowels in our input: " + count);
+        sc.close();
     }
 
     public static void main(String[] args) {
@@ -219,10 +225,6 @@ public class StringExample {
         // stringBuilder();
         // toUpperCase();
         // compress();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string: ");
-        String input = sc.nextLine();
-        int vowelCount = countVowels(input);
-        System.out.println("Total vowel in our input is: " + vowelCount);
+        countVowels();
     }
 }
