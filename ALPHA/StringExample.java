@@ -132,8 +132,8 @@ public class StringExample {
     public static void largestString() {
         String fruits[] = { "Apple", "Mango", "Banana" };
         String largest = fruits[0];
-        for(int i=1; i<fruits.length; i++){
-            if(largest.compareTo(fruits[i]) < 0){
+        for (int i = 1; i < fruits.length; i++) {
+            if (largest.compareTo(fruits[i]) < 0) {
                 largest = fruits[i];
             }
         }
@@ -141,9 +141,9 @@ public class StringExample {
         System.out.println("Largest String: " + largest);
     }
 
-    public static void stringBuilder(){
+    public static void stringBuilder() {
         StringBuilder sb = new StringBuilder("");
-        for(char ch='a'; ch<='z'; ch++){
+        for (char ch = 'a'; ch <= 'z'; ch++) {
             sb.append(ch);
         }
         // O(26) time complexity
@@ -152,15 +152,15 @@ public class StringExample {
         System.out.println(sb.length());
     }
 
-    public static void toUpperCase(){
+    public static void toUpperCase() {
         StringBuilder sb = new StringBuilder("");
         String str = "Kaushik mandal";
 
         char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
 
-        for(int i=1; i<str.length(); i++){
-            if(str.charAt(i) == ' ' && i<str.length()-1){
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) == ' ' && i < str.length() - 1) {
                 sb.append(str.charAt(i));
                 i++;
                 sb.append(Character.toUpperCase(str.charAt(i)));
@@ -171,22 +171,39 @@ public class StringExample {
         System.out.println(sb.toString());
     }
 
-    public static void compress(){
+    public static void compress() {
         String newStr = "";
         String str = "aaabbcccdd";
 
-        for(int i=0; i<str.length(); i++){
+        for (int i = 0; i < str.length(); i++) { // O(n) - time complexity
             Integer count = 1;
-            while(i<str.length()-1 && str.charAt(i) == str.charAt(i+1)){
+            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
                 count++;
                 i++;
             }
             newStr += str.charAt(i);
-            if(count >1){
+            if (count > 1) {
                 newStr += count.toString();
             }
         }
         System.out.println(newStr);
+    }
+
+    // Assignment questions
+    public static boolean isVowel(char ch) {
+        return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U');
+    }
+
+    public static int countVowels(String input) {
+        int count = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (isVowel(ch)) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -201,6 +218,11 @@ public class StringExample {
         // largestString();
         // stringBuilder();
         // toUpperCase();
-        compress();       
+        // compress();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String input = sc.nextLine();
+        int vowelCount = countVowels(input);
+        System.out.println("Total vowel in our input is: " + vowelCount);
     }
 }
