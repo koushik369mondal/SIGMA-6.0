@@ -190,6 +190,7 @@ public class StringExample {
     }
 
     // Assignment questions
+    // Q1 - 
     public static boolean isVowel(char ch) {
         return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
                 ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U');
@@ -212,6 +213,14 @@ public class StringExample {
         sc.close();
     }
 
+    // Q2 - 
+    public static void Q2() {
+        String str = "KaushikMandal";
+        String str1 = "ApnaCollege";
+        String str2 = "KaushikMandal";
+        System.out.println(str.equals(str1) + " " + str.equals(str2));
+    }
+
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
@@ -225,6 +234,7 @@ public class StringExample {
         // stringBuilder();
         // toUpperCase();
         // compress();
-        countVowels();
+        // countVowels();
+        Q2();
     }
 }
