@@ -221,6 +221,12 @@ public class StringExample {
         System.out.println(str.equals(str1) + " " + str.equals(str2));
     }
 
+    // Q3 -
+    public static void Q3() {
+        String str = "ApnaCollege".replace("l", "   ");
+        System.out.println(str);
+    }
+
     public static void main(String[] args) {
         // basicStringExamples();
         // stringLengthExample();
@@ -235,6 +241,7 @@ public class StringExample {
         // toUpperCase();
         // compress();
         // countVowels();
-        Q2();
+        // Q2();
+        Q3();
     }
 }
