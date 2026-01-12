@@ -228,7 +228,10 @@ public class StringExample {
     }
 
     // Q4 -
-    public static boolean isAnagram(String s, String t) {
+    // Solution 1
+
+    // Solution 2
+    public static boolean isAnagram2(String s, String t) {
         if (s.length() != t.length())
             return false;
 
@@ -242,9 +245,29 @@ public class StringExample {
         return m1.equals(m2);
     }
 
+    // Solution 3
+    public static boolean isAnagram3(String s, String t) {
+        int[] count = new int[26];
+        int n1 = s.length();
+        int n2 = t.length();
+        if (n1 != n2)
+            return false;
+
+        for (int i = 0; i < n1; i++) {
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
+        }
+
+        for (int i = 0; i < 26; i++) {
+            if (count[i] != 0)
+                return false;
+        }
+        return true;
+    }
+
     public static void Q4() {
-        System.out.println(isAnagram("listen", "silent")); // true
-        System.out.println(isAnagram("hello", "billion")); // false
+        System.out.println(isAnagram3("listen", "silent")); // true
+        System.out.println(isAnagram3("hello", "billion")); // false
     }
 
     public static void main(String[] args) {
