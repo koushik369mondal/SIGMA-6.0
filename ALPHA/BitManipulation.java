@@ -29,10 +29,16 @@ public class BitManipulation {
         }
     }
 
+    public static int setIthBit(int n, int i){
+        int bitMask = 1<<i;
+        return n | bitMask;
+    }
+
     public static void main(String[] args) {
         // bitwiseOperators(5, 3);
         // oddOrEven(12);
         // oddOrEven(15);
         System.out.println(getIthBit(10, 2)); // Here, 10 in binary is 1010
+        System.out.println(setIthBit(10, 2)); // Setting the 2nd bit of 10, 
     }
 }
