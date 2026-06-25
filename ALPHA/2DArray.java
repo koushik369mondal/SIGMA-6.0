@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 
 class Ideone {
     // Question 1 - Count occurrences of 7 in 2D array
@@ -32,7 +32,7 @@ class Ideone {
                 { 9, 9, 8, 8 }
         };
         int n = arr.length;
-        int m = arr[0].length;
+        // int m = arr[0].length;
         int sum = 0;
         // 2nd row index = 1
         // for(int i=0; i<m; i++){
