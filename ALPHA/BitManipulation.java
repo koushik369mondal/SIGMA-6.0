@@ -72,6 +72,17 @@ public class BitManipulation {
         System.out.println("a: " + a + " b: " + b);
     }
 
+    // Add 1 to an integer using Bit Manipulation.(Hint: try using Bitwise NOT
+    // Operator)
+    public static void s3(int n) {
+        int x = 6;
+        System.out.println(x + " + " + 1 + " is " + -~x);
+        x = -4;
+        System.out.println(x + " + " + 1 + " is " + -~x);
+        x = 0;
+        System.out.println(x + " + " + 1 + " is " + -~x);
+    }
+
     public static void main(String[] args) {
         // bitwiseOperators(5, 3);
         // oddOrEven(12);
@@ -84,5 +95,6 @@ public class BitManipulation {
         // System.out.println(isPowerOfTwo(8));
         s1();
         s2(10, 5);
+        s3(0);
     }
 }
