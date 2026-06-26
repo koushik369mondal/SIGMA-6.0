@@ -29,33 +29,39 @@ public class BitManipulation {
         }
     }
 
-    public static int setIthBit(int n, int i){
-        int bitMask = 1<<i;
+    public static int setIthBit(int n, int i) {
+        int bitMask = 1 << i;
         return n | bitMask;
     }
 
-    public static int clearIthBit(int n, int i){
-        int bitMask = ~(1<<i);
+    public static int clearIthBit(int n, int i) {
+        int bitMask = ~(1 << i);
         return n & bitMask;
     }
 
-    public static int  updateIntBit(int n, int i, int newBit){
-        if(newBit == 0){
+    public static int updateIntBit(int n, int i, int newBit) {
+        if (newBit == 0) {
             return clearIthBit(n, i);
         } else {
             return setIthBit(n, i);
         }
     }
 
-    public static int clearBitsinRange(int n, int i, int j){
-        int a = (~0) << (j+1);
-        int b = (1<<i) - 1;
+    public static int clearBitsinRange(int n, int i, int j) {
+        int a = (~0) << (j + 1);
+        int b = (1 << i) - 1;
         int bitMask = a | b;
         return n & bitMask;
     }
 
-    public static boolean isPowerOfTwo(int n){
-        return (n&(n-1)) == 0;
+    public static boolean isPowerOfTwo(int n) {
+        return (n & (n - 1)) == 0;
+    }
+
+    // What is the value of x^x for any valueof x?
+    public static void s1() {
+        int x = 5;
+        System.out.println(x ^ x);
     }
 
     public static void main(String[] args) {
@@ -63,9 +69,11 @@ public class BitManipulation {
         // oddOrEven(12);
         // oddOrEven(15);
         // System.out.println(getIthBit(10, 2)); // Here, 10 in binary is 1010
-        // System.out.println(setIthBit(10, 2)); // Setting the 2nd bit of 10, 
+        // System.out.println(setIthBit(10, 2)); // Setting the 2nd bit of 10,
         // System.out.println(clearIthBit(10, 1)); // Clearing the 1st bit of 10
-        // System.out.println(updateIntBit(10, 1, 1)); // Updating the 1st bit of 10 to 1
-        System.out.println(isPowerOfTwo(8));
+        // System.out.println(updateIntBit(10, 1, 1)); // Updating the 1st bit of 10 to
+        // 1
+        // System.out.println(isPowerOfTwo(8));
+        s1();
     }
 }
