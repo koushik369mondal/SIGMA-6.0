@@ -64,6 +64,14 @@ public class BitManipulation {
         System.out.println(x ^ x);
     }
 
+    // Swap two numbers without using any thirdvariable
+    public static void s2(int a, int b) {
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println("a: " + a + " b: " + b);
+    }
+
     public static void main(String[] args) {
         // bitwiseOperators(5, 3);
         // oddOrEven(12);
@@ -75,5 +83,6 @@ public class BitManipulation {
         // 1
         // System.out.println(isPowerOfTwo(8));
         s1();
+        s2(10, 5);
     }
 }
