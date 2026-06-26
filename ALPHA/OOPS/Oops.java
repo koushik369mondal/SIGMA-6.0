@@ -16,11 +16,17 @@ public class Oops {
     //     System.out.println("Student Age: " + student1.age);
     //     System.out.println("Student Percentage: " + student1.percentage);
     
-        Student1 student2 = new Student1("Alice", 22);
-        student2.calcPercentage(90, 85, 95);
+        Student1 student2 = new Student1(); // Non-parameterized constructor
         System.out.println("Student Name: " + student2.name);
         System.out.println("Student Age: " + student2.age);
-        System.out.println("Student Percentage: " + student2.percentage);
+
+        Student1 student3 = new Student1("Alice", 19); // Parameterized constructor
+        System.out.println("Student Name: " + student3.name);
+        System.out.println("Student Age: " + student3.age);
+
+        Student1 student4 = new Student1(student3); // Copy constructor
+        System.out.println("Student Name: " + student4.name);
+        System.out.println("Student Age: " + student4.age);
     }
 }
 
@@ -59,15 +65,22 @@ class Student {
 class Student1 {
     String name;
     int age;
-    float percentage;
 
-    // Constructor
+    // Non-parameterized constructor
+    Student1() {
+        this.name = "Default Name";
+        this.age = 18;
+    }
+
+    // Parameterized constructor
     Student1(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    void calcPercentage(int phy, int chem, int math) {
-        percentage = (phy + chem + math) / 3;
+    // Copy constructor
+    Student1(Student1 s) {
+        this.name = s.name;
+        this.age = s.age;
     }
 }
