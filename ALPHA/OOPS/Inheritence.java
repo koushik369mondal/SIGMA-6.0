@@ -6,6 +6,10 @@ public class Inheritence {
         shark.eat();
         shark.breathe();
         shark.swim();
+        Dog dobby = new Dog();
+        dobby.eat();
+        dobby.legs = 4;
+        System.out.println("Dobby has " + dobby.legs + " legs");
     }
 }
 
@@ -22,11 +26,27 @@ class Animal{
     }
 }
 
-// Derived class
+// Derived class / subclass 
 class Fish extends Animal{
     int fins;
 
     void swim(){
         System.out.println("Fish is swimming");
+    }
+}
+
+class Mammls extends Animal{
+    int legs;
+
+    void run(){
+        System.out.println("Mammal is running");
+    }
+}
+
+class Dog extends Mammls{
+    String breed;
+
+    void bark(){
+        System.out.println("Dog is barking");
     }
 }
