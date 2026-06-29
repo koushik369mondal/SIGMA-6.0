@@ -5,6 +5,10 @@ public class Abstraction {
         Horse h = new Horse();
         h.eat();
         h.walk();
+
+        Chicken c = new Chicken();
+        c.eat();
+        c.walk();
     }
 }
 
@@ -12,7 +16,6 @@ abstract class Animal {
     void eat() {
         System.out.println("Animal eats");
     }
-
     abstract void walk();
 }
 
