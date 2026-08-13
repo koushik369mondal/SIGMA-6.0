@@ -41,10 +41,20 @@ public class Recursion {
         if(n == 0 || n == 1){
             return n;
         }
-        int fnm1 = fib(n-1);
-        int fnm2 = fib(n-2);
-        int fn = fnm1 + fnm2;
+        int f1 = fib(n-1);
+        int f2 = fib(n-2);
+        int fn = f1 + f2;
         return fn;
+    }
+
+    public static boolean isSorted(int arr[], int i){
+        if(i == arr.length-1){
+            return true;
+        }
+        if(arr[i] > arr[i+1]){
+            return false;
+        }
+        return isSorted(arr, i+1);
     }
 
     public static void main(String[] args) {
@@ -52,7 +62,9 @@ public class Recursion {
         // printInc(10);
         // System.out.println(fact(5));
         // System.out.println(sum(5));
-        System.out.println(fib(10));
+        // System.out.println(fib(10));
+        int[] arr = {1, 2, 3, 6, 4, 5};
+        System.out.println(isSorted(arr, 0));
     }
 }
 
