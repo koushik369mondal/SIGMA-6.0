@@ -10,3 +10,8 @@ out/
 
 # Ignore local Git folders inside sub-projects (optional)
 **/.git/
+
+# Ignore Node dependencies
+node_modules/
+**/node_modules/
+
