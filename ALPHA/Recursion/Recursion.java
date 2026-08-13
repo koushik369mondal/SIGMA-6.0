@@ -57,14 +57,25 @@ public class Recursion {
         return isSorted(arr, i+1);
     }
 
+    public static int firstOccurence(int arr[], int key, int i){
+        if(i == arr.length){
+            return -1;
+        }
+        if(arr[i] == key){
+            return i;
+        }
+        return firstOccurence(arr, key, i+1);
+    }
+
     public static void main(String[] args) {
         // printDec(10);
         // printInc(10);
         // System.out.println(fact(5));
         // System.out.println(sum(5));
         // System.out.println(fib(10));
-        int[] arr = {1, 2, 3, 6, 4, 5};
-        System.out.println(isSorted(arr, 0));
+        int[] arr = {8, 3, 6, 9, 5, 10, 2, 5, 3};
+        // System.out.println(isSorted(arr, 0));
+        System.out.println(firstOccurence(arr, 5, 0));
     }
 }
 
