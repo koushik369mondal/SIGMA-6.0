@@ -67,6 +67,13 @@ public class LinkedList {
         temp.next = newNode;
     }
 
+    public int removeFirst() {
+        int val = head.data;
+        head = head.next;
+        // size--;
+        return val;
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(2);
@@ -76,6 +83,8 @@ public class LinkedList {
         ll.add(2, 3);
 
         ll.print();
-        System.out.println(ll.size);
+        // System.out.println(ll.size);
+        ll.removeFirst();
+        ll.print();
     }
 }
