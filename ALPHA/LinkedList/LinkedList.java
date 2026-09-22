@@ -93,6 +93,18 @@ public class LinkedList {
             size = 0;
             return val;
         }
+
+        // prev : i= size-2
+        Node prev = head;
+        for(int i=0; i<size-2; i++){
+            prev = prev.next;
+        }
+    
+        int val = prev.next.data; //tail.data
+        prev.next = null;
+        tail = prev;
+        size--;
+        return val;
     }
 
     public static void main(String[] args) {
@@ -106,6 +118,9 @@ public class LinkedList {
         ll.print();
         // System.out.println(ll.size);
         ll.removeFirst();
+        ll.print();
+
+        ll.removeLast();
         ll.print();
     }
 }
