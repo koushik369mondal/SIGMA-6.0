@@ -122,5 +122,6 @@ public class LinkedList {
 
         ll.removeLast();
         ll.print();
+        System.out.println(ll.size);
     }
 }
