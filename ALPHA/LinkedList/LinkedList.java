@@ -121,7 +121,7 @@ public class LinkedList {
         return -1;
     }
 
-    public int helper(Node head, int key){
+    public int helper(Node head, int key){ // O(n)
         if(head == null){
             return -1;
         }
@@ -140,6 +140,20 @@ public class LinkedList {
 
     public int recSearch(int key){
         return helper(head, key);
+    }
+
+    public void reverse(){ //O(n)
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
     }
 
     public static void main(String[] args) {
@@ -161,5 +175,7 @@ public class LinkedList {
 
         System.out.println(ll.itrSearch(10));
         System.out.println(ll.recSearch(3));
+        ll.reverse();
+        ll.print();
     }
 }
