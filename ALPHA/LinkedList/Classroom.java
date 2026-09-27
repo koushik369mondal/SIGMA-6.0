@@ -12,5 +12,10 @@ public class Classroom {
         ll.addFirst(0);
         // 0->1->2
         System.out.println(ll);
+
+        // remove
+        ll.removeLast();
+        ll.removeFirst();
+        System.out.println(ll);
     }
 }
