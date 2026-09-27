@@ -182,6 +182,50 @@ public class LinkedList {
         return;
     }
 
+    public Node findMid(Node head){
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow; // mid
+    }
+
+    public boolean checkPalindrome(){
+        if(head == null || head.next == null){
+            return true;
+        }
+
+        // Step 1 - Find Mid
+        Node midNode = findMid(head);
+
+        // Step 2 - Reverse 2nd half
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node right = prev; // right half head
+        Node left = head;
+
+        // Step 3 - check the left half and right half
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(2);
@@ -197,7 +241,7 @@ public class LinkedList {
 
         ll.removeLast();
         ll.print();
-        System.out.println(ll.size);
+        // System.out.println(ll.size);
 
         System.out.println(ll.itrSearch(10));
         System.out.println(ll.recSearch(3));
@@ -206,5 +250,7 @@ public class LinkedList {
 
         ll.deleteNthfromEnd(3);
         ll.print();
+
+        System.out.println(ll.checkPalindrome());
     }
 }
