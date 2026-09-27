@@ -225,32 +225,52 @@ public class LinkedList {
 
         return true;
     }
+    
+    public static boolean isCycle() {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.addFirst(2);
-        ll.addFirst(1);
-        ll.addLast(4);
-        ll.addLast(5);
-        ll.add(2, 3);
+        // LinkedList ll = new LinkedList();
+        // ll.addFirst(2);
+        // ll.addFirst(1);
+        // ll.addLast(4);
+        // ll.addLast(5);
+        // ll.add(2, 3);
 
-        ll.print();
-        // System.out.println(ll.size);
-        ll.removeFirst();
-        ll.print();
+        // ll.print();
+        // // System.out.println(ll.size);
+        // ll.removeFirst();
+        // ll.print();
 
-        ll.removeLast();
-        ll.print();
-        // System.out.println(ll.size);
+        // ll.removeLast();
+        // ll.print();
+        // // System.out.println(ll.size);
 
-        System.out.println(ll.itrSearch(10));
-        System.out.println(ll.recSearch(3));
-        ll.reverse();
-        ll.print();
+        // System.out.println(ll.itrSearch(10));
+        // System.out.println(ll.recSearch(3));
+        // ll.reverse();
+        // ll.print();
 
-        ll.deleteNthfromEnd(3);
-        ll.print();
+        // ll.deleteNthfromEnd(3);
+        // ll.print();
 
-        System.out.println(ll.checkPalindrome());
+        // System.out.println(ll.checkPalindrome());
+
+        head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = head;
+        // 1->2->3->1
+        System.out.println(isCycle());
     }
 }
